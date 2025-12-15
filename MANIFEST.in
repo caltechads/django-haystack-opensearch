@@ -1,0 +1,5 @@
+include *.txt
+include *.md
+include Makefile
+include pyproject.toml
+include django_haystack_opensearch/py.typed

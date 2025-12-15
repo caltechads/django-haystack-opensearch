@@ -1,0 +1,21 @@
+
+{% extends 'core/intermediate.html' %}
+{% load i18n static %}
+
+{% block title %}{% trans 'django_haystack_opensearch Demo' %}{% endblock %}
+
+{% block content %}
+  <h2>Hello from django_haystack_opensearch Demo Demo</h2>
+
+  <p class="introduction">
+    {% if user.is_authenticated %}
+      You are logged in as {{user}}.
+    {% else %}
+      You are not logged in.
+    {% endif %}
+  </p>
+
+  <p>
+    {{ mydata }}
+  </p>
+{% endblock %}

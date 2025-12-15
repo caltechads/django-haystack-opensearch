@@ -1,0 +1,26 @@
+
+{% extends 'academy_theme/base.html' %}
+{% load academy_theme i18n static sass_tags %}
+
+{% block title %}{% trans 'django_haystack_opensearch Demo' %}{% endblock %}
+
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% sass_src 'core/css/core.scss' %}">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" integrity="sha384-CkbBL/n3ZOZkc8ovstsrGxoxn5rrvlQXBesVNiMgEo17kPWvANS0hFBRkMl0Omh4" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'wildewidgets/css/highlighting.css' %}">
+{% endblock %}
+
+{% block extra_header_js %}
+  <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js" integrity="sha384-RxzVJNpULMjRDJ3nd+aAVYb11VBDmhgIonMdvYdLxYvylOdEl6pprk4R4PK0t3xG" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js" integrity="sha384-+L9cLYI1hRt62ye+ayjAos6Kfy1yA+EispSRAz0UyD8cBtNKkUYv3e0cf+w2GETR" crossorigin="anonymous"></script>
+  <script src="https://cdn.datatables.net/plug-ins/1.10.21/sorting/datetime-moment.js" integrity="sha384-tVTbd6QP6WhDQT0tXD3txbw/78zFP8zF45xVDbkGr7ULYmKMuHdZKekVQ2CbXAoC" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block breadcrumbs %}
+  <ol class="breadcrumb ribbon__content__login__breadcrumbs__breadcrumb">
+  {% block breadcrumb-items %}
+    {% breadcrumb 'Home' 'core:home' %}
+  {% endblock %}
+  </ol>
+{% endblock %}

@@ -1,0 +1,48 @@
+---
+services:
+  demo:
+    image: django_haystack_opensearch_demo:latest
+    container_name: django_haystack_opensearch_demo
+    restart: always
+    hostname: django_haystack_opensearch_demo
+    environment:
+      - DEBUG=True
+      - DEVELOPMENT=True
+    ports:
+      - "443:8443"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    volumes:
+      - .:/app
+      - ../django_haystack_opensearch:/ve/lib/python3.13/site-packages/django_haystack_opensearch
+      #- ../../django-theme-academy/academy_theme:/ve/lib/python3.11/site-packages/academy_theme
+      #- ../../django-wildewidgets/wildewidgets:/ve/lib/python3.11/site-packages/wildewidgets
+      - django_haystack_opensearch_demo_media:/media
+
+  mysql:
+    image: mysql:8.4
+    container_name: db
+    hostname: db
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+    cap_add:
+      # removes error messages like: mbind: Operation not permitted
+      - SYS_NICE
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./sql/docker/my.cnf:/etc/mysql/conf.d/dev.cnf
+      - ./sql/docker:/docker-entrypoint-initdb.d
+      - django_haystack_opensearch_demo_data:/var/lib/mysql
+    healthcheck:
+      test: mysql --user=root --password=root_password --execute "SHOW DATABASES;"
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  # The Docker volume in which the database's files are stored. Works in tandem
+  # with the "demo_data:/var/lib/mysql" volume mount defined above.
+  django_haystack_opensearch_demo_data:
+  django_haystack_opensearch_demo_media:
