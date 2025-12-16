@@ -386,8 +386,8 @@ logging.config.dictConfig(LOGGING)
 # ------------------------------------------------------------------------------
 HAYSTACK_CONNECTIONS: dict[str, Any] = {
     "default": {
-        "ENGINE": "django_haystack_opensearch.core.haystack.OpenSearchSearchEngine",
-        "URL": "https://search:9200/",
+        "ENGINE": "django_haystack_opensearch.haystack.OpenSearchSearchEngine",
+        "URL": "http://host.docker.internal:9200/",
         "INDEX_NAME": "django_haystack_opensearch_demo",
     },
 }

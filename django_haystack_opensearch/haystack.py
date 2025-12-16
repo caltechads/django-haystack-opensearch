@@ -259,7 +259,10 @@ class OpenSearchSearchBackend(BaseSearchBackend):
         if hasattr(value, "strftime"):
             if hasattr(value, "hour"):
                 return value.isoformat()
-        return f"{value.isoformat()}T00:00:00"
+            # date objects have strftime but not hour
+            if hasattr(value, "isoformat"):
+                return f"{value.isoformat()}T00:00:00"
+        return None
 
     def _from_python(self, value):
         """Convert more Python data types to OpenSearch-understandable JSON."""
@@ -1387,7 +1390,11 @@ class OpenSearchSearchBackend(BaseSearchBackend):
                 content_field_name = field_class.index_fieldname
 
             if field_mapping["type"] == "text":
-                if field_class.indexed is False or hasattr(field_class, "facet_for"):
+                if (
+                    field_class.indexed is False
+                    or hasattr(field_class, "facet_for")
+                    or getattr(field_class, "faceted", False)
+                ):
                     field_mapping["type"] = "keyword"
                     del field_mapping["analyzer"]
 

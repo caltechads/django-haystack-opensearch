@@ -76,7 +76,7 @@ test:
 		sleep 2; \
 	done
 	docker exec django_haystack_opensearch_demo /bin/bash -c "TESTING=True DJANGO_SETTINGS_MODULE=demo.settings pytest $(ARGS)"
-	make devdown
+	#make devdown
 
 docker-destroy: docker-clean docker-destroy-db
 
