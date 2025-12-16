@@ -8,17 +8,19 @@ services:
     environment:
       - DEBUG=True
       - DEVELOPMENT=True
+      - BOOTSTRAP_ALWAYS_MIGRATE=True
     ports:
       - "443:8443"
     depends_on:
       mysql:
+        condition: service_healthy
+      opensearch:
         condition: service_healthy
     volumes:
       - .:/app
       - ../django_haystack_opensearch:/ve/lib/python3.13/site-packages/django_haystack_opensearch
       #- ../../django-theme-academy/academy_theme:/ve/lib/python3.11/site-packages/academy_theme
       #- ../../django-wildewidgets/wildewidgets:/ve/lib/python3.11/site-packages/wildewidgets
-      - django_haystack_opensearch_demo_media:/media
 
   mysql:
     image: mysql:8.4
@@ -34,9 +36,31 @@ services:
     volumes:
       - ./sql/docker/my.cnf:/etc/mysql/conf.d/dev.cnf
       - ./sql/docker:/docker-entrypoint-initdb.d
-      - django_haystack_opensearch_demo_data:/var/lib/mysql
+      - djo_mysql_data:/var/lib/mysql
     healthcheck:
       test: mysql --user=root --password=root_password --execute "SHOW DATABASES;"
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  opensearch:
+    image: opensearchproject/opensearch:3
+    container_name: opensearch
+    hostname: opensearch
+    environment:
+      - discovery.type=single-node
+      - OPENSEARCH_INITIAL_ADMIN_PASSWORD=Admin_password123!
+      - DISABLE_SECURITY_PLUGIN=true
+      - bootstrap.memory_lock=true
+      - PA_DEST_FOLDER=/usr/share/opensearch
+    ports:
+      - "9200:9200"
+    volumes:
+      - djo_opensearch_data:/usr/share/opensearch/data
+      # Mount an empty directory to disable performance analyzer and avoid missing file error
+      - /dev/null:/usr/share/opensearch/config/opensearch-performance-analyzer
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9200"]
       interval: 5s
       timeout: 5s
       retries: 5
@@ -44,5 +68,5 @@ services:
 volumes:
   # The Docker volume in which the database's files are stored. Works in tandem
   # with the "demo_data:/var/lib/mysql" volume mount defined above.
-  django_haystack_opensearch_demo_data:
-  django_haystack_opensearch_demo_media:
+  djo_mysql_data:
+  djo_opensearch_data:

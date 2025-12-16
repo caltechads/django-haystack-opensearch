@@ -1,7 +1,7 @@
 import structlog
 from crequest.middleware import CrequestMiddleware
 
-logger = structlog.get_logger("sphinx_hosting_demo")
+logger = structlog.get_logger("django_haystack_opensearch_demo")
 
 
 def request_context_logging_processor(_, __, event_dict):

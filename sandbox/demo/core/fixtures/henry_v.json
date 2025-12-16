@@ -1,0 +1,2379 @@
+[
+  {
+    "model": "core.play",
+    "pk": 1,
+    "fields": {
+      "title": "Henry V"
+    }
+  },
+  {
+    "model": "core.act",
+    "pk": 2,
+    "fields": {
+      "play": 1,
+      "name": "Prologue",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.scene",
+    "pk": 3,
+    "fields": {
+      "act": 2,
+      "name": "Scene 1",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 4,
+    "fields": {
+      "name": "CHORUS"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 5,
+    "fields": {
+      "speaker": 4,
+      "scene": 3,
+      "text": "O, for a muse of fire that would ascend\nThe brightest heaven of invention!\nA kingdom for a stage, princes to act,\nAnd monarchs to behold the swelling scene!\nThen should the warlike Harry, like himself,\nAssume the port of Mars, and at his heels,\nLeashed in like hounds, should famine, sword, and\nfire\nCrouch for employment. But pardon, gentles all,\nThe flat unraised spirits that hath dared\nOn this unworthy scaffold to bring forth\nSo great an object. Can this cockpit hold\nThe vasty fields of France? Or may we cram\nWithin this wooden O the very casques\nThat did affright the air at Agincourt?\nO pardon, since a crooked figure may\nAttest in little place a million,\nAnd let us, ciphers to this great account,\nOn your imaginary forces work.\nSuppose within the girdle of these walls\nAre now confined two mighty monarchies,\nWhose high upreared and abutting fronts\nThe perilous narrow ocean parts asunder.\nPiece out our imperfections with your thoughts.\nInto a thousand parts divide one man,\nAnd make imaginary puissance.\nThink, when we talk of horses, that you see them\nPrinting their proud hoofs i' th' receiving earth,\nFor 'tis your thoughts that now must deck our\nkings,\nCarry them here and there, jumping o'er times,\nTurning th' accomplishment of many years\nInto an hourglass; for the which supply,\nAdmit me chorus to this history,\nWho, prologue-like, your humble patience pray\nGently to hear, kindly to judge our play.",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.act",
+    "pk": 6,
+    "fields": {
+      "play": 1,
+      "name": "Act 1",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.scene",
+    "pk": 7,
+    "fields": {
+      "act": 6,
+      "name": "Scene 1",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 8,
+    "fields": {
+      "name": "BISHOP OF CANTERBURY"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 9,
+    "fields": {
+      "speaker": 8,
+      "scene": 7,
+      "text": "My lord, I'll tell you that self bill is urged\nWhich in th' eleventh year of the last king's reign\nWas like, and had indeed against us passed\nBut that the scambling and unquiet time\nDid push it out of farther question.",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 10,
+    "fields": {
+      "name": "BISHOP OF ELY"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 11,
+    "fields": {
+      "speaker": 10,
+      "scene": 7,
+      "text": "But how, my lord, shall we resist it now?",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 12,
+    "fields": {
+      "speaker": 8,
+      "scene": 7,
+      "text": "It must be thought on. If it pass against us,\nWe lose the better half of our possession,\nFor all the temporal lands which men devout\nBy testament have given to the Church\nWould they strip from us, being valued thus:\n\"As much as would maintain, to the King's honor,\nFull fifteen earls and fifteen hundred knights,\nSix thousand and two hundred good esquires;\nAnd, to relief of lazars and weak age\nOf indigent faint souls past corporal toil,\nA hundred almshouses right well supplied;\nAnd to the coffers of the King besides,\nA thousand pounds by th' year.\" Thus runs the bill.",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 13,
+    "fields": {
+      "speaker": 10,
+      "scene": 7,
+      "text": "This would drink deep.\nBISHOP OF CANTERBURY  'Twould drink the cup and\nall.\nBISHOP OF ELY  But what prevention?",
+      "order": 3
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 14,
+    "fields": {
+      "speaker": 8,
+      "scene": 7,
+      "text": "The King is full of grace and fair regard.",
+      "order": 4
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 15,
+    "fields": {
+      "speaker": 10,
+      "scene": 7,
+      "text": "And a true lover of the holy Church.",
+      "order": 5
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 16,
+    "fields": {
+      "speaker": 8,
+      "scene": 7,
+      "text": "The courses of his youth promised it not.\nThe breath no sooner left his father's body\nBut that his wildness, mortified in him,\nSeemed to die too. Yea, at that very moment\nConsideration like an angel came\nAnd whipped th' offending Adam out of him,\nLeaving his body as a paradise\nT' envelop and contain celestial spirits.\nNever was such a sudden scholar made,\nNever came reformation in a flood\nWith such a heady currance scouring faults,\nNor never Hydra-headed willfulness\nSo soon did lose his seat, and all at once,\nAs in this king.\nBISHOP OF ELY  We are blessed in the change.",
+      "order": 6
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 17,
+    "fields": {
+      "speaker": 8,
+      "scene": 7,
+      "text": "Hear him but reason in divinity\nAnd, all-admiring, with an inward wish\nYou would desire the King were made a prelate;\nHear him debate of commonwealth affairs,\nYou would say it hath been all in all his study;\nList his discourse of war, and you shall hear\nA fearful battle rendered you in music;\nTurn him to any cause of policy,\nThe Gordian knot of it he will unloose\nFamiliar as his garter; that, when he speaks,\nThe air, a chartered libertine, is still,\nAnd the mute wonder lurketh in men's ears\nTo steal his sweet and honeyed sentences;\nSo that the art and practic part of life\nMust be the mistress to this theoric;\nWhich is a wonder how his Grace should glean it,\nSince his addiction was to courses vain,\nHis companies unlettered, rude, and shallow,\nHis hours filled up with riots, banquets, sports,\nAnd never noted in him any study,\nAny retirement, any sequestration\nFrom open haunts and popularity.",
+      "order": 7
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 18,
+    "fields": {
+      "speaker": 10,
+      "scene": 7,
+      "text": "The strawberry grows underneath the nettle,\nAnd wholesome berries thrive and ripen best\nNeighbored by fruit of baser quality;\nAnd so the Prince obscured his contemplation\nUnder the veil of wildness, which, no doubt,\nGrew like the summer grass, fastest by night,\nUnseen yet crescive in his faculty.",
+      "order": 8
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 19,
+    "fields": {
+      "speaker": 8,
+      "scene": 7,
+      "text": "It must be so, for miracles are ceased,\nAnd therefore we must needs admit the means\nHow things are perfected.\nBISHOP OF ELY  But, my good lord,\nHow now for mitigation of this bill\nUrged by the Commons? Doth his Majesty\nIncline to it or no?\nBISHOP OF CANTERBURY  He seems indifferent,\nOr rather swaying more upon our part\nThan cherishing th' exhibitors against us;\nFor I have made an offer to his Majesty--\nUpon our spiritual convocation\nAnd in regard of causes now in hand,\nWhich I have opened to his Grace at large,\nAs touching France--to give a greater sum\nThan ever at one time the clergy yet\nDid to his predecessors part withal.",
+      "order": 9
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 20,
+    "fields": {
+      "speaker": 10,
+      "scene": 7,
+      "text": "How did this offer seem received, my lord?",
+      "order": 10
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 21,
+    "fields": {
+      "speaker": 8,
+      "scene": 7,
+      "text": "With good acceptance of his Majesty--\nSave that there was not time enough to hear,\nAs I perceived his Grace would fain have done,\nThe severals and unhidden passages\nOf his true titles to some certain dukedoms,\nAnd generally to the crown and seat of France,\nDerived from Edward, his great-grandfather.",
+      "order": 11
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 22,
+    "fields": {
+      "speaker": 10,
+      "scene": 7,
+      "text": "What was th' impediment that broke this off?",
+      "order": 12
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 23,
+    "fields": {
+      "speaker": 8,
+      "scene": 7,
+      "text": "The French ambassador upon that instant\nCraved audience. And the hour, I think, is come\nTo give him hearing. Is it four o'clock?\nBISHOP OF ELY  It is.",
+      "order": 13
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 24,
+    "fields": {
+      "speaker": 8,
+      "scene": 7,
+      "text": "Then go we in to know his embassy,\nWhich I could with a ready guess declare\nBefore the Frenchman speak a word of it.",
+      "order": 14
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 25,
+    "fields": {
+      "speaker": 10,
+      "scene": 7,
+      "text": "I'll wait upon you, and I long to hear it.",
+      "order": 15
+    }
+  },
+  {
+    "model": "core.scene",
+    "pk": 26,
+    "fields": {
+      "act": 6,
+      "name": "Scene 2",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 27,
+    "fields": {
+      "name": "KING HENRY"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 28,
+    "fields": {
+      "speaker": 27,
+      "scene": 26,
+      "text": "Where is my gracious Lord of Canterbury?",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 29,
+    "fields": {
+      "name": "EXETER"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 30,
+    "fields": {
+      "speaker": 29,
+      "scene": 26,
+      "text": "Not here in presence.\nKING HENRY  Send for him, good uncle.",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 31,
+    "fields": {
+      "name": "WESTMORELAND"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 32,
+    "fields": {
+      "speaker": 31,
+      "scene": 26,
+      "text": "Shall we call in th' Ambassador, my liege?",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 33,
+    "fields": {
+      "speaker": 27,
+      "scene": 26,
+      "text": "Not yet, my cousin. We would be resolved,\nBefore we hear him, of some things of weight\nThat task our thoughts concerning us and France.",
+      "order": 3
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 34,
+    "fields": {
+      "speaker": 8,
+      "scene": 26,
+      "text": "God and his angels guard your sacred throne\nAnd make you long become it.\nKING HENRY  Sure we thank you.\nMy learned lord, we pray you to proceed\nAnd justly and religiously unfold\nWhy the law Salic that they have in France\nOr should or should not bar us in our claim.\nAnd God forbid, my dear and faithful lord,\nThat you should fashion, wrest, or bow your\nreading,\nOr nicely charge your understanding soul\nWith opening titles miscreate, whose right\nSuits not in native colors with the truth;\nFor God doth know how many now in health\nShall drop their blood in approbation\nOf what your reverence shall incite us to.\nTherefore take heed how you impawn our person,\nHow you awake our sleeping sword of war.\nWe charge you in the name of God, take heed,\nFor never two such kingdoms did contend\nWithout much fall of blood, whose guiltless drops\nAre every one a woe, a sore complaint\n'Gainst him whose wrongs gives edge unto the\nswords\nThat makes such waste in brief mortality.\nUnder this conjuration, speak, my lord,\nFor we will hear, note, and believe in heart\nThat what you speak is in your conscience washed\nAs pure as sin with baptism.",
+      "order": 4
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 35,
+    "fields": {
+      "speaker": 8,
+      "scene": 26,
+      "text": "Then hear me, gracious sovereign, and you peers\nThat owe yourselves, your lives, and services\nTo this imperial throne. There is no bar\nTo make against your Highness' claim to France\nBut this, which they produce from Pharamond:\n\"In terram Salicam mulieres ne succedant\n(No woman shall succeed in Salic land),\nWhich Salic land the French unjustly gloze\nTo be the realm of France, and Pharamond\nThe founder of this law and female bar.\nYet their own authors faithfully affirm\nThat the land Salic is in Germany,\nBetween the floods of Sala and of Elbe,\nWhere Charles the Great, having subdued the\nSaxons,\nThere left behind and settled certain French,\nWho, holding in disdain the German women\nFor some dishonest manners of their life,\nEstablished then this law: to wit, no female\nShould be inheritrix in Salic land,\nWhich \"Salic,\" as I said, 'twixt Elbe and Sala\nIs at this day in Germany called Meissen.\nThen doth it well appear the Salic law\nWas not devised for the realm of France,\nNor did the French possess the Salic land\nUntil four hundred one and twenty years\nAfter defunction of King Pharamond,\nIdly supposed the founder of this law,\nWho died within the year of our redemption\nFour hundred twenty-six; and Charles the Great\nSubdued the Saxons and did seat the French\nBeyond the river Sala in the year\nEight hundred five. Besides, their writers say,\nKing Pepin, which deposed Childeric,\nDid, as heir general, being descended\nOf Blithild, which was daughter to King Clothair,\nMake claim and title to the crown of France.\nHugh Capet also, who usurped the crown\nOf Charles the Duke of Lorraine, sole heir male\nOf the true line and stock of Charles the Great,\nTo find his title with some shows of truth,\nThough in pure truth it was corrupt and naught,\nConveyed himself as th' heir to th' Lady Lingare,\nDaughter to Charlemagne, who was the son\nTo Lewis the Emperor, and Lewis the son\nOf Charles the Great. Also King Lewis the Tenth,\nWho was sole heir to the usurper Capet,\nCould not keep quiet in his conscience,\nWearing the crown of France, till satisfied\nThat fair Queen Isabel, his grandmother,\nWas lineal of the Lady Ermengare,\nDaughter to Charles the foresaid Duke of Lorraine:\nBy the which marriage the line of Charles the Great\nWas reunited to the crown of France.\nSo that, as clear as is the summer's sun,\nKing Pepin's title and Hugh Capet's claim,\nKing Lewis his satisfaction, all appear\nTo hold in right and title of the female.\nSo do the kings of France unto this day,\nHowbeit they would hold up this Salic law\nTo bar your Highness claiming from the female,\nAnd rather choose to hide them in a net\nThan amply to imbar their crooked titles\nUsurped from you and your progenitors.",
+      "order": 5
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 36,
+    "fields": {
+      "speaker": 27,
+      "scene": 26,
+      "text": "May I with right and conscience make this claim?",
+      "order": 6
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 37,
+    "fields": {
+      "speaker": 8,
+      "scene": 26,
+      "text": "The sin upon my head, dread sovereign,\nFor in the Book of Numbers is it writ:\n\"When the man dies, let the inheritance\nDescend unto the daughter.\" Gracious lord,\nStand for your own, unwind your bloody flag,\nLook back into your mighty ancestors.\nGo, my dread lord, to your great-grandsire's tomb,\nFrom whom you claim; invoke his warlike spirit\nAnd your great-uncle's, Edward the Black Prince,\nWho on the French ground played a tragedy,\nMaking defeat on the full power of France\nWhiles his most mighty father on a hill\nStood smiling to behold his lion's whelp\nForage in blood of French nobility.\nO noble English, that could entertain\nWith half their forces the full pride of France\nAnd let another half stand laughing by,\nAll out of work and cold for action!",
+      "order": 7
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 38,
+    "fields": {
+      "speaker": 10,
+      "scene": 26,
+      "text": "Awake remembrance of these valiant dead\nAnd with your puissant arm renew their feats.\nYou are their heir, you sit upon their throne,\nThe blood and courage that renowned them\nRuns in your veins; and my thrice-puissant liege\nIs in the very May-morn of his youth,\nRipe for exploits and mighty enterprises.",
+      "order": 8
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 39,
+    "fields": {
+      "speaker": 29,
+      "scene": 26,
+      "text": "Your brother kings and monarchs of the Earth\nDo all expect that you should rouse yourself\nAs did the former lions of your blood.",
+      "order": 9
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 40,
+    "fields": {
+      "speaker": 31,
+      "scene": 26,
+      "text": "They know your Grace hath cause and means and\nmight;\nSo hath your Highness. Never king of England\nHad nobles richer, and more loyal subjects,\nWhose hearts have left their bodies here in England\nAnd lie pavilioned in the fields of France.",
+      "order": 10
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 41,
+    "fields": {
+      "speaker": 8,
+      "scene": 26,
+      "text": "O, let their bodies follow, my dear liege,\nWith blood and sword and fire to win your right,\nIn aid whereof we of the spiritualty\nWill raise your Highness such a mighty sum\nAs never did the clergy at one time\nBring in to any of your ancestors.",
+      "order": 11
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 42,
+    "fields": {
+      "speaker": 27,
+      "scene": 26,
+      "text": "We must not only arm t' invade the French,\nBut lay down our proportions to defend\nAgainst the Scot, who will make road upon us\nWith all advantages.",
+      "order": 12
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 43,
+    "fields": {
+      "speaker": 8,
+      "scene": 26,
+      "text": "They of those marches, gracious sovereign,\nShall be a wall sufficient to defend\nOur inland from the pilfering borderers.",
+      "order": 13
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 44,
+    "fields": {
+      "speaker": 27,
+      "scene": 26,
+      "text": "We do not mean the coursing snatchers only,\nBut fear the main intendment of the Scot,\nWho hath been still a giddy neighbor to us.\nFor you shall read that my great-grandfather\nNever went with his forces into France\nBut that the Scot on his unfurnished kingdom\nCame pouring like the tide into a breach\nWith ample and brim fullness of his force,\nGalling the gleaned land with hot assays,\nGirding with grievous siege castles and towns,\nThat England, being empty of defense,\nHath shook and trembled at th' ill neighborhood.",
+      "order": 14
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 45,
+    "fields": {
+      "speaker": 8,
+      "scene": 26,
+      "text": "She hath been then more feared than harmed, my\nliege,\nFor hear her but exampled by herself:\nWhen all her chivalry hath been in France\nAnd she a mourning widow of her nobles,\nShe hath herself not only well defended\nBut taken and impounded as a stray\nThe King of Scots, whom she did send to France\nTo fill King Edward's fame with prisoner kings\nAnd make her chronicle as rich with praise\nAs is the ooze and bottom of the sea\nWith sunken wrack and sumless treasuries.",
+      "order": 15
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 46,
+    "fields": {
+      "speaker": 10,
+      "scene": 26,
+      "text": "But there's a saying very old and true:\n\t\"If that you will France win,\n\tThen with Scotland first begin.\"\nFor once the eagle England being in prey,\nTo her unguarded nest the weasel Scot\nComes sneaking and so sucks her princely eggs,\nPlaying the mouse in absence of the cat,\nTo 'tame and havoc more than she can eat.",
+      "order": 16
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 47,
+    "fields": {
+      "speaker": 29,
+      "scene": 26,
+      "text": "It follows, then, the cat must stay at home.\nYet that is but a crushed necessity,\nSince we have locks to safeguard necessaries\nAnd pretty traps to catch the petty thieves.\nWhile that the armed hand doth fight abroad,\nTh' advised head defends itself at home.\nFor government, though high and low and lower,\nPut into parts, doth keep in one consent,\nCongreeing in a full and natural close,\nLike music.\nBISHOP OF CANTERBURY  Therefore doth heaven divide\nThe state of man in divers functions,\nSetting endeavor in continual motion,\nTo which is fixed as an aim or butt\nObedience; for so work the honeybees,\nCreatures that by a rule in nature teach\nThe act of order to a peopled kingdom.\nThey have a king and officers of sorts,\nWhere some like magistrates correct at home,\nOthers like merchants venture trade abroad,\nOthers like soldiers armed in their stings\nMake boot upon the summer's velvet buds,\nWhich pillage they with merry march bring home\nTo the tent royal of their emperor,\nWho, busied in his majesty, surveys\nThe singing masons building roofs of gold,\nThe civil citizens kneading up the honey,\nThe poor mechanic porters crowding in\nTheir heavy burdens at his narrow gate,\nThe sad-eyed justice with his surly hum\nDelivering o'er to executors pale\nThe lazy yawning drone. I this infer:\nThat many things, having full reference\nTo one consent, may work contrariously,\nAs many arrows loosed several ways\nCome to one mark, as many ways meet in one town,\nAs many fresh streams meet in one salt sea,\nAs many lines close in the dial's center,\nSo may a thousand actions, once afoot,\nEnd in one purpose and be all well borne\nWithout defeat. Therefore to France, my liege!\nDivide your happy England into four,\nWhereof take you one quarter into France,\nAnd you withal shall make all Gallia shake.\nIf we, with thrice such powers left at home,\nCannot defend our own doors from the dog,\nLet us be worried, and our nation lose\nThe name of hardiness and policy.",
+      "order": 17
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 48,
+    "fields": {
+      "speaker": 27,
+      "scene": 26,
+      "text": "Call in the messengers sent from the Dauphin.\nNow are we well resolved, and by God's help\nAnd yours, the noble sinews of our power,\nFrance being ours, we'll bend it to our awe\nOr break it all to pieces. Or there we'll sit,\nRuling in large and ample empery\nO'er France and all her almost kingly dukedoms,\nOr lay these bones in an unworthy urn,\nTombless, with no remembrance over them.\nEither our history shall with full mouth\nSpeak freely of our acts, or else our grave,\nLike Turkish mute, shall have a tongueless mouth,\nNot worshiped with a waxen epitaph.\n[Enter Ambassadors of France, with Attendants.\n]\nNow are we well prepared to know the pleasure\nOf our fair cousin Dauphin, for we hear\nYour greeting is from him, not from the King.",
+      "order": 18
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 49,
+    "fields": {
+      "name": "AMBASSADOR"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 50,
+    "fields": {
+      "speaker": 49,
+      "scene": 26,
+      "text": "May 't please your Majesty to give us leave\nFreely to render what we have in charge,\nOr shall we sparingly show you far off\nThe Dauphin's meaning and our embassy?",
+      "order": 19
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 51,
+    "fields": {
+      "speaker": 27,
+      "scene": 26,
+      "text": "We are no tyrant, but a Christian king,\nUnto whose grace our passion is as subject\nAs is our wretches fettered in our prisons.\nTherefore with frank and with uncurbed plainness\nTell us the Dauphin's mind.\nAMBASSADOR  Thus, then, in few:\nYour Highness, lately sending into France,\nDid claim some certain dukedoms in the right\nOf your great predecessor, King Edward the Third;\nIn answer of which claim, the Prince our master\nSays that you savor too much of your youth\nAnd bids you be advised there's naught in France\nThat can be with a nimble galliard won;\nYou cannot revel into dukedoms there.\nHe therefore sends you, meeter for your spirit,\nThis tun of treasure and, in lieu of this,\nDesires you let the dukedoms that you claim\nHear no more of you. This the Dauphin speaks.",
+      "order": 20
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 52,
+    "fields": {
+      "speaker": 27,
+      "scene": 26,
+      "text": "What treasure, uncle?\nEXETER  Tennis balls,\nmy liege.",
+      "order": 21
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 53,
+    "fields": {
+      "speaker": 27,
+      "scene": 26,
+      "text": "We are glad the Dauphin is so pleasant with us.\nHis present and your pains we thank you for.\nWhen we have matched our rackets to these balls,\nWe will in France, by God's grace, play a set\nShall strike his father's crown into the hazard.\nTell him he hath made a match with such a\nwrangler\nThat all the courts of France will be disturbed\nWith chases. And we understand him well,\nHow he comes o'er us with our wilder days,\nNot measuring what use we made of them.\nWe never valued this poor seat of England,\nAnd therefore, living hence, did give ourself\nTo barbarous license, as 'tis ever common\nThat men are merriest when they are from home.\nBut tell the Dauphin I will keep my state,\nBe like a king, and show my sail of greatness\nWhen I do rouse me in my throne of France,\nFor that I have laid by my majesty\nAnd plodded like a man for working days;\nBut I will rise there with so full a glory\nThat I will dazzle all the eyes of France,\nYea, strike the Dauphin blind to look on us.\nAnd tell the pleasant prince this mock of his\nHath turned his balls to gun-stones, and his soul\nShall stand sore charged for the wasteful vengeance\nThat shall fly with them; for many a thousand\nwidows\nShall this his mock mock out of their dear husbands,\nMock mothers from their sons, mock castles down;\nAnd some are yet ungotten and unborn\nThat shall have cause to curse the Dauphin's scorn.\nBut this lies all within the will of God,\nTo whom I do appeal, and in whose name\nTell you the Dauphin I am coming on,\nTo venge me as I may and to put forth\nMy rightful hand in a well-hallowed cause.\nSo get you hence in peace. And tell the Dauphin\nHis jest will savor but of shallow wit\nWhen thousands weep more than did laugh at it.--\nConvey them with safe conduct.--Fare you well.\nEXETER  This was a merry message.",
+      "order": 22
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 54,
+    "fields": {
+      "speaker": 27,
+      "scene": 26,
+      "text": "We hope to make the sender blush at it.\nTherefore, my lords, omit no happy hour\nThat may give furth'rance to our expedition;\nFor we have now no thought in us but France,\nSave those to God, that run before our business.\nTherefore let our proportions for these wars\nBe soon collected, and all things thought upon\nThat may with reasonable swiftness add\nMore feathers to our wings. For, God before,\nWe'll chide this Dauphin at his father's door.\nTherefore let every man now task his thought,\nThat this fair action may on foot be brought.",
+      "order": 23
+    }
+  },
+  {
+    "model": "core.act",
+    "pk": 55,
+    "fields": {
+      "play": 1,
+      "name": "Act 2",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.scene",
+    "pk": 56,
+    "fields": {
+      "act": 55,
+      "name": "Scene 1",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 57,
+    "fields": {
+      "speaker": 4,
+      "scene": 56,
+      "text": "Now all the youth of England are on fire,\nAnd silken dalliance in the wardrobe lies;\nNow thrive the armorers, and honor's thought\nReigns solely in the breast of every man.\nThey sell the pasture now to buy the horse,\nFollowing the mirror of all Christian kings\nWith winged heels, as English Mercurys.\nFor now sits Expectation in the air\nAnd hides a sword, from hilts unto the point,\nWith crowns imperial, crowns, and coronets\nPromised to Harry and his followers.\nThe French, advised by good intelligence\nOf this most dreadful preparation,\nShake in their fear, and with pale policy\nSeek to divert the English purposes.\nO England, model to thy inward greatness,\nLike little body with a mighty heart,\nWhat might'st thou do, that honor would thee do,\nWere all thy children kind and natural!\nBut see, thy fault France hath in thee found out,\nA nest of hollow bosoms, which he fills\nWith treacherous crowns, and three corrupted men--\nOne, Richard, Earl of Cambridge, and the second,\nHenry, Lord Scroop of Masham, and the third,\nSir Thomas Grey, knight, of Northumberland--\nHave, for the gilt of France (O guilt indeed!),\nConfirmed conspiracy with fearful France,\nAnd by their hands this grace of kings must die,\nIf hell and treason hold their promises,\nEre he take ship for France, and in Southampton.\nLinger your patience on, and we'll digest\nTh' abuse of distance, force a play.\nThe sum is paid, the traitors are agreed,\nThe King is set from London, and the scene\nIs now transported, gentles, to Southampton.\nThere is the playhouse now, there must you sit,\nAnd thence to France shall we convey you safe\nAnd bring you back, charming the narrow seas\nTo give you gentle pass; for, if we may,\nWe'll not offend one stomach with our play.\nBut, till the King come forth, and not till then,\nUnto Southampton do we shift our scene.",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 58,
+    "fields": {
+      "name": "PISTOL"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 59,
+    "fields": {
+      "speaker": 58,
+      "scene": 56,
+      "text": "O braggart vile and damned furious wight,\nThe grave doth gape, and doting death is near.\nTherefore exhale.\nBARDOLPH  Hear me, hear me what I say: he that strikes\nthe first stroke, I'll run him up to the hilts, as I am a\nsoldier.\t[He draws.]\nPISTOL  An oath of mickle might, and fury shall abate.\n[Pistol and Nym and then Bardolph\nsheathe their swords.]\nGive me thy fist, thy forefoot to me give. Thy spirits\nare most tall.\nNYM, [to Pistol]  I will cut thy throat one time or other\nin fair terms, that is the humor of it.\nPISTOL  Couple a gorge, that is the word. I defy thee\nagain. O hound of Crete, think'st thou my spouse to\nget? No, to the spital go, and from the powd'ring tub\nof infamy fetch forth the lazar kite of Cressid's kind,\nDoll Tearsheet she by name, and her espouse. I\nhave, and I will hold, the quondam Quickly for the\nonly she: and pauca, there's enough too! Go to.\nBOY  Mine host Pistol, you must come to my master,\nand your hostess. He is very sick and would to\nbed.--Good Bardolph, put thy face between his\nsheets, and do the office of a warming-pan. Faith,\nhe's very ill.\nBARDOLPH  Away, you rogue!\nHOSTESS  By my troth, he'll yield the crow a pudding\none of these days. The King has killed his heart.\nGood husband, come home presently.\nBARDOLPH  Come, shall I make you two friends? We\nmust to France together. Why the devil should we\nkeep knives to cut one another's throats?",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 60,
+    "fields": {
+      "speaker": 58,
+      "scene": 56,
+      "text": "Let floods o'erswell and fiends for food howl on!\nNYM  You'll pay me the eight shillings I won of you at\nbetting?\nPISTOL  Base is the slave that pays.\nNYM  That now I will have, that's the humor of it.\nPISTOL  As manhood shall compound. Push home.\nBARDOLPH, [drawing his sword]  By this sword, he that\nmakes the first thrust, I'll kill him. By this sword, I\nwill.\nPISTOL, [sheathing his sword]  \"Sword\" is an oath, and\noaths must have their course.\nBARDOLPH  Corporal Nym, an thou wilt be friends, be\nfriends; an thou wilt not, why then be enemies with\nme too. Prithee, put up.\nPISTOL, [to Nym]  A noble shalt thou have, and present\npay, and liquor likewise will I give to thee, and\nfriendship shall combine, and brotherhood. I'll live\nby Nym, and Nym shall live by me. Is not this just?\nFor I shall sutler be unto the camp, and profits will\naccrue. Give me thy hand.\nNYM  I shall have my noble?\nPISTOL  In cash, most justly paid.\nNYM  Well, then, that's the humor of 't.\nHOSTESS  As ever you come of women, come in quickly\nto Sir John. Ah, poor heart, he is so shaked of a\nburning quotidian-tertian that it is most lamentable\nto behold. Sweet men, come to him.\nNYM  The King hath run bad humors on the knight,\nthat's the even of it.\nPISTOL  Nym, thou hast spoke the right. His heart is\nfracted and corroborate.\nNYM  The King is a good king, but it must be as it may;\nhe passes some humors and careers.\nPISTOL  Let us condole the knight, for, lambkins, we\nwill live.",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.scene",
+    "pk": 61,
+    "fields": {
+      "act": 55,
+      "name": "Scene 2",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 62,
+    "fields": {
+      "name": "BEDFORD"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 63,
+    "fields": {
+      "speaker": 62,
+      "scene": 61,
+      "text": "'Fore God, his Grace is bold to trust these traitors.",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 64,
+    "fields": {
+      "speaker": 29,
+      "scene": 61,
+      "text": "They shall be apprehended by and by.",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 65,
+    "fields": {
+      "speaker": 31,
+      "scene": 61,
+      "text": "How smooth and even they do bear themselves,\nAs if allegiance in their bosoms sat\nCrowned with faith and constant loyalty.",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 66,
+    "fields": {
+      "speaker": 62,
+      "scene": 61,
+      "text": "The King hath note of all that they intend,\nBy interception which they dream not of.",
+      "order": 3
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 67,
+    "fields": {
+      "speaker": 29,
+      "scene": 61,
+      "text": "Nay, but the man that was his bedfellow,\nWhom he hath dulled and cloyed with gracious\nfavors--\nThat he should, for a foreign purse, so sell\nHis sovereign's life to death and treachery!\n[Sound Trumpets. Enter the King of England,\nScroop, Cambridge, and Grey, with Attendants.]",
+      "order": 4
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 68,
+    "fields": {
+      "speaker": 27,
+      "scene": 61,
+      "text": "Now sits the wind fair, and we will aboard.--\nMy Lord of Cambridge, and my kind Lord of\nMasham,\nAnd you, my gentle knight, give me your thoughts.\nThink you not that the powers we bear with us\nWill cut their passage through the force of France,\nDoing the execution and the act\nFor which we have in head assembled them?",
+      "order": 5
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 69,
+    "fields": {
+      "name": "SCROOP"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 70,
+    "fields": {
+      "speaker": 69,
+      "scene": 61,
+      "text": "No doubt, my liege, if each man do his best.",
+      "order": 6
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 71,
+    "fields": {
+      "speaker": 27,
+      "scene": 61,
+      "text": "I doubt not that, since we are well persuaded\nWe carry not a heart with us from hence\nThat grows not in a fair consent with ours,\nNor leave not one behind that doth not wish\nSuccess and conquest to attend on us.",
+      "order": 7
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 72,
+    "fields": {
+      "name": "CAMBRIDGE"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 73,
+    "fields": {
+      "speaker": 72,
+      "scene": 61,
+      "text": "Never was monarch better feared and loved\nThan is your Majesty. There's not, I think, a subject\nThat sits in heart-grief and uneasiness\nUnder the sweet shade of your government.",
+      "order": 8
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 74,
+    "fields": {
+      "name": "GREY"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 75,
+    "fields": {
+      "speaker": 74,
+      "scene": 61,
+      "text": "True. Those that were your father's enemies\nHave steeped their galls in honey, and do serve you\nWith hearts create of duty and of zeal.",
+      "order": 9
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 76,
+    "fields": {
+      "speaker": 27,
+      "scene": 61,
+      "text": "We therefore have great cause of thankfulness,\nAnd shall forget the office of our hand\nSooner than quittance of desert and merit\nAccording to the weight and worthiness.",
+      "order": 10
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 77,
+    "fields": {
+      "speaker": 69,
+      "scene": 61,
+      "text": "So service shall with steeled sinews toil,\nAnd labor shall refresh itself with hope\nTo do your Grace incessant services.",
+      "order": 11
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 78,
+    "fields": {
+      "speaker": 27,
+      "scene": 61,
+      "text": "We judge no less.--Uncle of Exeter,\nEnlarge the man committed yesterday\nThat railed against our person. We consider\nIt was excess of wine that set him on,\nAnd on his more advice we pardon him.",
+      "order": 12
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 79,
+    "fields": {
+      "speaker": 69,
+      "scene": 61,
+      "text": "That's mercy, but too much security.\nLet him be punished, sovereign, lest example\nBreed, by his sufferance, more of such a kind.\nKING HENRY  O, let us yet be merciful.",
+      "order": 13
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 80,
+    "fields": {
+      "speaker": 72,
+      "scene": 61,
+      "text": "So may your Highness, and yet punish too.",
+      "order": 14
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 81,
+    "fields": {
+      "speaker": 74,
+      "scene": 61,
+      "text": "Sir, you show great mercy if you give him life\nAfter the taste of much correction.",
+      "order": 15
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 82,
+    "fields": {
+      "speaker": 27,
+      "scene": 61,
+      "text": "Alas, your too much love and care of me\nAre heavy orisons 'gainst this poor wretch.\nIf little faults proceeding on distemper\nShall not be winked at, how shall we stretch our eye\nWhen capital crimes, chewed, swallowed, and\ndigested,\nAppear before us? We'll yet enlarge that man,\nThough Cambridge, Scroop, and Grey, in their dear\ncare\nAnd tender preservation of our person,\nWould have him punished. And now to our French\ncauses.\nWho are the late commissioners?\nCAMBRIDGE  I one, my lord.\nYour Highness bade me ask for it today.\nSCROOP  So did you me, my liege.\nGREY  And I, my royal sovereign.\nKING HENRY, [giving them papers]\nThen Richard, Earl of Cambridge, there is yours--\nThere yours, Lord Scroop of Masham.--And, sir\nknight,\nGrey of Northumberland, this same is yours.--\nRead them, and know I know your worthiness.--\nMy Lord of Westmoreland and uncle Exeter,\nWe will aboard tonight.--Why how now, gentlemen?\nWhat see you in those papers, that you lose\nSo much complexion?--Look you, how they change.\nTheir cheeks are paper.--Why, what read you there\nThat have so cowarded and chased your blood\nOut of appearance?\nCAMBRIDGE  I do confess my fault,\nAnd do submit me to your Highness' mercy.\nGREY/SCROOP  To which we all appeal.",
+      "order": 16
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 83,
+    "fields": {
+      "speaker": 27,
+      "scene": 61,
+      "text": "The mercy that was quick in us but late\nBy your own counsel is suppressed and killed.\nYou must not dare, for shame, to talk of mercy,\nFor your own reasons turn into your bosoms\nAs dogs upon their masters, worrying you.--\nSee you, my princes and my noble peers,\nThese English monsters. My Lord of Cambridge\nhere,\nYou know how apt our love was to accord\nTo furnish him with all appurtenants\nBelonging to his honor, and this man\nHath, for a few light crowns, lightly conspired\nAnd sworn unto the practices of France\nTo kill us here in Hampton; to the which\nThis knight, no less for bounty bound to us\nThan Cambridge is, hath likewise sworn.--But O,\nWhat shall I say to thee, Lord Scroop, thou cruel,\nIngrateful, savage, and inhuman creature?\nThou that didst bear the key of all my counsels,\nThat knew'st the very bottom of my soul,\nThat almost mightst have coined me into gold,\nWouldst thou have practiced on me for thy use--\nMay it be possible that foreign hire\nCould out of thee extract one spark of evil\nThat might annoy my finger? 'Tis so strange\nThat, though the truth of it stands off as gross\nAs black and white, my eye will scarcely see it.\nTreason and murder ever kept together,\nAs two yoke-devils sworn to either's purpose,\nWorking so grossly in a natural cause\nThat admiration did not whoop at them.\nBut thou, 'gainst all proportion, didst bring in\nWonder to wait on treason and on murder,\nAnd whatsoever cunning fiend it was\nThat wrought upon thee so preposterously\nHath got the voice in hell for excellence.\nAll other devils that suggest by treasons\nDo botch and bungle up damnation\nWith patches, colors, and with forms being fetched\nFrom glist'ring semblances of piety;\nBut he that tempered thee bade thee stand up,\nGave thee no instance why thou shouldst do treason,\nUnless to dub thee with the name of traitor.\nIf that same demon that hath gulled thee thus\nShould with his lion gait walk the whole world,\nHe might return to vasty Tartar back\nAnd tell the legions \"I can never win\nA soul so easy as that Englishman's.\"\nO, how hast thou with jealousy infected\nThe sweetness of affiance! Show men dutiful?\nWhy, so didst thou. Seem they grave and learned?\nWhy, so didst thou. Come they of noble family?\nWhy, so didst thou. Seem they religious?\nWhy, so didst thou. Or are they spare in diet,\nFree from gross passion or of mirth or anger,\nConstant in spirit, not swerving with the blood,\nGarnished and decked in modest complement,\nNot working with the eye without the ear,\nAnd but in purged judgment trusting neither?\nSuch and so finely bolted didst thou seem.\nAnd thus thy fall hath left a kind of blot\nTo mark the full-fraught man and best endued\nWith some suspicion. I will weep for thee,\nFor this revolt of thine methinks is like\nAnother fall of man.--Their faults are open.\nArrest them to the answer of the law,\nAnd God acquit them of their practices.\nEXETER  I arrest thee of high treason, by the name of\nRichard, Earl of Cambridge.--\nI arrest thee of high treason, by the name of\nHenry, Lord Scroop of Masham.--\nI arrest thee of high treason, by the name of\nThomas Grey, knight, of Northumberland.",
+      "order": 17
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 84,
+    "fields": {
+      "speaker": 69,
+      "scene": 61,
+      "text": "Our purposes God justly hath discovered,\nAnd I repent my fault more than my death,\nWhich I beseech your Highness to forgive,\nAlthough my body pay the price of it.",
+      "order": 18
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 85,
+    "fields": {
+      "speaker": 72,
+      "scene": 61,
+      "text": "For me, the gold of France did not seduce,\nAlthough I did admit it as a motive\nThe sooner to effect what I intended;\nBut God be thanked for prevention,\nWhich I in sufferance heartily will rejoice,\nBeseeching God and you to pardon me.",
+      "order": 19
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 86,
+    "fields": {
+      "speaker": 74,
+      "scene": 61,
+      "text": "Never did faithful subject more rejoice\nAt the discovery of most dangerous treason\nThan I do at this hour joy o'er myself,\nPrevented from a damned enterprise.\nMy fault, but not my body, pardon, sovereign.",
+      "order": 20
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 87,
+    "fields": {
+      "speaker": 27,
+      "scene": 61,
+      "text": "God quit you in His mercy. Hear your sentence:\nYou have conspired against our royal person,\nJoined with an enemy proclaimed, and from his\ncoffers\nReceived the golden earnest of our death,\nWherein you would have sold your king to\nslaughter,\nHis princes and his peers to servitude,\nHis subjects to oppression and contempt,\nAnd his whole kingdom into desolation.\nTouching our person, seek we no revenge,\nBut we our kingdom's safety must so tender,\nWhose ruin you have sought, that to her laws\nWe do deliver you. Get you therefore hence,\nPoor miserable wretches, to your death,\nThe taste whereof God of His mercy give\nYou patience to endure, and true repentance\nOf all your dear offenses.--Bear them hence.\nNow, lords, for France, the enterprise whereof\nShall be to you as us, like glorious.\nWe doubt not of a fair and lucky war,\nSince God so graciously hath brought to light\nThis dangerous treason lurking in our way\nTo hinder our beginnings. We doubt not now\nBut every rub is smoothed on our way.\nThen forth, dear countrymen. Let us deliver\nOur puissance into the hand of God,\nPutting it straight in expedition.\nCheerly to sea. The signs of war advance.\nNo king of England if not king of France.",
+      "order": 21
+    }
+  },
+  {
+    "model": "core.scene",
+    "pk": 88,
+    "fields": {
+      "act": 55,
+      "name": "Scene 3",
+      "order": 3
+    }
+  },
+  {
+    "model": "core.scene",
+    "pk": 89,
+    "fields": {
+      "act": 55,
+      "name": "Scene 4",
+      "order": 4
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 90,
+    "fields": {
+      "name": "KING OF FRANCE"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 91,
+    "fields": {
+      "speaker": 90,
+      "scene": 89,
+      "text": "Thus comes the English with full power upon us,\nAnd more than carefully it us concerns\nTo answer royally in our defenses.\nTherefore the Dukes of Berri and of Brittany,\nOf Brabant and of Orleans, shall make forth,\nAnd you, Prince Dauphin, with all swift dispatch,\nTo line and new-repair our towns of war\nWith men of courage and with means defendant.\nFor England his approaches makes as fierce\nAs waters to the sucking of a gulf.\nIt fits us then to be as provident\nAs fear may teach us out of late examples\nLeft by the fatal and neglected English\nUpon our fields.\nDAUPHIN  My most redoubted father,\nIt is most meet we arm us 'gainst the foe,\nFor peace itself should not so dull a kingdom,\nThough war nor no known quarrel were in question\nBut that defenses, musters, preparations\nShould be maintained, assembled, and collected\nAs were a war in expectation.\nTherefore I say 'tis meet we all go forth\nTo view the sick and feeble parts of France.\nAnd let us do it with no show of fear,\nNo, with no more than if we heard that England\nWere busied with a Whitsun morris-dance.\nFor, my good liege, she is so idly kinged,\nHer scepter so fantastically borne\nBy a vain, giddy, shallow, humorous youth,\nThat fear attends her not.\nCONSTABLE  O peace, Prince Dauphin!\nYou are too much mistaken in this king.\nQuestion your Grace the late ambassadors\nWith what great state he heard their embassy,\nHow well supplied with noble councillors,\nHow modest in exception, and withal\nHow terrible in constant resolution,\nAnd you shall find his vanities forespent\nWere but the outside of the Roman Brutus,\nCovering discretion with a coat of folly,\nAs gardeners do with ordure hide those roots\nThat shall first spring and be most delicate.",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 92,
+    "fields": {
+      "name": "DAUPHIN"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 93,
+    "fields": {
+      "speaker": 92,
+      "scene": 89,
+      "text": "Well, 'tis not so, my Lord High Constable.\nBut though we think it so, it is no matter.\nIn cases of defense, 'tis best to weigh\nThe enemy more mighty than he seems.\nSo the proportions of defense are filled,\nWhich of a weak and niggardly projection\nDoth, like a miser, spoil his coat with scanting\nA little cloth.\nKING OF FRANCE  Think we King Harry strong,\nAnd, princes, look you strongly arm to meet him.\nThe kindred of him hath been fleshed upon us,\nAnd he is bred out of that bloody strain\nThat haunted us in our familiar paths.\nWitness our too-much-memorable shame\nWhen Cressy battle fatally was struck\nAnd all our princes captived by the hand\nOf that black name, Edward, Black Prince of\nWales,\nWhiles that his mountain sire, on mountain standing\nUp in the air, crowned with the golden sun,\nSaw his heroical seed and smiled to see him\nMangle the work of nature and deface\nThe patterns that by God and by French fathers\nHad twenty years been made. This is a stem\nOf that victorious stock, and let us fear\nThe native mightiness and fate of him.",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 94,
+    "fields": {
+      "name": "MESSENGER"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 95,
+    "fields": {
+      "speaker": 94,
+      "scene": 89,
+      "text": "Ambassadors from Harry King of England\nDo crave admittance to your Majesty.",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 96,
+    "fields": {
+      "speaker": 90,
+      "scene": 89,
+      "text": "We'll give them present audience. Go, and bring\nthem.\t[Messenger exits.]\nYou see this chase is hotly followed, friends.",
+      "order": 3
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 97,
+    "fields": {
+      "speaker": 92,
+      "scene": 89,
+      "text": "Turn head and stop pursuit, for coward dogs\nMost spend their mouths when what they seem to\nthreaten\nRuns far before them. Good my sovereign,\nTake up the English short, and let them know\nOf what a monarchy you are the head.\nSelf-love, my liege, is not so vile a sin\nAs self-neglecting.\nKING OF FRANCE  From our brother of England?",
+      "order": 4
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 98,
+    "fields": {
+      "speaker": 29,
+      "scene": 89,
+      "text": "From him, and thus he greets your Majesty:\nHe wills you, in the name of God almighty,\nThat you divest yourself and lay apart\nThe borrowed glories that, by gift of heaven,\nBy law of nature and of nations, 'longs\nTo him and to his heirs--namely, the crown\nAnd all wide-stretched honors that pertain\nBy custom and the ordinance of times\nUnto the crown of France. That you may know\n'Tis no sinister nor no awkward claim\nPicked from the wormholes of long-vanished days\nNor from the dust of old oblivion raked,\nHe sends you this most memorable line,\nIn every branch truly demonstrative,\nWilling you overlook this pedigree,\nAnd when you find him evenly derived\nFrom his most famed of famous ancestors,\nEdward the Third, he bids you then resign\nYour crown and kingdom, indirectly held\nFrom him, the native and true challenger.\nKING OF FRANCE  Or else what follows?",
+      "order": 5
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 99,
+    "fields": {
+      "speaker": 29,
+      "scene": 89,
+      "text": "Bloody constraint, for if you hide the crown\nEven in your hearts, there will he rake for it.\nTherefore in fierce tempest is he coming,\nIn thunder and in earthquake like a Jove,\nThat, if requiring fail, he will compel,\nAnd bids you, in the bowels of the Lord,\nDeliver up the crown and to take mercy\nOn the poor souls for whom this hungry war\nOpens his vasty jaws, and on your head\nTurning the widows' tears, the orphans' cries,\nThe dead men's blood, the prived maidens'\ngroans,\nFor husbands, fathers, and betrothed lovers\nThat shall be swallowed in this controversy.\nThis is his claim, his threat'ning, and my message--\nUnless the Dauphin be in presence here,\nTo whom expressly I bring greeting too.",
+      "order": 6
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 100,
+    "fields": {
+      "speaker": 90,
+      "scene": 89,
+      "text": "For us, we will consider of this further.\nTomorrow shall you bear our full intent\nBack to our brother of England.\nDAUPHIN, [to Exeter]  For the Dauphin,\nI stand here for him. What to him from England?",
+      "order": 7
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 101,
+    "fields": {
+      "speaker": 29,
+      "scene": 89,
+      "text": "Scorn and defiance, slight regard, contempt,\nAnd anything that may not misbecome\nThe mighty sender, doth he prize you at.\nThus says my king: an if your father's Highness\nDo not, in grant of all demands at large,\nSweeten the bitter mock you sent his Majesty,\nHe'll call you to so hot an answer of it\nThat caves and womby vaultages of France\nShall chide your trespass and return your mock\nIn second accent of his ordinance.",
+      "order": 8
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 102,
+    "fields": {
+      "speaker": 92,
+      "scene": 89,
+      "text": "Say, if my father render fair return,\nIt is against my will, for I desire\nNothing but odds with England. To that end,\nAs matching to his youth and vanity,\nI did present him with the Paris balls.",
+      "order": 9
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 103,
+    "fields": {
+      "speaker": 29,
+      "scene": 89,
+      "text": "He'll make your Paris Louvre shake for it,\nWere it the mistress court of mighty Europe.\nAnd be assured you'll find a difference,\nAs we his subjects have in wonder found,\nBetween the promise of his greener days\nAnd these he masters now. Now he weighs time\nEven to the utmost grain. That you shall read\nIn your own losses, if he stay in France.",
+      "order": 10
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 104,
+    "fields": {
+      "speaker": 90,
+      "scene": 89,
+      "text": "Tomorrow shall you know our mind at full.",
+      "order": 11
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 105,
+    "fields": {
+      "speaker": 29,
+      "scene": 89,
+      "text": "Dispatch us with all speed, lest that our king\nCome here himself to question our delay,\nFor he is footed in this land already.",
+      "order": 12
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 106,
+    "fields": {
+      "speaker": 90,
+      "scene": 89,
+      "text": "You shall be soon dispatched with fair conditions.\nA night is but small breath and little pause\nTo answer matters of this consequence.",
+      "order": 13
+    }
+  },
+  {
+    "model": "core.act",
+    "pk": 107,
+    "fields": {
+      "play": 1,
+      "name": "Act 3",
+      "order": 3
+    }
+  },
+  {
+    "model": "core.scene",
+    "pk": 108,
+    "fields": {
+      "act": 107,
+      "name": "Scene 1",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 109,
+    "fields": {
+      "speaker": 4,
+      "scene": 108,
+      "text": "Thus with imagined wing our swift scene flies\nIn motion of no less celerity\nThan that of thought. Suppose that you have seen\nThe well-appointed king at Dover pier\nEmbark his royalty, and his brave fleet\nWith silken streamers the young Phoebus\nfanning.\nPlay with your fancies and in them behold,\nUpon the hempen tackle, shipboys climbing.\nHear the shrill whistle, which doth order give\nTo sounds confused. Behold the threaden sails,\nBorne with th' invisible and creeping wind,\nDraw the huge bottoms through the furrowed sea,\nBreasting the lofty surge. O, do but think\nYou stand upon the rivage and behold\nA city on th' inconstant billows dancing,\nFor so appears this fleet majestical,\nHolding due course to Harfleur. Follow, follow!\nGrapple your minds to sternage of this navy,\nAnd leave your England, as dead midnight still,\nGuarded with grandsires, babies, and old women,\nEither past or not arrived to pith and puissance,\nFor who is he whose chin is but enriched\nWith one appearing hair that will not follow\nThese culled and choice-drawn cavaliers to France?\nWork, work your thoughts, and therein see a siege;\nBehold the ordnance on their carriages,\nWith fatal mouths gaping on girded Harfleur.\nSuppose th' Ambassador from the French comes\nback,\nTells Harry that the King doth offer him\nKatherine his daughter and with her, to dowry,\nSome petty and unprofitable dukedoms.\nThe offer likes not, and the nimble gunner\nWith linstock now the devilish cannon touches,\nAnd down goes all before them. Still be kind,\nAnd eke out our performance with your mind.",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 110,
+    "fields": {
+      "speaker": 27,
+      "scene": 108,
+      "text": "Once more unto the breach, dear friends, once\nmore,\nOr close the wall up with our English dead!\nIn peace there's nothing so becomes a man\nAs modest stillness and humility,\nBut when the blast of war blows in our ears,\nThen imitate the action of the tiger:\nStiffen the sinews, summon up the blood,\nDisguise fair nature with hard-favored rage,\nThen lend the eye a terrible aspect,\nLet it pry through the portage of the head\nLike the brass cannon, let the brow o'erwhelm it\nAs fearfully as doth a galled rock\nO'erhang and jutty his confounded base\nSwilled with the wild and wasteful ocean.\nNow set the teeth, and stretch the nostril wide,\nHold hard the breath, and bend up every spirit\nTo his full height. On, on, you noblest English,\nWhose blood is fet from fathers of war-proof,\nFathers that, like so many Alexanders,\nHave in these parts from morn till even fought,\nAnd sheathed their swords for lack of argument.\nDishonor not your mothers. Now attest\nThat those whom you called fathers did beget you.\nBe copy now to men of grosser blood\nAnd teach them how to war. And you, good\nyeomen,\nWhose limbs were made in England, show us here\nThe mettle of your pasture. Let us swear\nThat you are worth your breeding, which I doubt\nnot,\nFor there is none of you so mean and base\nThat hath not noble luster in your eyes.\nI see you stand like greyhounds in the slips,\nStraining upon the start. The game's afoot.\nFollow your spirit, and upon this charge\nCry \"God for Harry, England, and Saint George!\"",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.scene",
+    "pk": 111,
+    "fields": {
+      "act": 107,
+      "name": "Scene 2",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 112,
+    "fields": {
+      "name": "FLUELLEN"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 113,
+    "fields": {
+      "speaker": 112,
+      "scene": 111,
+      "text": "Up to the breach, you dogs! Avaunt, you cullions!\nPISTOL  Be merciful, great duke, to men of mold. Abate\nthy rage, abate thy manly rage, abate thy rage, great\nduke. Good bawcock, 'bate thy rage. Use lenity,\nsweet chuck.\nNYM, [to Fluellen]  These be good humors. Your Honor\nwins bad humors.\nBOY  As young as I am, I have observed these three\nswashers. I am boy to them all three, but all they\nthree, though they would serve me, could not be\nman to me. For indeed three such antics do not\namount to a man: for Bardolph, he is white-livered\nand red-faced, by the means whereof he faces it out\nbut fights not; for Pistol, he hath a killing tongue\nand a quiet sword, by the means whereof he breaks\nwords and keeps whole weapons; for Nym, he hath\nheard that men of few words are the best men, and\ntherefore he scorns to say his prayers, lest he should\nbe thought a coward, but his few bad words are\nmatched with as few good deeds, for he never broke\nany man's head but his own, and that was against a\npost when he was drunk. They will steal anything\nand call it purchase. Bardolph stole a lute case, bore\nit twelve leagues, and sold it for three halfpence.\nNym and Bardolph are sworn brothers in filching,\nand in Calais they stole a fire shovel. I knew by that\npiece of service the men would carry coals. They\nwould have me as familiar with men's pockets as\ntheir gloves or their handkerchers, which makes\nmuch against my manhood, if I should take from\nanother's pocket to put into mine, for it is plain\npocketing up of wrongs. I must leave them and seek\nsome better service. Their villainy goes against my\nweak stomach, and therefore I must cast it up.\nGOWER  Captain Fluellen, you must come presently to\nthe mines; the Duke of Gloucester would speak\nwith you.\nFLUELLEN  To the mines? Tell you the Duke it is not so\ngood to come to the mines, for, look you, the mines\nis not according to the disciplines of the war. The\nconcavities of it is not sufficient, for, look you, th'\nathversary, you may discuss unto the Duke, look\nyou, is digt himself four yard under the countermines.\nBy Cheshu, I think he will plow up all if\nthere is not better directions.\nGOWER  The Duke of Gloucester, to whom the order of\nthe siege is given, is altogether directed by an\nIrishman, a very valiant gentleman, i' faith.\nFLUELLEN  It is Captain Macmorris, is it not?\nGOWER  I think it be.\nFLUELLEN  By Cheshu, he is an ass, as in the world. I\nwill verify as much in his beard. He has no more\ndirections in the true disciplines of the wars, look\nyou, of the Roman disciplines, than is a puppy dog.\nGOWER  Here he comes, and the Scots captain, Captain\nJamy, with him.\nFLUELLEN  Captain Jamy is a marvelous falorous gentleman,\nthat is certain, and of great expedition and\nknowledge in th' aunchient wars, upon my particular\nknowledge of his directions. By Cheshu, he will\nmaintain his argument as well as any military man\nin the world in the disciplines of the pristine wars\nof the Romans.\nJAMY  I say gudday, Captain Fluellen.\nFLUELLEN  Godden to your Worship, good Captain\nJames.\nGOWER  How now, Captain Macmorris, have you quit\nthe mines? Have the pioners given o'er?\nMACMORRIS  By Chrish, la, 'tish ill done. The work ish\ngive over. The trompet sound the retreat. By my\nhand I swear, and my father's soul, the work ish ill\ndone. It ish give over. I would have blowed up the\ntown, so Chrish save me, la, in an hour. O, 'tish ill\ndone, 'tish ill done, by my hand, 'tish ill done.\nFLUELLEN  Captain Macmorris, I beseech you now,\nwill you voutsafe me, look you, a few disputations\nwith you as partly touching or concerning the\ndisciplines of the war, the Roman wars? In the way\nof argument, look you, and friendly communication,\npartly to satisfy my opinion, and partly for the\nsatisfaction, look you, of my mind, as touching the\ndirection of the military discipline, that is the point.\nJAMY  It sall be vary gud, gud feith, gud captens bath,\nand I sall quit you with gud leve, as I may pick\noccasion, that sall I, marry.\nMACMORRIS  It is no time to discourse, so Chrish save\nme. The day is hot, and the weather, and the wars,\nand the King, and the dukes. It is no time to\ndiscourse. The town is beseeched. An the trumpet\ncall us to the breach and we talk and, be Chrish, do\nnothing, 'tis shame for us all. So God sa' me, 'tis\nshame to stand still. It is shame, by my hand. And\nthere is throats to be cut, and works to be done,\nand there ish nothing done, so Christ sa' me, la.\nJAMY  By the Mess, ere theise eyes of mine take themselves\nto slomber, ay'll de gud service, or I'll lig i'\nth' grund for it, ay, or go to death. And I'll pay 't as\nvalorously as I may, that sall I suerly do, that is the\nbreff and the long. Marry, I wad full fain heard\nsome question 'tween you tway.\nFLUELLEN  Captain Macmorris, I think, look you, under\nyour correction, there is not many of your\nnation--\nMACMORRIS  Of my nation? What ish my nation? Ish a\nvillain and a basterd and a knave and a rascal. What\nish my nation? Who talks of my nation?\nFLUELLEN  Look you, if you take the matter otherwise\nthan is meant, Captain Macmorris, peradventure I\nshall think you do not use me with that affability as,\nin discretion, you ought to use me, look you, being\nas good a man as yourself, both in the disciplines of\nwar and in the derivation of my birth, and in other\nparticularities.\nMACMORRIS  I do not know you so good a man as\nmyself. So Chrish save me, I will cut off your head.\nGOWER  Gentlemen both, you will mistake each other.\nJAMY  Ah, that's a foul fault.\nGOWER  The town sounds a parley.\nFLUELLEN  Captain Macmorris, when there is more\nbetter opportunity to be required, look you, I will\nbe so bold as to tell you I know the disciplines of\nwar, and there is an end.",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.scene",
+    "pk": 114,
+    "fields": {
+      "act": 107,
+      "name": "Scene 3",
+      "order": 3
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 115,
+    "fields": {
+      "name": "GOVERNOR"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 116,
+    "fields": {
+      "speaker": 115,
+      "scene": 114,
+      "text": "Our expectation hath this day an end.\nThe Dauphin, whom of succors we entreated,\nReturns us that his powers are yet not ready\nTo raise so great a siege. Therefore, great king,\nWe yield our town and lives to thy soft mercy.\nEnter our gates, dispose of us and ours,\nFor we no longer are defensible.",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 117,
+    "fields": {
+      "speaker": 27,
+      "scene": 114,
+      "text": "Open your gates.\t[Governor exits.]\nCome, uncle Exeter,\nGo you and enter Harfleur. There remain,\nAnd fortify it strongly 'gainst the French.\nUse mercy to them all for us, dear uncle.\nThe winter coming on and sickness growing\nUpon our soldiers, we will retire to Calais.\nTonight in Harfleur will we be your guest.\nTomorrow for the march are we addressed.",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.scene",
+    "pk": 118,
+    "fields": {
+      "act": 107,
+      "name": "Scene 4",
+      "order": 4
+    }
+  },
+  {
+    "model": "core.scene",
+    "pk": 119,
+    "fields": {
+      "act": 107,
+      "name": "Scene 5",
+      "order": 5
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 120,
+    "fields": {
+      "speaker": 90,
+      "scene": 119,
+      "text": "'Tis certain he hath passed the river Somme.",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 121,
+    "fields": {
+      "name": "CONSTABLE"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 122,
+    "fields": {
+      "speaker": 121,
+      "scene": 119,
+      "text": "An if he be not fought withal, my lord,\nLet us not live in France. Let us quit all,\nAnd give our vineyards to a barbarous people.",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 123,
+    "fields": {
+      "speaker": 92,
+      "scene": 119,
+      "text": "O Dieu vivant, shall a few sprays of us,\nThe emptying of our fathers' luxury,\nOur scions, put in wild and savage stock,\nSpurt up so suddenly into the clouds\nAnd overlook their grafters?",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 124,
+    "fields": {
+      "name": "BRITTANY"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 125,
+    "fields": {
+      "speaker": 124,
+      "scene": 119,
+      "text": "Normans, but bastard Normans, Norman bastards!\nMort de ma vie, if they march along\nUnfought withal, but I will sell my dukedom\nTo buy a slobb'ry and a dirty farm\nIn that nook-shotten isle of Albion.",
+      "order": 3
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 126,
+    "fields": {
+      "speaker": 121,
+      "scene": 119,
+      "text": "Dieu de batailles, where have they this mettle?\nIs not their climate foggy, raw, and dull,\nOn whom, as in despite, the sun looks pale,\nKilling their fruit with frowns? Can sodden water,\nA drench for sur-reined jades, their barley broth,\nDecoct their cold blood to such valiant heat?\nAnd shall our quick blood, spirited with wine,\nSeem frosty? O, for honor of our land,\nLet us not hang like roping icicles\nUpon our houses' thatch, whiles a more frosty\npeople\nSweat drops of gallant youth in our rich fields!\n\"Poor\" we may call them in their native lords.\nDAUPHIN  By faith and honor,\nOur madams mock at us and plainly say\nOur mettle is bred out, and they will give\nTheir bodies to the lust of English youth\nTo new-store France with bastard warriors.",
+      "order": 4
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 127,
+    "fields": {
+      "speaker": 124,
+      "scene": 119,
+      "text": "They bid us to the English dancing-schools,\nAnd teach lavoltas high, and swift corantos,\nSaying our grace is only in our heels\nAnd that we are most lofty runaways.",
+      "order": 5
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 128,
+    "fields": {
+      "speaker": 90,
+      "scene": 119,
+      "text": "Where is Montjoy the herald? Speed him hence.\nLet him greet England with our sharp defiance.\nUp, princes, and, with spirit of honor edged\nMore sharper than your swords, hie to the field:\nCharles Delabreth, High Constable of France;\nYou Dukes of Orleans, Bourbon, and of Berri,\nAlencon, Brabant, Bar, and Burgundy;\nJacques Chatillon, Rambures, Vaudemont,\nBeaumont, Grandpre, Roussi, and Faulconbridge,\nFoix, Lestrale, Bouciquault, and Charolois;\nHigh dukes, great princes, barons, lords, and\nknights,\nFor your great seats now quit you of great shames.\nBar Harry England, that sweeps through our land\nWith pennons painted in the blood of Harfleur.\nRush on his host, as doth the melted snow\nUpon the valleys, whose low vassal seat\nThe Alps doth spit and void his rheum upon.\nGo down upon him--you have power enough--\nAnd in a captive chariot into Rouen\nBring him our prisoner.\nCONSTABLE  This becomes the great!\nSorry am I his numbers are so few,\nHis soldiers sick and famished in their march,\nFor, I am sure, when he shall see our army,\nHe'll drop his heart into the sink of fear\nAnd for achievement offer us his ransom.",
+      "order": 6
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 129,
+    "fields": {
+      "speaker": 90,
+      "scene": 119,
+      "text": "Therefore, Lord Constable, haste on Montjoy,\nAnd let him say to England that we send\nTo know what willing ransom he will give.--\nPrince Dauphin, you shall stay with us in Rouen.",
+      "order": 7
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 130,
+    "fields": {
+      "speaker": 92,
+      "scene": 119,
+      "text": "Not so, I do beseech your Majesty.",
+      "order": 8
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 131,
+    "fields": {
+      "name": "KING"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 132,
+    "fields": {
+      "speaker": 131,
+      "scene": 119,
+      "text": "Be patient, for you shall remain with us.--\nNow forth, Lord Constable and princes all,\nAnd quickly bring us word of England's fall.",
+      "order": 9
+    }
+  },
+  {
+    "model": "core.scene",
+    "pk": 133,
+    "fields": {
+      "act": 107,
+      "name": "Scene 6",
+      "order": 6
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 134,
+    "fields": {
+      "speaker": 27,
+      "scene": 133,
+      "text": "What is thy name? I know thy quality.\nMONTJOY  Montjoy.",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 135,
+    "fields": {
+      "speaker": 27,
+      "scene": 133,
+      "text": "Thou dost thy office fairly. Turn thee back,\nAnd tell thy king I do not seek him now\nBut could be willing to march on to Calais\nWithout impeachment, for, to say the sooth,\nThough 'tis no wisdom to confess so much\nUnto an enemy of craft and vantage,\nMy people are with sickness much enfeebled,\nMy numbers lessened, and those few I have\nAlmost no better than so many French,\nWho when they were in health, I tell thee, herald,\nI thought upon one pair of English legs\nDid march three Frenchmen. Yet forgive me, God,\nThat I do brag thus. This your air of France\nHath blown that vice in me. I must repent.\nGo therefore, tell thy master: here I am.\nMy ransom is this frail and worthless trunk,\nMy army but a weak and sickly guard,\nYet, God before, tell him we will come on\nThough France himself and such another neighbor\nStand in our way. There's for thy labor, Montjoy.\nGo bid thy master well advise himself:\nIf we may pass, we will; if we be hindered,\nWe shall your tawny ground with your red blood\nDiscolor. And so, Montjoy, fare you well.\nThe sum of all our answer is but this:\nWe would not seek a battle as we are,\nNor, as we are, we say we will not shun it.\nSo tell your master.",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 136,
+    "fields": {
+      "name": "MONTJOY"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 137,
+    "fields": {
+      "speaker": 136,
+      "scene": 133,
+      "text": "I shall deliver so. Thanks to your Highness.",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 138,
+    "fields": {
+      "name": "GLOUCESTER"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 139,
+    "fields": {
+      "speaker": 138,
+      "scene": 133,
+      "text": "I hope they will not come upon us now.",
+      "order": 3
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 140,
+    "fields": {
+      "speaker": 27,
+      "scene": 133,
+      "text": "We are in God's hand, brother, not in theirs.\nMarch to the bridge. It now draws toward night.\nBeyond the river we'll encamp ourselves,\nAnd on tomorrow bid them march away.",
+      "order": 4
+    }
+  },
+  {
+    "model": "core.scene",
+    "pk": 141,
+    "fields": {
+      "act": 107,
+      "name": "Scene 7",
+      "order": 7
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 142,
+    "fields": {
+      "name": "ORLEANS"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 143,
+    "fields": {
+      "speaker": 142,
+      "scene": 141,
+      "text": "It is now two o'clock. But, let me see, by ten\nWe shall have each a hundred Englishmen.",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.act",
+    "pk": 144,
+    "fields": {
+      "play": 1,
+      "name": "Act 4",
+      "order": 4
+    }
+  },
+  {
+    "model": "core.scene",
+    "pk": 145,
+    "fields": {
+      "act": 144,
+      "name": "Scene 1",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 146,
+    "fields": {
+      "speaker": 4,
+      "scene": 145,
+      "text": "Now entertain conjecture of a time\nWhen creeping murmur and the poring dark\nFills the wide vessel of the universe.\nFrom camp to camp, through the foul womb of\nnight,\nThe hum of either army stilly sounds,\nThat the fixed sentinels almost receive\nThe secret whispers of each other's watch.\nFire answers fire, and through their paly flames\nEach battle sees the other's umbered face;\nSteed threatens steed in high and boastful neighs\nPiercing the night's dull ear; and from the tents\nThe armorers, accomplishing the knights,\nWith busy hammers closing rivets up,\nGive dreadful note of preparation.\nThe country cocks do crow, the clocks do toll,\nAnd, the third hour of drowsy morning named,\nProud of their numbers and secure in soul,\nThe confident and overlusty French\nDo the low-rated English play at dice\nAnd chide the cripple, tardy-gaited night,\nWho like a foul and ugly witch doth limp\nSo tediously away. The poor condemned English,\nLike sacrifices, by their watchful fires\nSit patiently and inly ruminate\nThe morning's danger; and their gesture sad,\nInvesting lank-lean cheeks and war-worn coats,\nPresenteth them unto the gazing moon\nSo many horrid ghosts. O now, who will behold\nThe royal captain of this ruined band\nWalking from watch to watch, from tent to tent,\nLet him cry, \"Praise and glory on his head!\"\nFor forth he goes and visits all his host,\nBids them good morrow with a modest smile,\nAnd calls them brothers, friends, and countrymen.\nUpon his royal face there is no note\nHow dread an army hath enrounded him,\nNor doth he dedicate one jot of color\nUnto the weary and all-watched night,\nBut freshly looks and overbears attaint\nWith cheerful semblance and sweet majesty,\nThat every wretch, pining and pale before,\nBeholding him, plucks comfort from his looks.\nA largesse universal, like the sun,\nHis liberal eye doth give to everyone,\nThawing cold fear, that mean and gentle all\nBehold, as may unworthiness define,\nA little touch of Harry in the night.\nAnd so our scene must to the battle fly,\nWhere, O for pity, we shall much disgrace,\nWith four or five most vile and ragged foils\nRight ill-disposed in brawl ridiculous,\nThe name of Agincourt. Yet sit and see,\nMinding true things by what their mock'ries be.",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 147,
+    "fields": {
+      "speaker": 27,
+      "scene": 145,
+      "text": "Gloucester, 'tis true that we are in great danger.\nThe greater therefore should our courage be.--\nGood morrow, brother Bedford. God almighty,\nThere is some soul of goodness in things evil,\nWould men observingly distill it out.\nFor our bad neighbor makes us early stirrers,\nWhich is both healthful and good husbandry.\nBesides, they are our outward consciences\nAnd preachers to us all, admonishing\nThat we should dress us fairly for our end.\nThus may we gather honey from the weed\nAnd make a moral of the devil himself.\nGood morrow, old Sir Thomas Erpingham.\nA good soft pillow for that good white head\nWere better than a churlish turf of France.",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 148,
+    "fields": {
+      "name": "ERPINGHAM"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 149,
+    "fields": {
+      "speaker": 148,
+      "scene": 145,
+      "text": "Not so, my liege, this lodging likes me better,\nSince I may say \"Now lie I like a king.\"",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 150,
+    "fields": {
+      "speaker": 27,
+      "scene": 145,
+      "text": "'Tis good for men to love their present pains\nUpon example. So the spirit is eased;\nAnd when the mind is quickened, out of doubt,\nThe organs, though defunct and dead before,\nBreak up their drowsy grave and newly move\nWith casted slough and fresh legerity.\nLend me thy cloak, Sir Thomas.\nBrothers both,\nCommend me to the princes in our camp,\nDo my good morrow to them, and anon\nDesire them all to my pavilion.\nGLOUCESTER  We shall, my liege.\nERPINGHAM  Shall I attend your Grace?\nKING HENRY  No, my good knight.\nGo with my brothers to my lords of England.\nI and my bosom must debate awhile,\nAnd then I would no other company.",
+      "order": 3
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 151,
+    "fields": {
+      "speaker": 148,
+      "scene": 145,
+      "text": "The Lord in heaven bless thee, noble Harry.",
+      "order": 4
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 152,
+    "fields": {
+      "speaker": 27,
+      "scene": 145,
+      "text": "God-a-mercy, old heart, thou speak'st cheerfully.\nPISTOL  Qui vous la?\nKING HENRY  A friend.\nPISTOL  Discuss unto me: art thou officer or art thou\nbase, common, and popular?\nKING HENRY  I am a gentleman of a company.\nPISTOL  Trail'st thou the puissant pike?\nKING HENRY  Even so. What are you?\nPISTOL  As good a gentleman as the Emperor.\nKING HENRY  Then you are a better than the King.\nPISTOL  The King's a bawcock and a heart of gold, a lad\nof life, an imp of fame, of parents good, of fist most\nvaliant. I kiss his dirty shoe, and from heartstring I\nlove the lovely bully. What is thy name?\nKING HENRY  Harry le Roy.\nPISTOL  Le Roy? A Cornish name. Art thou of Cornish\ncrew?\nKING HENRY  No, I am a Welshman.\nPISTOL  Know'st thou Fluellen?\nKING HENRY  Yes.\nPISTOL  Tell him I'll knock his leek about his pate upon\nSaint Davy's day.\nKING HENRY  Do not you wear your dagger in your cap\nthat day, lest he knock that about yours.\nPISTOL  Art thou his friend?\nKING HENRY  And his kinsman too.\nPISTOL  The figo for thee then!\nKING HENRY  I thank you. God be with you.\nPISTOL  My name is Pistol called.\t[He exits.]\nKING HENRY  It sorts well with your fierceness.\nGOWER  Captain Fluellen.\nFLUELLEN  ’So. In the name of Jesu Christ, speak fewer.\nIt is the greatest admiration in the universal world\nwhen the true and aunchient prerogatifes and\nlaws of the wars is not kept. If you would take the\npains but to examine the wars of Pompey the\nGreat, you shall find, I warrant you, that there is\nno tiddle taddle nor pibble babble in Pompey's\ncamp. I warrant you, you shall find the ceremonies\nof the wars and the cares of it and the forms\nof it and the sobriety of it and the modesty of it to\nbe otherwise.\nGOWER  Why, the enemy is loud. You hear him all\nnight.\nFLUELLEN  If the enemy is an ass and a fool and a prating\ncoxcomb, is it meet, think you, that we should also,\nlook you, be an ass and a fool and a prating\ncoxcomb, in your own conscience now?\nGOWER  I will speak lower.\nFLUELLEN  I pray you and beseech you that you will.",
+      "order": 5
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 153,
+    "fields": {
+      "speaker": 27,
+      "scene": 145,
+      "text": "Though it appear a little out of fashion,\nThere is much care and valor in this Welshman.\n[Enter three Soldiers, John Bates, Alexander Court, and\nMichael Williams.]\nCOURT  Brother John Bates, is not that the morning\nwhich breaks yonder?\nBATES  I think it be, but we have no great cause to desire\nthe approach of day.\nWILLIAMS  We see yonder the beginning of the day, but\nI think we shall never see the end of it.--Who goes\nthere?\nKING HENRY  A friend.\nWILLIAMS  Under what captain serve you?\nKING HENRY  Under Sir Thomas Erpingham.\nWILLIAMS  A good old commander and a most kind\ngentleman. I pray you, what thinks he of our\nestate?\nKING HENRY  Even as men wracked upon a sand, that\nlook to be washed off the next tide.\nBATES  He hath not told his thought to the King?\nKING HENRY  No. Nor it is not meet he should, for,\nthough I speak it to you, I think the King is but a\nman as I am. The violet smells to him as it doth to\nme. The element shows to him as it doth to me. All\nhis senses have but human conditions. His ceremonies\nlaid by, in his nakedness he appears but a man,\nand though his affections are higher mounted than\nours, yet when they stoop, they stoop with the like\nwing. Therefore, when he sees reason of fears as we\ndo, his fears, out of doubt, be of the same relish as\nours are. Yet, in reason, no man should possess him\nwith any appearance of fear, lest he, by showing it,\nshould dishearten his army.\nBATES  He may show what outward courage he will,\nbut I believe, as cold a night as 'tis, he could wish\nhimself in Thames up to the neck; and so I would\nhe were, and I by him, at all adventures, so we were\nquit here.\nKING HENRY  By my troth, I will speak my conscience\nof the King. I think he would not wish himself\nanywhere but where he is.\nBATES  Then I would he were here alone; so should he\nbe sure to be ransomed, and a many poor men's\nlives saved.\nKING HENRY  I dare say you love him not so ill to wish\nhim here alone, howsoever you speak this to feel\nother men's minds. Methinks I could not die anywhere\nso contented as in the King's company, his\ncause being just and his quarrel honorable.\nWILLIAMS  That's more than we know.\nBATES  Ay, or more than we should seek after, for we\nknow enough if we know we are the King's subjects.\nIf his cause be wrong, our obedience to the\nKing wipes the crime of it out of us.\nWILLIAMS  But if the cause be not good, the King\nhimself hath a heavy reckoning to make, when all\nthose legs and arms and heads, chopped off in a\nbattle, shall join together at the latter day, and cry\nall \"We died at such a place,\" some swearing, some\ncrying for a surgeon, some upon their wives left\npoor behind them, some upon the debts they owe,\nsome upon their children rawly left. I am afeard\nthere are few die well that die in a battle, for how\ncan they charitably dispose of anything when blood\nis their argument? Now, if these men do not die\nwell, it will be a black matter for the king that led\nthem to it, who to disobey were against all proportion\nof subjection.\nKING HENRY  So, if a son that is by his father sent about\nmerchandise do sinfully miscarry upon the sea,\nthe imputation of his wickedness, by your rule,\nshould be imposed upon his father that sent him.\nOr if a servant, under his master's command transporting\na sum of money, be assailed by robbers and\ndie in many irreconciled iniquities, you may call the\nbusiness of the master the author of the servant's\ndamnation. But this is not so. The King is not bound\nto answer the particular endings of his soldiers, the\nfather of his son, nor the master of his servant, for\nthey purpose not their death when they purpose\ntheir services. Besides, there is no king, be his cause\nnever so spotless, if it come to the arbitrament of\nswords, can try it out with all unspotted soldiers.\nSome, peradventure, have on them the guilt of\npremeditated and contrived murder; some, of beguiling\nvirgins with the broken seals of perjury;\nsome, making the wars their bulwark, that have\nbefore gored the gentle bosom of peace with pillage\nand robbery. Now, if these men have defeated the\nlaw and outrun native punishment, though they can\noutstrip men, they have no wings to fly from God.\nWar is His beadle, war is His vengeance, so that here\nmen are punished for before-breach of the King's\nlaws in now the King's quarrel. Where they feared\nthe death, they have borne life away; and where they\nwould be safe, they perish. Then, if they die unprovided,\nno more is the King guilty of their damnation\nthan he was before guilty of those impieties for the\nwhich they are now visited. Every subject's duty is\nthe King's, but every subject's soul is his own.\nTherefore should every soldier in the wars do as\nevery sick man in his bed: wash every mote out of\nhis conscience. And, dying so, death is to him\nadvantage; or not dying, the time was blessedly lost\nwherein such preparation was gained. And in him\nthat escapes, it were not sin to think that, making\nGod so free an offer, He let him outlive that day to\nsee His greatness and to teach others how they\nshould prepare.\nWILLIAMS  'Tis certain, every man that dies ill, the ill\nupon his own head; the King is not to answer it.\nBATES  I do not desire he should answer for me, and yet\nI determine to fight lustily for him.\nKING HENRY  I myself heard the King say he would not\nbe ransomed.\nWILLIAMS  Ay, he said so to make us fight cheerfully,\nbut when our throats are cut, he may be ransomed\nand we ne'er the wiser.\nKING HENRY  If I live to see it, I will never trust his\nword after.\nWILLIAMS  You pay him then. That's a perilous shot out\nof an elder gun, that a poor and a private displeasure\ncan do against a monarch. You may as well go\nabout to turn the sun to ice with fanning in his face\nwith a peacock's feather. You'll \"never trust his\nword after.\" Come, 'tis a foolish saying.\nKING HENRY  Your reproof is something too round. I\nshould be angry with you if the time were\nconvenient.\nWILLIAMS  Let it be a quarrel between us, if you live.\nKING HENRY  I embrace it.\nWILLIAMS  How shall I know thee again?\nKING HENRY  Give me any gage of thine, and I will wear\nit in my bonnet. Then, if ever thou dar'st acknowledge\nit, I will make it my quarrel.\nWILLIAMS  Here's my glove. Give me another of thine.\nKING HENRY  There.\t[They exchange gloves.]\nWILLIAMS  This will I also wear in my cap. If ever thou\ncome to me and say, after tomorrow, \"This is my\nglove,\" by this hand I will take thee a box on the\near.\nKING HENRY  If ever I live to see it, I will challenge it.\nWILLIAMS  Thou dar'st as well be hanged.\nKING HENRY  Well, I will do it, though I take thee in the\nKing's company.\nWILLIAMS  Keep thy word. Fare thee well.\nBATES  Be friends, you English fools, be friends. We\nhave French quarrels enough, if you could tell how\nto reckon.\nKING HENRY  Indeed, the French may lay twenty\nFrench crowns to one they will beat us, for they\nbear them on their shoulders. But it is no English\ntreason to cut French crowns, and tomorrow the\nKing himself will be a clipper.\nUpon the King! Let us our lives, our souls, our\ndebts, our careful wives, our children, and our sins,\nlay on the King!\nWe must bear all. O hard condition,\nTwin-born with greatness, subject to the breath\nOf every fool whose sense no more can feel\nBut his own wringing. What infinite heart's ease\nMust kings neglect that private men enjoy?\nAnd what have kings that privates have not too,\nSave ceremony, save general ceremony?\nAnd what art thou, thou idol ceremony?\nWhat kind of god art thou that suffer'st more\nOf mortal griefs than do thy worshipers?\nWhat are thy rents? What are thy comings-in?\nO ceremony, show me but thy worth!\nWhat is thy soul of adoration?\nArt thou aught else but place, degree, and form,\nCreating awe and fear in other men,\nWherein thou art less happy, being feared,\nThan they in fearing?\nWhat drink'st thou oft, instead of homage sweet,\nBut poisoned flattery? O, be sick, great greatness,\nAnd bid thy ceremony give thee cure!\nThink'st thou the fiery fever will go out\nWith titles blown from adulation?\nWill it give place to flexure and low bending?\nCanst thou, when thou command'st the beggar's\nknee,\nCommand the health of it? No, thou proud dream,\nThat play'st so subtly with a king's repose.\nI am a king that find thee, and I know\n'Tis not the balm, the scepter, and the ball,\nThe sword, the mace, the crown imperial,\nThe intertissued robe of gold and pearl,\nThe farced title running 'fore the King,\nThe throne he sits on, nor the tide of pomp\nThat beats upon the high shore of this world;\nNo, not all these, thrice-gorgeous ceremony,\nNot all these, laid in bed majestical,\nCan sleep so soundly as the wretched slave\nWho, with a body filled and vacant mind,\nGets him to rest, crammed with distressful bread;\nNever sees horrid night, the child of hell,\nBut, like a lackey, from the rise to set\nSweats in the eye of Phoebus, and all night\nSleeps in Elysium; next day after dawn\nDoth rise and help Hyperion to his horse,\nAnd follows so the ever-running year\nWith profitable labor to his grave.\nAnd, but for ceremony, such a wretch,\nWinding up days with toil and nights with sleep,\nHad the forehand and vantage of a king.\nThe slave, a member of the country's peace,\nEnjoys it, but in gross brain little wots\nWhat watch the King keeps to maintain the peace,\nWhose hours the peasant best advantages.",
+      "order": 6
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 154,
+    "fields": {
+      "speaker": 148,
+      "scene": 145,
+      "text": "My lord, your nobles, jealous of your absence,\nSeek through your camp to find you.\nKING HENRY  Good old knight,\nCollect them all together at my tent.\nI'll be before thee.\nERPINGHAM  I shall do 't, my lord.\t[He exits.]",
+      "order": 7
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 155,
+    "fields": {
+      "speaker": 27,
+      "scene": 145,
+      "text": "O God of battles, steel my soldiers' hearts.\nPossess them not with fear. Take from them now\nThe sense of reck'ning or th' opposed numbers\nPluck their hearts from them. Not today, O Lord,\nO, not today, think not upon the fault\nMy father made in compassing the crown.\nI Richard's body have interred new\nAnd on it have bestowed more contrite tears\nThan from it issued forced drops of blood.\nFive hundred poor I have in yearly pay\nWho twice a day their withered hands hold up\nToward heaven to pardon blood. And I have built\nTwo chantries where the sad and solemn priests\nSing still for Richard's soul. More will I do--\nThough all that I can do is nothing worth,\nSince that my penitence comes after all,\nImploring pardon.\nGLOUCESTER  My liege.\nKING HENRY  My brother Gloucester's voice.--Ay,\nI know thy errand. I will go with thee.\nThe day, my friends, and all things stay for me.",
+      "order": 8
+    }
+  },
+  {
+    "model": "core.scene",
+    "pk": 156,
+    "fields": {
+      "act": 144,
+      "name": "Scene 2",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 157,
+    "fields": {
+      "speaker": 142,
+      "scene": 156,
+      "text": "The sun doth gild our armor. Up, my lords.",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 158,
+    "fields": {
+      "speaker": 92,
+      "scene": 156,
+      "text": "Montez a cheval! My horse, varlet! Lackey! Ha!\nORLEANS  O brave spirit!\nDAUPHIN  Via les eaux et terre.\nORLEANS  Rien puis? L'air et feu?\nDAUPHIN  Cieux, cousin Orleans.\nNow, my Lord Constable?",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 159,
+    "fields": {
+      "speaker": 121,
+      "scene": 156,
+      "text": "Hark how our steeds for present service neigh.",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 160,
+    "fields": {
+      "speaker": 92,
+      "scene": 156,
+      "text": "Mount them, and make incision in their hides,\nThat their hot blood may spin in English eyes\nAnd dout them with superfluous courage. Ha!",
+      "order": 3
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 161,
+    "fields": {
+      "name": "RAMBURES"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 162,
+    "fields": {
+      "speaker": 161,
+      "scene": 156,
+      "text": "What, will you have them weep our horses' blood?\nHow shall we then behold their natural tears?",
+      "order": 4
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 163,
+    "fields": {
+      "speaker": 94,
+      "scene": 156,
+      "text": "The English are embattled, you French peers.",
+      "order": 5
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 164,
+    "fields": {
+      "speaker": 121,
+      "scene": 156,
+      "text": "To horse, you gallant princes, straight to horse.\nDo but behold yond poor and starved band,\nAnd your fair show shall suck away their souls,\nLeaving them but the shales and husks of men.\nThere is not work enough for all our hands,\nScarce blood enough in all their sickly veins\nTo give each naked curtal ax a stain,\nThat our French gallants shall today draw out\nAnd sheathe for lack of sport. Let us but blow on\nthem,\nThe vapor of our valor will o'erturn them.\n'Tis positive against all exceptions, lords,\nThat our superfluous lackeys and our peasants,\nWho in unnecessary action swarm\nAbout our squares of battle, were enough\nTo purge this field of such a hilding foe,\nThough we upon this mountain's basis by\nTook stand for idle speculation,\nBut that our honors must not. What's to say?\nA very little little let us do,\nAnd all is done. Then let the trumpets sound\nThe tucket sonance and the note to mount,\nFor our approach shall so much dare the field\nThat England shall couch down in fear and yield.",
+      "order": 6
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 165,
+    "fields": {
+      "name": "GRANDPRE"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 166,
+    "fields": {
+      "speaker": 165,
+      "scene": 156,
+      "text": "Why do you stay so long, my lords of France?\nYond island carrions, desperate of their bones,\nIll-favoredly become the morning field.\nTheir ragged curtains poorly are let loose,\nAnd our air shakes them passing scornfully.\nBig Mars seems bankrupt in their beggared host\nAnd faintly through a rusty beaver peeps.\nThe horsemen sit like fixed candlesticks\nWith torch staves in their hand, and their poor jades\nLob down their heads, drooping the hides and hips,\nThe gum down-roping from their pale dead eyes,\nAnd in their pale dull mouths the gemeled bit\nLies foul with chawed grass, still and motionless.\nAnd their executors, the knavish crows,\nFly o'er them all, impatient for their hour.\nDescription cannot suit itself in words\nTo demonstrate the life of such a battle\nIn life so lifeless, as it shows itself.",
+      "order": 7
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 167,
+    "fields": {
+      "speaker": 121,
+      "scene": 156,
+      "text": "They have said their prayers, and they stay for death.",
+      "order": 8
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 168,
+    "fields": {
+      "speaker": 92,
+      "scene": 156,
+      "text": "Shall we go send them dinners and fresh suits,\nAnd give their fasting horses provender,\nAnd after fight with them?",
+      "order": 9
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 169,
+    "fields": {
+      "speaker": 121,
+      "scene": 156,
+      "text": "I stay but for my guard. On, to the field!\nI will the banner from a trumpet take\nAnd use it for my haste. Come, come away.\nThe sun is high, and we outwear the day.",
+      "order": 10
+    }
+  },
+  {
+    "model": "core.scene",
+    "pk": 170,
+    "fields": {
+      "act": 144,
+      "name": "Scene 3",
+      "order": 3
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 171,
+    "fields": {
+      "speaker": 62,
+      "scene": 170,
+      "text": "The King himself is rode to view their battle.",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 172,
+    "fields": {
+      "speaker": 31,
+      "scene": 170,
+      "text": "Of fighting men they have full threescore thousand.",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 173,
+    "fields": {
+      "speaker": 29,
+      "scene": 170,
+      "text": "There's five to one. Besides, they all are fresh.",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 174,
+    "fields": {
+      "name": "SALISBURY"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 175,
+    "fields": {
+      "speaker": 174,
+      "scene": 170,
+      "text": "God's arm strike with us! 'Tis a fearful odds.\nGod be wi' you, princes all. I'll to my charge.\nIf we no more meet till we meet in heaven,\nThen joyfully, my noble Lord of Bedford,\nMy dear Lord Gloucester, and my good Lord Exeter,\nAnd my kind kinsman, warriors all, adieu.",
+      "order": 3
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 176,
+    "fields": {
+      "speaker": 62,
+      "scene": 170,
+      "text": "Farewell, good Salisbury, and good luck go with\nthee.\nAnd yet I do thee wrong to mind thee of it,\nFor thou art framed of the firm truth of valor.",
+      "order": 4
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 177,
+    "fields": {
+      "speaker": 29,
+      "scene": 170,
+      "text": "Farewell, kind lord. Fight valiantly today.",
+      "order": 5
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 178,
+    "fields": {
+      "speaker": 62,
+      "scene": 170,
+      "text": "He is as full of valor as of kindness,\nPrincely in both.\nWESTMORELAND  O, that we now had here\nBut one ten thousand of those men in England\nThat do no work today.\nKING HENRY  What's he that wishes so?\nMy cousin Westmoreland? No, my fair cousin.\nIf we are marked to die, we are enough\nTo do our country loss; and if to live,\nThe fewer men, the greater share of honor.\nGod's will, I pray thee wish not one man more.\nBy Jove, I am not covetous for gold,\nNor care I who doth feed upon my cost;\nIt yearns me not if men my garments wear;\nSuch outward things dwell not in my desires.\nBut if it be a sin to covet honor,\nI am the most offending soul alive.\nNo, 'faith, my coz, wish not a man from England.\nGod's peace, I would not lose so great an honor\nAs one man more, methinks, would share from me,\nFor the best hope I have. O, do not wish one more!\nRather proclaim it, Westmoreland, through my host,\nThat he which hath no stomach to this fight,\nLet him depart. His passport shall be made,\nAnd crowns for convoy put into his purse.\nWe would not die in that man's company\nThat fears his fellowship to die with us.\nThis day is called the feast of Crispian.\nHe that outlives this day and comes safe home\nWill stand o' tiptoe when this day is named\nAnd rouse him at the name of Crispian.\nHe that shall see this day, and live old age,\nWill yearly on the vigil feast his neighbors\nAnd say \"Tomorrow is Saint Crispian.\"\nThen will he strip his sleeve and show his scars.\nOld men forget; yet all shall be forgot,\nBut he'll remember with advantages\nWhat feats he did that day. Then shall our names,\nFamiliar in his mouth as household words,\nHarry the King, Bedford and Exeter,\nWarwick and Talbot, Salisbury and Gloucester,\nBe in their flowing cups freshly remembered.\nThis story shall the good man teach his son,\nAnd Crispin Crispian shall ne'er go by,\nFrom this day to the ending of the world,\nBut we in it shall be remembered--\nWe few, we happy few, we band of brothers;\nFor he today that sheds his blood with me\nShall be my brother; be he ne'er so vile,\nThis day shall gentle his condition;\nAnd gentlemen in England now abed\nShall think themselves accursed they were not here,\nAnd hold their manhoods cheap whiles any speaks\nThat fought with us upon Saint Crispin's day.",
+      "order": 6
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 179,
+    "fields": {
+      "speaker": 174,
+      "scene": 170,
+      "text": "My sovereign lord, bestow yourself with speed.\nThe French are bravely in their battles set,\nAnd will with all expedience charge on us.",
+      "order": 7
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 180,
+    "fields": {
+      "speaker": 27,
+      "scene": 170,
+      "text": "All things are ready if our minds be so.",
+      "order": 8
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 181,
+    "fields": {
+      "speaker": 31,
+      "scene": 170,
+      "text": "Perish the man whose mind is backward now!",
+      "order": 9
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 182,
+    "fields": {
+      "speaker": 27,
+      "scene": 170,
+      "text": "Thou dost not wish more help from England, coz?",
+      "order": 10
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 183,
+    "fields": {
+      "speaker": 31,
+      "scene": 170,
+      "text": "God's will, my liege, would you and I alone,\nWithout more help, could fight this royal battle!",
+      "order": 11
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 184,
+    "fields": {
+      "speaker": 27,
+      "scene": 170,
+      "text": "Why, now thou hast unwished five thousand men,\nWhich likes me better than to wish us one.--\nYou know your places. God be with you all.",
+      "order": 12
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 185,
+    "fields": {
+      "speaker": 136,
+      "scene": 170,
+      "text": "Once more I come to know of thee, King Harry,\nIf for thy ransom thou wilt now compound,\nBefore thy most assured overthrow.\nFor certainly thou art so near the gulf\nThou needs must be englutted. Besides, in mercy,\nThe Constable desires thee thou wilt mind\nThy followers of repentance, that their souls\nMay make a peaceful and a sweet retire\nFrom off these fields where, wretches, their poor\nbodies\nMust lie and fester.\nKING HENRY  Who hath sent thee now?\nMONTJOY  The Constable of France.",
+      "order": 13
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 186,
+    "fields": {
+      "speaker": 27,
+      "scene": 170,
+      "text": "I pray thee bear my former answer back.\nBid them achieve me and then sell my bones.\nGood God, why should they mock poor fellows\nthus?\nThe man that once did sell the lion's skin\nWhile the beast lived was killed with hunting him.\nA many of our bodies shall no doubt\nFind native graves, upon the which, I trust,\nShall witness live in brass of this day's work.\nAnd those that leave their valiant bones in France,\nDying like men, though buried in your dunghills,\nThey shall be famed; for there the sun shall greet\nthem\nAnd draw their honors reeking up to heaven,\nLeaving their earthly parts to choke your clime,\nThe smell whereof shall breed a plague in France.\nMark, then, abounding valor in our English,\nThat being dead, like to the bullet's crazing,\nBreak out into a second course of mischief,\nKilling in relapse of mortality.\nLet me speak proudly: tell the Constable\nWe are but warriors for the working day;\nOur gayness and our gilt are all besmirched\nWith rainy marching in the painful field.\nThere's not a piece of feather in our host--\nGood argument, I hope, we will not fly--\nAnd time hath worn us into slovenry.\nBut, by the Mass, our hearts are in the trim,\nAnd my poor soldiers tell me, yet ere night\nThey'll be in fresher robes, or they will pluck\nThe gay new coats o'er the French soldiers' heads\nAnd turn them out of service. If they do this,\nAs, if God please, they shall, my ransom then\nWill soon be levied. Herald, save thou thy labor.\nCome thou no more for ransom, gentle herald.\nThey shall have none, I swear, but these my joints,\nWhich, if they have, as I will leave 'em them,\nShall yield them little, tell the Constable.",
+      "order": 14
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 187,
+    "fields": {
+      "speaker": 136,
+      "scene": 170,
+      "text": "I shall, King Harry. And so fare thee well.\nThou never shalt hear herald anymore.\nKING HENRY  I fear thou wilt once more come again\nfor a ransom.\t[Montjoy exits.]\n[Enter York.\n]\nYORK, [kneeling]\nMy lord, most humbly on my knee I beg\nThe leading of the vaward.",
+      "order": 15
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 188,
+    "fields": {
+      "speaker": 27,
+      "scene": 170,
+      "text": "Take it, brave York.\t[York rises.]\nNow, soldiers, march away,\nAnd how Thou pleasest, God, dispose the day.",
+      "order": 16
+    }
+  },
+  {
+    "model": "core.scene",
+    "pk": 189,
+    "fields": {
+      "act": 144,
+      "name": "Scene 4",
+      "order": 4
+    }
+  },
+  {
+    "model": "core.scene",
+    "pk": 190,
+    "fields": {
+      "act": 144,
+      "name": "Scene 5",
+      "order": 5
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 191,
+    "fields": {
+      "speaker": 142,
+      "scene": 190,
+      "text": "O Seigneur! Le jour est perdu, tout est perdu!",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 192,
+    "fields": {
+      "speaker": 92,
+      "scene": 190,
+      "text": "Mort de ma vie, all is confounded, all!\nReproach and everlasting shame\nSits mocking in our plumes.\t[A short Alarum.]\nO mechante Fortune!\nDo not run away.\nCONSTABLE  Why, all our ranks are broke.",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 193,
+    "fields": {
+      "speaker": 92,
+      "scene": 190,
+      "text": "O perdurable shame! Let's stab ourselves.\nBe these the wretches that we played at dice for?",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 194,
+    "fields": {
+      "speaker": 142,
+      "scene": 190,
+      "text": "Is this the king we sent to for his ransom?",
+      "order": 3
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 195,
+    "fields": {
+      "name": "BOURBON"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 196,
+    "fields": {
+      "speaker": 195,
+      "scene": 190,
+      "text": "Shame, and eternal shame, nothing but shame!\nLet us die. In once more! Back again!\nAnd he that will not follow Bourbon now,\nLet him go hence, and with his cap in hand\nLike a base pander hold the chamber door,\nWhilst by a slave, no gentler than my dog,\nHis fairest daughter is contaminate.",
+      "order": 4
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 197,
+    "fields": {
+      "speaker": 121,
+      "scene": 190,
+      "text": "Disorder, that hath spoiled us, friend us now.\nLet us on heaps go offer up our lives.",
+      "order": 5
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 198,
+    "fields": {
+      "speaker": 142,
+      "scene": 190,
+      "text": "We are enough yet living in the field\nTo smother up the English in our throngs,\nIf any order might be thought upon.",
+      "order": 6
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 199,
+    "fields": {
+      "speaker": 195,
+      "scene": 190,
+      "text": "The devil take order now! I'll to the throng.\nLet life be short, else shame will be too long.",
+      "order": 7
+    }
+  },
+  {
+    "model": "core.scene",
+    "pk": 200,
+    "fields": {
+      "act": 144,
+      "name": "Scene 6",
+      "order": 6
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 201,
+    "fields": {
+      "speaker": 27,
+      "scene": 200,
+      "text": "Well have we done, thrice-valiant countrymen,\nBut all's not done. Yet keep the French the field.",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 202,
+    "fields": {
+      "speaker": 29,
+      "scene": 200,
+      "text": "The Duke of York commends him to your Majesty.",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 203,
+    "fields": {
+      "speaker": 27,
+      "scene": 200,
+      "text": "Lives he, good uncle? Thrice within this hour\nI saw him down, thrice up again and fighting.\nFrom helmet to the spur, all blood he was.",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 204,
+    "fields": {
+      "speaker": 29,
+      "scene": 200,
+      "text": "In which array, brave soldier, doth he lie,\nLarding the plain, and by his bloody side,\nYoke-fellow to his honor-owing wounds,\nThe noble Earl of Suffolk also lies.\nSuffolk first died, and York, all haggled over,\nComes to him where in gore he lay insteeped,\nAnd takes him by the beard, kisses the gashes\nThat bloodily did yawn upon his face.\nHe cries aloud \"Tarry, my cousin Suffolk.\nMy soul shall thine keep company to heaven.\nTarry, sweet soul, for mine; then fly abreast,\nAs in this glorious and well-foughten field\nWe kept together in our chivalry.\"\nUpon these words I came and cheered him up.\nHe smiled me in the face, raught me his hand,\nAnd with a feeble grip, says \"Dear my lord,\nCommend my service to my sovereign.\"\nSo did he turn, and over Suffolk's neck\nHe threw his wounded arm and kissed his lips,\nAnd so, espoused to death, with blood he sealed\nA testament of noble-ending love.\nThe pretty and sweet manner of it forced\nThose waters from me which I would have stopped,\nBut I had not so much of man in me,\nAnd all my mother came into mine eyes\nAnd gave me up to tears.\nKING HENRY  I blame you not,\nFor, hearing this, I must perforce compound\nWith my full eyes, or they will issue too.\t[Alarum.]\nBut hark, what new alarum is this same?\nThe French have reinforced their scattered men.\nThen every soldier kill his prisoners.\nGive the word through.",
+      "order": 3
+    }
+  },
+  {
+    "model": "core.scene",
+    "pk": 205,
+    "fields": {
+      "act": 144,
+      "name": "Scene 7",
+      "order": 7
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 206,
+    "fields": {
+      "speaker": 27,
+      "scene": 205,
+      "text": "I was not angry since I came to France\nUntil this instant. Take a trumpet, herald.\nRide thou unto the horsemen on yond hill.\nIf they will fight with us, bid them come down,\nOr void the field. They do offend our sight.\nIf they'll do neither, we will come to them\nAnd make them skirr away as swift as stones\nEnforced from the old Assyrian slings.\nBesides, we'll cut the throats of those we have,\nAnd not a man of them that we shall take\nShall taste our mercy. Go and tell them so.",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 207,
+    "fields": {
+      "speaker": 29,
+      "scene": 205,
+      "text": "Here comes the herald of the French, my liege.",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 208,
+    "fields": {
+      "speaker": 138,
+      "scene": 205,
+      "text": "His eyes are humbler than they used to be.",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 209,
+    "fields": {
+      "speaker": 27,
+      "scene": 205,
+      "text": "How now, what means this, herald? Know'st thou\nnot\nThat I have fined these bones of mine for ransom?\nCom'st thou again for ransom?\nMONTJOY  No, great king.\nI come to thee for charitable license,\nThat we may wander o'er this bloody field\nTo book our dead and then to bury them,\nTo sort our nobles from our common men,\nFor many of our princes--woe the while!--\nLie drowned and soaked in mercenary blood.\nSo do our vulgar drench their peasant limbs\nIn blood of princes, and the wounded steeds\nFret fetlock deep in gore, and with wild rage\nYerk out their armed heels at their dead masters,\nKilling them twice. O, give us leave, great king,\nTo view the field in safety and dispose\nOf their dead bodies.\nKING HENRY  I tell thee truly, herald,\nI know not if the day be ours or no,\nFor yet a many of your horsemen peer\nAnd gallop o'er the field.\nMONTJOY  The day is yours.",
+      "order": 3
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 210,
+    "fields": {
+      "speaker": 27,
+      "scene": 205,
+      "text": "Praised be God, and not our strength, for it!\nWhat is this castle called that stands hard by?\nMONTJOY  They call it Agincourt.",
+      "order": 4
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 211,
+    "fields": {
+      "speaker": 27,
+      "scene": 205,
+      "text": "Then call we this the field of Agincourt,\nFought on the day of Crispin Crispianus.\nFLUELLEN  Your grandfather of famous memory, an 't\nplease your Majesty, and your great-uncle Edward\nthe Plack Prince of Wales, as I have read in the\nchronicles, fought a most prave pattle here in\nFrance.\nKING HENRY  They did, Fluellen.\nFLUELLEN  Your Majesty says very true. If your Majesties\nis remembered of it, the Welshmen did good\nservice in a garden where leeks did grow, wearing\nleeks in their Monmouth caps, which, your Majesty\nknow, to this hour is an honorable badge of the\nservice. And I do believe your Majesty takes no\nscorn to wear the leek upon Saint Tavy's day.",
+      "order": 5
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 212,
+    "fields": {
+      "speaker": 27,
+      "scene": 205,
+      "text": "I wear it for a memorable honor,\nFor I am Welsh, you know, good countryman.\nFLUELLEN  All the water in Wye cannot wash your\nMajesty's Welsh plood out of your pody, I can tell\nyou that. God pless it and preserve it as long as it\npleases his Grace and his Majesty too.\nKING HENRY  Thanks, good my countryman.\nFLUELLEN  By Jeshu, I am your Majesty's countryman,\nI care not who know it. I will confess it to all the\n'orld. I need not to be ashamed of your Majesty,\npraised be God, so long as your Majesty is an\nhonest man.",
+      "order": 6
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 213,
+    "fields": {
+      "speaker": 27,
+      "scene": 205,
+      "text": "God keep me so.--Our heralds, go with him.\nBring me just notice of the numbers dead\nOn both our parts.\nCall yonder fellow hither.\nEXETER  Soldier, you must come to the King.\nKING HENRY  Soldier, why wear'st thou that glove in thy\ncap?\nWILLIAMS  An 't please your Majesty, 'tis the gage of\none that I should fight withal, if he be alive.\nKING HENRY  An Englishman?\nWILLIAMS  An 't please your Majesty, a rascal that\nswaggered with me last night, who, if alive and ever\ndare to challenge this glove, I have sworn to take\nhim a box o' th' ear, or if I can see my glove in his\ncap, which he swore, as he was a soldier, he would\nwear if alive, I will strike it out soundly.\nKING HENRY  What think you, Captain Fluellen, is it fit\nthis soldier keep his oath?\nFLUELLEN  He is a craven and a villain else, an 't\nplease your Majesty, in my conscience.\nKING HENRY  It may be his enemy is a gentleman of\ngreat sort, quite from the answer of his degree.\nFLUELLEN  Though he be as good a gentleman as the\ndevil is, as Lucifer and Beelzebub himself, it is\nnecessary, look your Grace, that he keep his vow\nand his oath. If he be perjured, see you now, his\nreputation is as arrant a villain and a Jack Sauce as\never his black shoe trod upon God's ground and His\nearth, in my conscience, la.\nKING HENRY  Then keep thy vow, sirrah, when thou\nmeet'st the fellow.\nWILLIAMS  So I will, my liege, as I live.\nKING HENRY  Who serv'st thou under?\nWILLIAMS  Under Captain Gower, my liege.\nFLUELLEN  Gower is a good captain, and is good knowledge\nand literatured in the wars.\nKING HENRY  Call him hither to me, soldier.\nWILLIAMS  I will, my liege.\t[He exits.]\nKING HENRY, [giving Fluellen Williams's glove]  Here,\nFluellen, wear thou this favor for me, and stick it in\nthy cap. When Alencon and myself were down\ntogether, I plucked this glove from his helm. If any\nman challenge this, he is a friend to Alencon and an\nenemy to our person. If thou encounter any such,\napprehend him, an thou dost me love.\nFLUELLEN, [putting the glove in his cap]  Your Grace\ndoes me as great honors as can be desired in the\nhearts of his subjects. I would fain see the man that\nhas but two legs that shall find himself aggriefed at\nthis glove, that is all; but I would fain see it once, an\nplease God of His grace that I might see.\nKING HENRY  Know'st thou Gower?\nFLUELLEN  He is my dear friend, an please you.\nKING HENRY  Pray thee, go seek him, and bring him to\nmy tent.\nFLUELLEN  I will fetch him.\t[He exits.]",
+      "order": 7
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 214,
+    "fields": {
+      "speaker": 27,
+      "scene": 205,
+      "text": "My Lord of Warwick and my brother Gloucester,\nFollow Fluellen closely at the heels.\nThe glove which I have given him for a favor\nMay haply purchase him a box o' th' ear.\nIt is the soldier's. I by bargain should\nWear it myself. Follow, good cousin Warwick.\nIf that the soldier strike him, as I judge\nBy his blunt bearing he will keep his word,\nSome sudden mischief may arise of it,\nFor I do know Fluellen valiant\nAnd, touched with choler, hot as gunpowder,\nAnd quickly will return an injury.\nFollow, and see there be no harm between them.--\nGo you with me, uncle of Exeter.",
+      "order": 8
+    }
+  },
+  {
+    "model": "core.scene",
+    "pk": 215,
+    "fields": {
+      "act": 144,
+      "name": "Scene 8",
+      "order": 8
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 216,
+    "fields": {
+      "speaker": 27,
+      "scene": 215,
+      "text": "Here, uncle Exeter, fill this glove with crowns\nAnd give it to this fellow.--Keep it, fellow,\nAnd wear it for an honor in thy cap\nTill I do challenge it.--Give him the crowns.--\nAnd, captain, you must needs be friends with him.\nFLUELLEN  By this day and this light, the fellow has\nmettle enough in his belly.--Hold, there is twelvepence\nfor you, and I pray you to serve God and keep\nyou out of prawls and prabbles and quarrels and\ndissensions, and I warrant you it is the better for\nyou.\nWILLIAMS  I will none of your money.\nFLUELLEN  It is with a good will. I can tell you it will\nserve you to mend your shoes. Come, wherefore\nshould you be so pashful? Your shoes is not so\ngood. 'Tis a good silling, I warrant you, or I will\nchange it.\nKING HENRY  Now, herald, are the dead numbered?\nHERALD, [giving the King a paper]\nHere is the number of the slaughtered French.\nKING HENRY, [to Exeter]\nWhat prisoners of good sort are taken, uncle?",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 217,
+    "fields": {
+      "speaker": 29,
+      "scene": 215,
+      "text": "Charles, Duke of Orleans, nephew to the King;\nJohn, Duke of Bourbon, and Lord Bouciqualt.\nOf other lords and barons, knights and squires,\nFull fifteen hundred, besides common men.",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 218,
+    "fields": {
+      "speaker": 27,
+      "scene": 215,
+      "text": "This note doth tell me of ten thousand French\nThat in the field lie slain. Of princes in this number\nAnd nobles bearing banners, there lie dead\nOne hundred twenty-six. Added to these,\nOf knights, esquires, and gallant gentlemen,\nEight thousand and four hundred, of the which\nFive hundred were but yesterday dubbed knights.\nSo that in these ten thousand they have lost,\nThere are but sixteen hundred mercenaries.\nThe rest are princes, barons, lords, knights, squires,\nAnd gentlemen of blood and quality.\nThe names of those their nobles that lie dead:\nCharles Delabreth, High Constable of France;\nJacques of Chatillon, Admiral of France;\nThe Master of the Crossbows, Lord Rambures;\nGreat Master of France, the brave Sir Guichard\nDauphin;\nJohn, Duke of Alencon; Anthony, Duke of Brabant,\nThe brother to the Duke of Burgundy;\nAnd Edward, Duke of Bar. Of lusty earls:\nGrandpre and Roussi, Faulconbridge and Foix,\nBeaumont and Marle, Vaudemont and Lestrale.\nHere was a royal fellowship of death.\nWhere is the number of our English dead?\nEdward the Duke of York, the Earl of Suffolk,\nSir Richard Ketly, Davy Gam, esquire;\nNone else of name, and of all other men\nBut five and twenty. O God, thy arm was here,\nAnd not to us, but to thy arm alone\nAscribe we all! When, without stratagem,\nBut in plain shock and even play of battle,\nWas ever known so great and little loss\nOn one part and on th' other? Take it, God,\nFor it is none but thine.\nEXETER  'Tis wonderful.",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 219,
+    "fields": {
+      "speaker": 27,
+      "scene": 215,
+      "text": "Come, go we in procession to the village,\nAnd be it death proclaimed through our host\nTo boast of this or take that praise from God\nWhich is His only.\nFLUELLEN  Is it not lawful, an please your Majesty, to\ntell how many is killed?",
+      "order": 3
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 220,
+    "fields": {
+      "speaker": 27,
+      "scene": 215,
+      "text": "Yes, captain, but with this acknowledgment:\nThat God fought for us.\nFLUELLEN  Yes, my conscience, He did us great good.\nKING HENRY  Do we all holy rites.\nLet there be sung Non nobis, and Te Deum,\nThe dead with charity enclosed in clay,\nAnd then to Calais, and to England then,\nWhere ne'er from France arrived more happy men.",
+      "order": 4
+    }
+  },
+  {
+    "model": "core.act",
+    "pk": 221,
+    "fields": {
+      "play": 1,
+      "name": "Act 5",
+      "order": 5
+    }
+  },
+  {
+    "model": "core.scene",
+    "pk": 222,
+    "fields": {
+      "act": 221,
+      "name": "Scene 1",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 223,
+    "fields": {
+      "speaker": 4,
+      "scene": 222,
+      "text": "Vouchsafe to those that have not read the story\nThat I may prompt them; and of such as have,\nI humbly pray them to admit th' excuse\nOf time, of numbers, and due course of things,\nWhich cannot in their huge and proper life\nBe here presented. Now we bear the King\nToward Calais. Grant him there. There seen,\nHeave him away upon your winged thoughts\nAthwart the sea. Behold, the English beach\nPales in the flood with men, wives, and boys,\nWhose shouts and claps outvoice the deep-mouthed\nsea,\nWhich, like a mighty whiffler 'fore the King\nSeems to prepare his way. So let him land,\nAnd solemnly see him set on to London.\nSo swift a pace hath thought that even now\nYou may imagine him upon Blackheath,\nWhere that his lords desire him to have borne\nHis bruised helmet and his bended sword\nBefore him through the city. He forbids it,\nBeing free from vainness and self-glorious pride,\nGiving full trophy, signal, and ostent\nQuite from himself, to God. But now behold,\nIn the quick forge and workinghouse of thought,\nHow London doth pour out her citizens.\nThe Mayor and all his brethren in best sort,\nLike to the senators of th' antique Rome,\nWith the plebeians swarming at their heels,\nGo forth and fetch their conqu'ring Caesar in--\nAs, by a lower but by loving likelihood\nWere now the general of our gracious empress,\nAs in good time he may, from Ireland coming,\nBringing rebellion broached on his sword,\nHow many would the peaceful city quit\nTo welcome him! Much more, and much more\ncause,\nDid they this Harry. Now in London place him\n(As yet the lamentation of the French\nInvites the King of England's stay at home;\nThe Emperor's coming in behalf of France\nTo order peace between them) and omit\nAll the occurrences, whatever chanced,\nTill Harry's back return again to France.\nThere must we bring him, and myself have played\nThe interim, by remembering you 'tis past.\nThen brook abridgment, and your eyes advance\nAfter your thoughts, straight back again to France.",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.scene",
+    "pk": 224,
+    "fields": {
+      "act": 221,
+      "name": "Scene 2",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 225,
+    "fields": {
+      "speaker": 27,
+      "scene": 224,
+      "text": "Peace to this meeting wherefor we are met.\nUnto our brother France and to our sister,\nHealth and fair time of day.--Joy and good wishes\nTo our most fair and princely cousin Katherine.--\nAnd, as a branch and member of this royalty,\nBy whom this great assembly is contrived,\nWe do salute you, Duke of Burgundy.--\nAnd princes French, and peers, health to you all.",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 226,
+    "fields": {
+      "speaker": 90,
+      "scene": 224,
+      "text": "Right joyous are we to behold your face,\nMost worthy brother England. Fairly met.--\nSo are you, princes English, every one.",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 227,
+    "fields": {
+      "name": "QUEEN OF FRANCE"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 228,
+    "fields": {
+      "speaker": 227,
+      "scene": 224,
+      "text": "So happy be the issue, brother Ireland,\nOf this good day and of this gracious meeting,\nAs we are now glad to behold your eyes--\nYour eyes which hitherto have borne in them\nAgainst the French that met them in their bent\nThe fatal balls of murdering basilisks.\nThe venom of such looks, we fairly hope,\nHave lost their quality, and that this day\nShall change all griefs and quarrels into love.",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 229,
+    "fields": {
+      "speaker": 27,
+      "scene": 224,
+      "text": "To cry \"Amen\" to that, thus we appear.",
+      "order": 3
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 230,
+    "fields": {
+      "speaker": 227,
+      "scene": 224,
+      "text": "You English princes all, I do salute you.",
+      "order": 4
+    }
+  },
+  {
+    "model": "core.speaker",
+    "pk": 231,
+    "fields": {
+      "name": "BURGUNDY"
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 232,
+    "fields": {
+      "speaker": 231,
+      "scene": 224,
+      "text": "My duty to you both, on equal love,\nGreat kings of France and England. That I have\nlabored\nWith all my wits, my pains, and strong endeavors\nTo bring your most imperial Majesties\nUnto this bar and royal interview,\nYour Mightiness on both parts best can witness.\nSince, then, my office hath so far prevailed\nThat face to face and royal eye to eye\nYou have congreeted, let it not disgrace me\nIf I demand before this royal view\nWhat rub or what impediment there is\nWhy that the naked, poor, and mangled peace,\nDear nurse of arts, plenties, and joyful births,\nShould not in this best garden of the world,\nOur fertile France, put up her lovely visage?\nAlas, she hath from France too long been chased,\nAnd all her husbandry doth lie on heaps,\nCorrupting in its own fertility.\nHer vine, the merry cheerer of the heart,\nUnpruned, dies. Her hedges, even-pleached,\nLike prisoners wildly overgrown with hair,\nPut forth disordered twigs. Her fallow leas\nThe darnel, hemlock, and rank fumitory\nDoth root upon, while that the coulter rusts\nThat should deracinate such savagery.\nThe even mead, that erst brought sweetly forth\nThe freckled cowslip, burnet, and green clover,\nWanting the scythe, withal uncorrected, rank,\nConceives by idleness, and nothing teems\nBut hateful docks, rough thistles, kecksies, burrs,\nLosing both beauty and utility.\nAnd all our vineyards, fallows, meads, and hedges,\nDefective in their natures, grow to wildness.\nEven so our houses and ourselves and children\nHave lost, or do not learn for want of time,\nThe sciences that should become our country,\nBut grow like savages, as soldiers will\nThat nothing do but meditate on blood,\nTo swearing and stern looks, diffused attire,\nAnd everything that seems unnatural.\nWhich to reduce into our former favor\nYou are assembled, and my speech entreats\nThat I may know the let why gentle peace\nShould not expel these inconveniences\nAnd bless us with her former qualities.",
+      "order": 5
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 233,
+    "fields": {
+      "speaker": 27,
+      "scene": 224,
+      "text": "If, Duke of Burgundy, you would the peace,\nWhose want gives growth to th' imperfections\nWhich you have cited, you must buy that peace\nWith full accord to all our just demands,\nWhose tenors and particular effects\nYou have, enscheduled briefly, in your hands.",
+      "order": 6
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 234,
+    "fields": {
+      "speaker": 231,
+      "scene": 224,
+      "text": "The King hath heard them, to the which as yet\nThere is no answer made.",
+      "order": 7
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 235,
+    "fields": {
+      "speaker": 27,
+      "scene": 224,
+      "text": "Well then, the peace which you before so urged\nLies in his answer.",
+      "order": 8
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 236,
+    "fields": {
+      "speaker": 90,
+      "scene": 224,
+      "text": "I have but with a cursitory eye\nO'erglanced the articles. Pleaseth your Grace\nTo appoint some of your council presently\nTo sit with us once more with better heed\nTo resurvey them, we will suddenly\nPass our accept and peremptory answer.",
+      "order": 9
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 237,
+    "fields": {
+      "speaker": 27,
+      "scene": 224,
+      "text": "Brother, we shall.--Go, uncle Exeter,\nAnd brother Clarence, and you, brother Gloucester,\nWarwick, and Huntington, go with the King,\nAnd take with you free power to ratify,\nAugment, or alter, as your wisdoms best\nShall see advantageable for our dignity,\nAnything in or out of our demands,\nAnd we'll consign thereto.--Will you, fair sister,\nGo with the princes or stay here with us?",
+      "order": 10
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 238,
+    "fields": {
+      "speaker": 227,
+      "scene": 224,
+      "text": "Our gracious brother, I will go with them.\nHaply a woman's voice may do some good\nWhen articles too nicely urged be stood on.",
+      "order": 11
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 239,
+    "fields": {
+      "speaker": 27,
+      "scene": 224,
+      "text": "Yet leave our cousin Katherine here with us.\nShe is our capital demand, comprised\nWithin the forerank of our articles.",
+      "order": 12
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 240,
+    "fields": {
+      "speaker": 227,
+      "scene": 224,
+      "text": "She hath good leave.\n[All but Katherine, and the King of England,\nand Alice exit.]\nKING HENRY  Fair Katherine, and most fair,\nWill you vouchsafe to teach a soldier terms\nSuch as will enter at a lady's ear\nAnd plead his love-suit to her gentle heart?\nKATHERINE  Your Majesty shall mock at me. I cannot\nspeak your England.\nKING HENRY  O fair Katherine, if you will love me\nsoundly with your French heart, I will be glad to\nhear you confess it brokenly with your English\ntongue. Do you like me, Kate?\nKATHERINE  Pardonnez-moi, I cannot tell wat is \"like\nme.\"\nKING HENRY  An angel is like you, Kate, and you are\nlike an angel.\nKATHERINE, [to Alice]  Que dit-il? Que je suis semblable a\nles anges?\nALICE  Oui, vraiment, sauf votre Grace, ainsi dit-il.\nKING HENRY  I said so, dear Katherine, and I must not\nblush to affirm it.\nKATHERINE  O bon Dieu, les langues des hommes sont\npleines de tromperies.\nKING HENRY, [to Alice]  What says she, fair one? That the\ntongues of men are full of deceits?\nALICE  Oui, dat de tongues of de mans is be full of\ndeceits; dat is de Princess.\nKING HENRY  The Princess is the better Englishwoman.--\nI' faith, Kate, my wooing is fit for thy\nunderstanding. I am glad thou canst speak no\nbetter English, for if thou couldst, thou wouldst\nfind me such a plain king that thou wouldst think I\nhad sold my farm to buy my crown. I know no ways\nto mince it in love, but directly to say \"I love you.\"\nThen if you urge me farther than to say \"Do you, in\nfaith?\" I wear out my suit. Give me your answer, i'\nfaith, do; and so clap hands and a bargain. How say\nyou, lady?\nKATHERINE  Sauf votre honneur, me understand well.\nKING HENRY  Marry, if you would put me to verses or\nto dance for your sake, Kate, why you undid me.\nFor the one, I have neither words nor measure; and\nfor the other, I have no strength in measure, yet a\nreasonable measure in strength. If I could win a\nlady at leapfrog or by vaulting into my saddle with\nmy armor on my back, under the correction of\nbragging be it spoken, I should quickly leap into a\nwife. Or if I might buffet for my love, or bound my\nhorse for her favors, I could lay on like a butcher\nand sit like a jackanapes, never off. But, before God,\nKate, I cannot look greenly nor gasp out my eloquence,\nnor I have no cunning in protestation, only\ndownright oaths, which I never use till urged, nor\nnever break for urging. If thou canst love a fellow of\nthis temper, Kate, whose face is not worth sun-burning,\nthat never looks in his glass for love of\nanything he sees there, let thine eye be thy cook. I\nspeak to thee plain soldier. If thou canst love me for\nthis, take me. If not, to say to thee that I shall die is\ntrue, but for thy love, by the Lord, no. Yet I love thee\ntoo. And while thou liv'st, dear Kate, take a fellow of\nplain and uncoined constancy, for he perforce must\ndo thee right because he hath not the gift to woo in\nother places. For these fellows of infinite tongue,\nthat can rhyme themselves into ladies' favors, they\ndo always reason themselves out again. What? A\nspeaker is but a prater, a rhyme is but a ballad, a\ngood leg will fall, a straight back will stoop, a black\nbeard will turn white, a curled pate will grow bald,\na fair face will wither, a full eye will wax hollow, but\na good heart, Kate, is the sun and the moon, or\nrather the sun and not the moon, for it shines bright\nand never changes but keeps his course truly. If\nthou would have such a one, take me. And take me,\ntake a soldier. Take a soldier, take a king. And what\nsay'st thou then to my love? Speak, my fair, and\nfairly, I pray thee.\nKATHERINE  Is it possible dat I sould love de enemy of\nFrance?\nKING HENRY  No, it is not possible you should love the\nenemy of France, Kate. But, in loving me, you\nshould love the friend of France, for I love France\nso well that I will not part with a village of it. I will\nhave it all mine. And, Kate, when France is mine\nand I am yours, then yours is France and you are\nmine.\nKATHERINE  I cannot tell wat is dat.\nKING HENRY  No, Kate? I will tell thee in French,\nwhich I am sure will hang upon my tongue like a\nnew-married wife about her husband's neck, hardly\nto be shook off. Je quand sur le possession de\nFrance, et quand vous avez le possession de moi--let\nme see, what then? Saint Denis be my speed!--donc\nvotre est France, et vous etes mienne. It is as easy for\nme, Kate, to conquer the kingdom as to speak so\nmuch more French. I shall never move thee in\nFrench, unless it be to laugh at me.\nKATHERINE  Sauf votre honneur, le francais que vous\nparlez, il est meilleur que l'anglais lequel je parle.\nKING HENRY  No, faith, is 't not, Kate, but thy speaking\nof my tongue, and I thine, most truly-falsely must\nneeds be granted to be much at one. But, Kate, dost\nthou understand thus much English? Canst thou\nlove me?\nKATHERINE  I cannot tell.\nKING HENRY  Can any of your neighbors tell, Kate? I'll\nask them. Come, I know thou lovest me; and at\nnight, when you come into your closet, you'll question\nthis gentlewoman about me, and, I know, Kate,\nyou will, to her, dispraise those parts in me that you\nlove with your heart. But, good Kate, mock me\nmercifully, the rather, gentle princess, because I\nlove thee cruelly. If ever thou beest mine, Kate, as I\nhave a saving faith within me tells me thou shalt, I\nget thee with scambling, and thou must therefore\nneeds prove a good soldier-breeder. Shall not thou\nand I, between Saint Denis and Saint George, compound\na boy, half French, half English, that shall go\nto Constantinople and take the Turk by the beard?\nShall we not? What say'st thou, my fair flower de\nluce?\nKATHERINE  I do not know dat.\nKING HENRY  No, 'tis hereafter to know, but now to\npromise. Do but now promise, Kate, you will\nendeavor for your French part of such a boy; and\nfor my English moiety, take the word of a king and\na bachelor. How answer you, la plus belle Katherine\ndu monde, mon tres cher et divin deesse?\nKATHERINE  Your Majeste 'ave fausse French enough to\ndeceive de most sage demoiselle dat is en France.\nKING HENRY  Now fie upon my false French. By mine\nhonor, in true English, I love thee, Kate. By which\nhonor I dare not swear thou lovest me, yet my blood\nbegins to flatter me that thou dost, notwithstanding\nthe poor and untempering effect of my visage. Now\nbeshrew my father's ambition! He was thinking of\ncivil wars when he got me; therefore was I created\nwith a stubborn outside, with an aspect of iron, that\nwhen I come to woo ladies, I fright them. But, in\nfaith, Kate, the elder I wax, the better I shall appear.\nMy comfort is that old age, that ill layer-up of\nbeauty, can do no more spoil upon my face. Thou\nhast me, if thou hast me, at the worst, and thou shalt\nwear me, if thou wear me, better and better. And\ntherefore tell me, most fair Katherine, will you have\nme? Put off your maiden blushes, avouch the\nthoughts of your heart with the looks of an empress,\ntake me by the hand, and say \"Harry of England, I\nam thine,\" which word thou shalt no sooner bless\nmine ear withal, but I will tell thee aloud \"England\nis thine, Ireland is thine, France is thine, and Henry\nPlantagenet is thine,\" who, though I speak it before\nhis face, if he be not fellow with the best king, thou\nshalt find the best king of good fellows. Come, your\nanswer in broken music, for thy voice is music, and\nthy English broken. Therefore, queen of all, Katherine,\nbreak thy mind to me in broken English. Wilt\nthou have me?\nKATHERINE  Dat is as it shall please de roi mon pere.\nKING HENRY  Nay, it will please him well, Kate; it shall\nplease him, Kate.\nKATHERINE  Den it sall also content me.\nKING HENRY  Upon that I kiss your hand, and I call you\nmy queen.\nKATHERINE  Laissez, mon seigneur, laissez, laissez! Ma\nfoi, je ne veux point que vous abaissiez votre grandeur,\nen baisant la main d' une--Notre Seigneur!--\nindigne serviteur. Excusez-moi, je vous supplie, mon\ntres puissant seigneur.\nKING HENRY  Then I will kiss your lips, Kate.\nKATHERINE  Les dames et demoiselles, pour etre baisees\ndevant leurs noces, il n'est pas la coutume de France.\nKING HENRY  Madam my interpreter, what says she?\nALICE  Dat it is not be de fashion pour les ladies of\nFrance--I cannot tell wat is baiser en Anglish.\nKING HENRY  To kiss.\nALICE  Your Majeste entendre bettre que moi.\nKING HENRY  It is not a fashion for the maids in France\nto kiss before they are married, would she say?\nALICE  Oui, vraiment.\nKING HENRY  O Kate, nice customs curtsy to great\nkings. Dear Kate, you and I cannot be confined\nwithin the weak list of a country's fashion. We are\nthe makers of manners, Kate, and the liberty that\nfollows our places stops the mouth of all find-faults,\nas I will do yours for upholding the nice fashion of\nyour country in denying me a kiss. Therefore,\npatiently and yielding. [He kisses her.] You have\nwitchcraft in your lips, Kate. There is more eloquence\nin a sugar touch of them than in the tongues\nof the French council, and they should sooner\npersuade Harry of England than a general petition\nof monarchs.\n[Enter the French power, the French King and Queen\nand Burgundy, and the English Lords Westmoreland\nand Exeter.]\nHere comes your father.\nBURGUNDY  God save your Majesty. My royal cousin,\nteach you our princess English?\nKING HENRY  I would have her learn, my fair cousin,\nhow perfectly I love her, and that is good English.\nBURGUNDY  Is she not apt?\nKING HENRY  Our tongue is rough, coz, and my condition\nis not smooth, so that, having neither the voice\nnor the heart of flattery about me, I cannot so\nconjure up the spirit of love in her that he will\nappear in his true likeness.\nBURGUNDY  Pardon the frankness of my mirth if I\nanswer you for that. If you would conjure in her,\nyou must make a circle; if conjure up Love in her in\nhis true likeness, he must appear naked and blind.\nCan you blame her, then, being a maid yet rosed\nover with the virgin crimson of modesty, if she deny\nthe appearance of a naked blind boy in her naked\nseeing self? It were, my lord, a hard condition for a\nmaid to consign to.\nKING HENRY  Yet they do wink and yield, as love is\nblind and enforces.\nBURGUNDY  They are then excused, my lord, when they\nsee not what they do.\nKING HENRY  Then, good my lord, teach your cousin to\nconsent winking.\nBURGUNDY  I will wink on her to consent, my lord, if\nyou will teach her to know my meaning, for maids\nwell summered and warm kept are like flies at\nBartholomew-tide: blind, though they have their\neyes; and then they will endure handling, which\nbefore would not abide looking on.\nKING HENRY  This moral ties me over to time and a hot\nsummer. And so I shall catch the fly, your cousin,\nin the latter end, and she must be blind too.\nBURGUNDY  As love is, my lord, before it loves.\nKING HENRY  It is so. And you may, some of you, thank\nlove for my blindness, who cannot see many a fair\nFrench city for one fair French maid that stands in\nmy way.\nKING OF FRANCE  Yes, my lord, you see them perspectively,\nthe cities turned into a maid, for they are all\ngirdled with maiden walls that war hath never\nentered.\nKING HENRY  Shall Kate be my wife?\nKING OF FRANCE  So please you.\nKING HENRY  I am content, so the maiden cities you\ntalk of may wait on her. So the maid that stood in\nthe way for my wish shall show me the way to my\nwill.",
+      "order": 13
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 241,
+    "fields": {
+      "speaker": 90,
+      "scene": 224,
+      "text": "We have consented to all terms of reason.\nKING HENRY  Is 't so, my lords of England?",
+      "order": 14
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 242,
+    "fields": {
+      "speaker": 31,
+      "scene": 224,
+      "text": "The King hath granted every article,\nHis daughter first, and, in sequel, all,\nAccording to their firm proposed natures.",
+      "order": 15
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 243,
+    "fields": {
+      "speaker": 29,
+      "scene": 224,
+      "text": "Only he hath not yet subscribed this:\nWhere your Majesty demands that the King of\nFrance, having any occasion to write for matter of\ngrant, shall name your Highness in this form and\nwith this addition, in French: Notre tres cher fils\nHenri, roi d' Angleterre, heritier de France; and thus\nin Latin: Praeclarissimus filius noster Henricus, rex\nAngliae et hoeres Franciae.",
+      "order": 16
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 244,
+    "fields": {
+      "speaker": 90,
+      "scene": 224,
+      "text": "Nor this I have not, brother, so denied\nBut your request shall make me let it pass.",
+      "order": 17
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 245,
+    "fields": {
+      "speaker": 27,
+      "scene": 224,
+      "text": "I pray you, then, in love and dear alliance,\nLet that one article rank with the rest,\nAnd thereupon give me your daughter.",
+      "order": 18
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 246,
+    "fields": {
+      "speaker": 90,
+      "scene": 224,
+      "text": "Take her, fair son, and from her blood raise up\nIssue to me, that the contending kingdoms\nOf France and England, whose very shores look pale\nWith envy of each other's happiness,\nMay cease their hatred, and this dear conjunction\nPlant neighborhood and Christian-like accord\nIn their sweet bosoms, that never war advance\nHis bleeding sword 'twixt England and fair France.\nLORDS  Amen.",
+      "order": 19
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 247,
+    "fields": {
+      "speaker": 27,
+      "scene": 224,
+      "text": "Now welcome, Kate, and bear me witness all\nThat here I kiss her as my sovereign queen.",
+      "order": 20
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 248,
+    "fields": {
+      "speaker": 227,
+      "scene": 224,
+      "text": "God, the best maker of all marriages,\nCombine your hearts in one, your realms in one.\nAs man and wife, being two, are one in love,\nSo be there 'twixt your kingdoms such a spousal\nThat never may ill office or fell jealousy,\nWhich troubles oft the bed of blessed marriage,\nThrust in between the paction of these kingdoms\nTo make divorce of their incorporate league,\nThat English may as French, French Englishmen,\nReceive each other. God speak this Amen!\nALL  Amen.",
+      "order": 21
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 249,
+    "fields": {
+      "speaker": 27,
+      "scene": 224,
+      "text": "Prepare we for our marriage; on which day,\nMy Lord of Burgundy, we'll take your oath,\nAnd all the peers', for surety of our leagues.\nThen shall I swear to Kate, and you to me,\nAnd may our oaths well kept and prosp'rous be.",
+      "order": 22
+    }
+  },
+  {
+    "model": "core.speech",
+    "pk": 250,
+    "fields": {
+      "speaker": 4,
+      "scene": 224,
+      "text": "Thus far with rough and all-unable pen\nOur bending author hath pursued the story,\nIn little room confining mighty men,\nMangling by starts the full course of their glory.\nSmall time, but in that small most greatly lived\nThis star of England. Fortune made his sword,\nBy which the world's best garden he achieved\nAnd of it left his son imperial lord.\nHenry the Sixth, in infant bands crowned King\nOf France and England, did this king succeed,\nWhose state so many had the managing\nThat they lost France and made his England bleed,\nWhich oft our stage hath shown. And for their sake,\nIn your fair minds let this acceptance take.",
+      "order": 23
+    }
+  }
+]

@@ -1,0 +1,2 @@
+[client]
+disable-ssl-verify-server-cert

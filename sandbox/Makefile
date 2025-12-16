@@ -67,6 +67,17 @@ docker-clean:
 docker-destroy-db: docker-clean
 	docker volume rm sandbox_django_haystack_opensearch_demo_data
 
+test:
+	@echo "Starting django_haystack_opensearch_demo..."
+	docker compose up -d
+	@echo "Waiting for django_haystack_opensearch_demo to be up on port 443..."
+	@until nc -z localhost 443; do \
+		echo "Still waiting for container..."; \
+		sleep 2; \
+	done
+	docker exec django_haystack_opensearch_demo /bin/bash -c "TESTING=True DJANGO_SETTINGS_MODULE=demo.settings pytest $(ARGS)"
+	make devdown
+
 docker-destroy: docker-clean docker-destroy-db
 
 list:

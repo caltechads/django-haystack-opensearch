@@ -830,8 +830,17 @@ class OpenSearchSearchBackend(BaseSearchBackend):
         if dwithin is not None:
             filters.append(self._build_search_query_dwithin(dwithin))
 
-    def _apply_filters_to_query(self, kwargs, filters):
-        """Apply filters to the query, converting to bool query if needed."""
+    def _apply_filters_to_query(
+        self, kwargs: dict[str, Any], filters: list[dict[str, Any]]
+    ) -> None:
+        """
+        Apply filters to the query, converting to bool query if needed.
+
+        Args:
+            kwargs: The search kwargs to apply the filters to.
+            filters: The filters to apply to the search kwargs.
+
+        """
         if not filters:
             return
 
@@ -1390,8 +1399,14 @@ class OpenSearchSearchBackend(BaseSearchBackend):
 class OpenSearchSearchQuery(BaseSearchQuery):
     """OpenSearch search query class."""
 
-    def matching_all_fragment(self):
-        """Generates the query that matches all documents."""
+    def matching_all_fragment(self) -> str:
+        """
+        Generate the query that matches all documents.
+
+        Returns:
+            The query that matches all documents.
+
+        """
         return "*:*"
 
     def build_query_fragment(self, field: str, filter_type: str, value: Any) -> str:  # noqa: PLR0912, PLR0915
@@ -1518,5 +1533,8 @@ class OpenSearchSearchQuery(BaseSearchQuery):
 class OpenSearchSearchEngine(BaseEngine):
     """OpenSearch search engine for django-haystack."""
 
-    backend = OpenSearchSearchBackend
-    query = OpenSearchSearchQuery
+    #: The backend for the search engine.
+    backend: ClassVar[type[BaseSearchBackend]] = OpenSearchSearchBackend
+
+    #: The query for the search engine.
+    query: ClassVar[type[BaseSearchQuery]] = OpenSearchSearchQuery

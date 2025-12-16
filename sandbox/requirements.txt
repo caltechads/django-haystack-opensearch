@@ -4,18 +4,20 @@ asgiref==3.8.1
     # via django
 asttokens==3.0.0
     # via stack-data
-attrs==24.3.0
-    # via
-    #   jsonschema
-    #   referencing
+build==1.3.0
+    # via django-haystack-opensearch
 certifi==2024.12.14
-    # via elasticsearch
+    # via
+    #   opensearch-py
+    #   requests
+charset-normalizer==3.4.4
+    # via requests
+coverage==7.13.0
+    # via pytest-cov
 crispy-bootstrap5==2025.6
     # via
-    #   django-sphinx-hosting
+    #   django-haystack-opensearch-demo (pyproject.toml)
     #   django-wildewidgets
-cssselect==1.2.0
-    # via django-sphinx-hosting
 decorator==5.1.1
     # via ipython
 django==5.2.7
@@ -28,98 +30,93 @@ django==5.2.7
     #   django-crispy-forms
     #   django-debug-toolbar
     #   django-extensions
-    #   django-filter
     #   django-haystack
-    #   django-rest-framework-helpers
-    #   django-sphinx-hosting
+    #   django-haystack-opensearch
     #   django-wildewidgets
     #   django-xff
-    #   djangorestframework
-    #   drf-spectacular
 django-appconf==1.0.6
     # via django-compressor
-django-braces==1.16.0
-    # via django-sphinx-hosting
+django-braces==1.17.0
+    # via django-haystack-opensearch-demo (pyproject.toml)
 django-compressor==4.5.1
-    # via sphinx-hosting-demo (pyproject.toml)
+    # via django-haystack-opensearch-demo (pyproject.toml)
 django-crequest==2018.5.11
-    # via sphinx-hosting-demo (pyproject.toml)
-django-crispy-forms==2.4
+    # via django-haystack-opensearch-demo (pyproject.toml)
+django-crispy-forms==2.5
     # via
+    #   django-haystack-opensearch-demo (pyproject.toml)
     #   crispy-bootstrap5
-    #   django-sphinx-hosting
     #   django-wildewidgets
 django-debug-toolbar==4.4.6
-    # via sphinx-hosting-demo (pyproject.toml)
+    # via django-haystack-opensearch-demo (pyproject.toml)
 django-environ==0.11.2
-    # via sphinx-hosting-demo (pyproject.toml)
-django-extensions==3.2.3
-    # via django-sphinx-hosting
-django-filter==24.3
-    # via django-sphinx-hosting
+    # via django-haystack-opensearch-demo (pyproject.toml)
+django-extensions==4.1
+    # via django-haystack-opensearch-demo (pyproject.toml)
 django-haystack==3.3.0
-    # via django-sphinx-hosting
-django-rest-framework-helpers==8.5.0
-    # via django-sphinx-hosting
+    # via django-haystack-opensearch
+./django_haystack_opensearch.tar.gz
+    # via django-haystack-opensearch-demo (pyproject.toml)
 django-sass-processor==1.4.1
-    # via sphinx-hosting-demo (pyproject.toml)
-./django-sphinx-hosting.tar.gz
-    # via sphinx-hosting-demo (pyproject.toml)
-django-theme-academy==0.3.11
-    # via django-sphinx-hosting
-django-wildewidgets==1.2.3
+    # via django-haystack-opensearch-demo (pyproject.toml)
+django-theme-academy==0.3.13
+    # via django-haystack-opensearch-demo (pyproject.toml)
+django-wildewidgets==1.2.4
     # via
-    #   django-sphinx-hosting
+    #   django-haystack-opensearch-demo (pyproject.toml)
     #   django-theme-academy
 django-xff==1.3.0
-    # via sphinx-hosting-demo (pyproject.toml)
-djangorestframework==3.15.2
-    # via
-    #   django-rest-framework-helpers
-    #   django-sphinx-hosting
-    #   drf-spectacular
-drf-spectacular==0.28.0
-    # via django-sphinx-hosting
-elasticsearch==7.13.3
-    # via sphinx-hosting-demo (pyproject.toml)
+    # via django-haystack-opensearch-demo (pyproject.toml)
+events==0.5
+    # via opensearch-py
+execnet==2.1.2
+    # via pytest-xdist
 executing==2.1.0
     # via stack-data
+grpcio==1.76.0
+    # via opensearch-protobufs
 gunicorn==23.0.0
-    # via sphinx-hosting-demo (pyproject.toml)
-humanize==4.11.0
-    # via django-sphinx-hosting
-inflection==0.5.1
-    # via drf-spectacular
+    # via django-haystack-opensearch-demo (pyproject.toml)
+idna==3.11
+    # via requests
+iniconfig==2.3.0
+    # via pytest
 ipython==8.30.0
-    # via sphinx-hosting-demo (pyproject.toml)
+    # via django-haystack-opensearch-demo (pyproject.toml)
 jedi==0.19.2
     # via ipython
-jsonschema==4.23.0
-    # via drf-spectacular
-jsonschema-specifications==2024.10.1
-    # via jsonschema
 libsass==0.23.0
-    # via sphinx-hosting-demo (pyproject.toml)
-lxml==5.3.0
-    # via django-sphinx-hosting
-markdown-it-py==3.0.0
+    # via django-haystack-opensearch-demo (pyproject.toml)
+markdown-it-py==4.0.0
     # via rich
 matplotlib-inline==0.1.7
     # via ipython
 mdurl==0.1.2
     # via markdown-it-py
 mysqlclient==2.2.6
-    # via sphinx-hosting-demo (pyproject.toml)
+    # via django-haystack-opensearch-demo (pyproject.toml)
+opensearch-protobufs==0.19.0
+    # via opensearch-py
+opensearch-py==3.1.0
+    # via django-haystack-opensearch
 packaging==24.2
     # via
+    #   build
     #   django-haystack
     #   gunicorn
+    #   pytest
 parso==0.8.4
     # via jedi
 pexpect==4.9.0
     # via ipython
+pluggy==1.6.0
+    # via
+    #   pytest
+    #   pytest-cov
 prompt-toolkit==3.0.48
     # via ipython
+protobuf==6.33.2
+    # via opensearch-protobufs
 ptyprocess==0.7.0
     # via pexpect
 pure-eval==0.2.3
@@ -127,27 +124,48 @@ pure-eval==0.2.3
 pygments==2.18.0
     # via
     #   ipython
+    #   pytest
     #   rich
-pyyaml==6.0.2
-    # via drf-spectacular
+pyproject-hooks==1.2.0
+    # via build
+pytest==9.0.2
+    # via
+    #   django-haystack-opensearch-demo (pyproject.toml)
+    #   pytest-cov
+    #   pytest-django
+    #   pytest-env
+    #   pytest-mock
+    #   pytest-randomly
+    #   pytest-timeout
+    #   pytest-xdist
+pytest-cov==7.0.0
+    # via django-haystack-opensearch-demo (pyproject.toml)
+pytest-django==4.11.1
+    # via django-haystack-opensearch-demo (pyproject.toml)
+pytest-env==1.2.0
+    # via django-haystack-opensearch-demo (pyproject.toml)
+pytest-mock==3.15.1
+    # via django-haystack-opensearch-demo (pyproject.toml)
+pytest-randomly==4.0.1
+    # via django-haystack-opensearch-demo (pyproject.toml)
+pytest-timeout==2.4.0
+    # via django-haystack-opensearch-demo (pyproject.toml)
+pytest-xdist==3.8.0
+    # via django-haystack-opensearch-demo (pyproject.toml)
+python-dateutil==2.9.0.post0
+    # via opensearch-py
 rcssmin==1.1.2
     # via django-compressor
 redis==5.2.1
-    # via sphinx-hosting-demo (pyproject.toml)
-referencing==0.35.1
-    # via
-    #   jsonschema
-    #   jsonschema-specifications
-rich==13.9.4
-    # via django-sphinx-hosting
+    # via django-haystack-opensearch-demo (pyproject.toml)
+requests==2.32.5
+    # via opensearch-py
+rich==14.2.0
+    # via django-haystack-opensearch-demo (pyproject.toml)
 rjsmin==1.2.2
     # via django-compressor
-rpds-py==0.22.3
-    # via
-    #   jsonschema
-    #   referencing
-semver==3.0.2
-    # via django-sphinx-hosting
+six==1.17.0
+    # via python-dateutil
 sqlparse==0.5.3
     # via
     #   django
@@ -155,16 +173,18 @@ sqlparse==0.5.3
 stack-data==0.6.3
     # via ipython
 structlog==24.2.0
-    # via sphinx-hosting-demo (pyproject.toml)
+    # via django-haystack-opensearch-demo (pyproject.toml)
 tabulate==0.9.0
-    # via sphinx-hosting-demo (pyproject.toml)
+    # via django-haystack-opensearch-demo (pyproject.toml)
 traitlets==5.14.3
     # via
     #   ipython
     #   matplotlib-inline
-uritemplate==4.1.1
-    # via drf-spectacular
+typing-extensions==4.15.0
+    # via grpcio
 urllib3==1.26.20
-    # via elasticsearch
+    # via
+    #   opensearch-py
+    #   requests
 wcwidth==0.2.13
     # via prompt-toolkit

@@ -1,6 +1,8 @@
+from __future__ import annotations
+
 import logging
 import logging.config
-from typing import Any  # noqa: UP035
+from typing import Any
 
 import environ
 import structlog
@@ -59,7 +61,7 @@ if TESTING:
     DATABASES: dict[str, dict[str, Any]] = {
         "default": {
             "ENGINE": "django.db.backends.sqlite3",
-            "NAME": BASE_DIR.path("db.sqlite3"),
+            "NAME": str(BASE_DIR.path("db.sqlite3")),
         }
     }
 else:
@@ -117,18 +119,12 @@ DJANGO_APPS: list[str] = [
 ]
 THIRD_PARTY_APPS: list[str] = [
     "django_extensions",
-    "rest_framework",
-    "rest_framework.authtoken",
-    "django_filters",
-    "drf_spectacular",
     "sass_processor",
     "crispy_forms",
     "crispy_bootstrap5",
     "haystack",
     "academy_theme",
     "wildewidgets",
-    "sphinx_hosting",
-    "sphinx_hosting.api",
 ]
 LOCAL_APPS: list[str] = [
     "demo.users",
@@ -285,8 +281,8 @@ EMAIL_SUBJECT_PREFIX: str = env(
 )
 EMAIL_BACKEND: str = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST: str = env("EMAIL_HOST", default="mail")
-EMAIL_HOST_USER: str | None = env("EMAIL_HOST_USER", default=None)  # noqa: FA100
-EMAIL_HOST_PASSWORD: str | None = env("EMAIL_HOST_PASSWORD", default=None)  # noqa: FA100
+EMAIL_HOST_USER: str | None = env("EMAIL_HOST_USER", default=None)
+EMAIL_HOST_PASSWORD: str | None = env("EMAIL_HOST_PASSWORD", default=None)
 EMAIL_USE_TLS: bool = env.bool("EMAIL_USE_TLS", default=False)
 EMAIL_PORT: int = env.int("EMAIL_PORT", default=1025)
 
@@ -333,7 +329,7 @@ pre_chain = [
 ]
 
 # Build our custom logging config.
-LOGGING_CONFIG: dict[str, Any] | None = None  # noqa: FA100
+LOGGING_CONFIG: dict[str, Any] | None = None
 LOGGING: dict[str, Any] = {
     "version": 1,
     "disable_existing_loggers": False,
@@ -388,11 +384,11 @@ logging.config.dictConfig(LOGGING)
 
 # django-haystack
 # ------------------------------------------------------------------------------
-HAYSTACK_CONNECTIONS: Dict[str, Any] = {
+HAYSTACK_CONNECTIONS: dict[str, Any] = {
     "default": {
-        "ENGINE": "haystack.backends.elasticsearch7_backend.Elasticsearch7SearchEngine",
-        "URL": "http://search:9200/",
-        "INDEX_NAME": "sphinx_hosting",
+        "ENGINE": "django_haystack_opensearch.core.haystack.OpenSearchSearchEngine",
+        "URL": "https://search:9200/",
+        "INDEX_NAME": "django_haystack_opensearch_demo",
     },
 }
 
@@ -404,7 +400,7 @@ CRISPY_TEMPLATE_PACK: str = "bootstrap5"
 
 # django-theme-academy
 # ------------------------------------------------------------------------------
-ACADEMY_THEME_SETTINGS: Dict[str, Any] = {
+ACADEMY_THEME_SETTINGS: dict[str, Any] = {
     # Header
     "APPLE_TOUCH_ICON": "core/images/apple-touch-icon.png",
     "FAVICON_32": "core/images/favicon-32x32.png",
@@ -412,10 +408,10 @@ ACADEMY_THEME_SETTINGS: Dict[str, Any] = {
     "FAVICON": "core/images/favicon.ico",
     "SITE_WEBMANIFEST": "core/images/site.webmanifest",
     # Footer
-    "ORGANIZATION_LINK": "https://github.com/caltechads/django-sphinx-hosting",
-    "ORGANIZATION_NAME": "Sphinx Hosting",
-    "ORGANIZATION_ADDRESS": "123 Main Street, Everytown, ST",
-    "COPYRIGHT_ORGANIZATION": "Sphinx Hosting",
+    "ORGANIZATION_LINK": "https://github.com/caltechads/django_haystack_opensearch",
+    "ORGANIZATION_NAME": "django-haystack-opensearch",
+    "ORGANIZATION_ADDRESS": "1200 E California Blvd, Pasadena, CA 91125",
+    "COPYRIGHT_ORGANIZATION": "Caltech IMSS ADS",
     "FOOTER_LINKS": [],
 }
 

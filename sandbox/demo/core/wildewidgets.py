@@ -7,6 +7,7 @@ them between the ops and users apps without circular imports.
 
 from typing import Any, ClassVar
 
+from django.templatetags.static import static
 from django.urls import reverse_lazy
 from wildewidgets import (
     Block,
@@ -15,7 +16,6 @@ from wildewidgets import (
     Menu,
     MenuItem,
     TablerVerticalNavbar,
-    static,
 )
 
 
@@ -33,9 +33,9 @@ class MainMenu(Menu):
     #: Default menu items that appear for all users
     items: ClassVar[list[MenuItem]] = [
         MenuItem(
-            text="Buildings",
-            icon="building",
-            url=reverse_lazy("ops:home"),
+            text="Home",
+            icon="house",
+            url=reverse_lazy("core:home"),
         ),
     ]
 
@@ -63,7 +63,7 @@ class NavigationSidebar(TablerVerticalNavbar):
     #: The branding block that appears at the top of the sidebar
     branding = Block(
         LinkedImage(
-            image_src=static(static("core/images/logo.jpg")),
+            image_src=static("core/images/logo.jpg"),
             image_width="150px",
             image_alt="django_haystack_opensearch",
             css_class="d-flex justify-content-center ms-3",
@@ -102,9 +102,9 @@ class Breadcrumbs(BreadcrumbBlock):
         """
         Initialize the breadcrumbs with the django_haystack_opensearch home link.
 
-        This method automatically adds the first breadcrumb item pointing to
-        the django_haystack_opensearch home page, ensuring all breadcrumb trails start from
-        the same root location.
+        This method automatically adds the first breadcrumb item pointing to the
+        django_haystack_opensearch home page, ensuring all breadcrumb trails
+        start from the same root location.
 
         Args:
             *args: Variable length argument list passed to parent BreadcrumbBlock

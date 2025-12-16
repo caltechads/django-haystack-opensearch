@@ -5,7 +5,6 @@ from wildewidgets import WildewidgetDispatch
 
 from .core import urls as core_urls
 
-
 urlpatterns = [
     path("", include(core_urls, namespace="core")),
     path("accounts/", include("django.contrib.auth.urls")),
