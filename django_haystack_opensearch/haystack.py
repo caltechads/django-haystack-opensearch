@@ -203,6 +203,51 @@ class OpenSearchSearchBackend(BaseSearchBackend):
         """
         return {"properties": field_mapping}
 
+    def _add_keyword_and_exact_subfields(
+        self, props: dict[str, Any], unified_index: UnifiedIndex
+    ) -> dict[str, Any]:
+        """
+        Modify generated properties so that:
+
+          * Text fields get a `.keyword` subfield for exact matching
+          * Faceted fields get type keyword (exact match & aggregations)
+
+        Args:
+           props: The field mapping to add the keyword and exact subfields to.
+           unified_index: The unified index to get the facet fieldnames from.
+
+        Returns:
+           A dictionary with the properties of the field mapping with the
+           keyword and exact subfields added.
+
+        """
+        new_props: dict[str, Any] = {}
+        # Collect all declared facet field names from the unified index
+        facet_fields: set[str] = {
+            name
+            for model in unified_index.get_indexed_models()
+            for name, field in unified_index.get_index(model).fields.items()
+            if getattr(field, "faceted", False)
+        }
+
+        for field, definition in props.items():
+            # Always copy base definition
+            new_props[field] = definition
+
+            # If field is text type, add a keyword subfield
+            if definition.get("type") == "text":
+                new_props[field] = {
+                    "type": "text",
+                    "fields": {"keyword": {"type": "keyword", "ignore_above": 256}},
+                }
+
+            # If this is a facetable field, create an *exact* keyword field
+            if field in facet_fields:
+                exact_name = f"{field}_exact"
+                new_props[exact_name] = {"type": "keyword", "ignore_above": 256}
+
+        return new_props
+
     def setup(self) -> None:
         """
         Setup the index and mappings.
@@ -232,6 +277,10 @@ class OpenSearchSearchBackend(BaseSearchBackend):
         self.content_field_name, field_mapping = self.build_schema(
             unified_index.all_searchfields()
         )
+        field_mapping = self._add_keyword_and_exact_subfields(
+            field_mapping, unified_index
+        )
+
         current_mapping = self._get_current_mapping(field_mapping)
 
         if current_mapping != self.existing_mapping:
@@ -367,6 +416,23 @@ class OpenSearchSearchBackend(BaseSearchBackend):
                 )
 
         return prepped_docs
+
+    def get_facet_fieldname(self, field_name: str) -> str:
+        """
+        Return the correct backend field name for faceting/filtering.
+        If we created `<field>_exact` in the mapping, return that.
+
+        Args:
+            field_name: The field name to get the facet fieldname for.
+
+        Returns:
+            The facet exact fieldname.
+
+        Raises:
+            KeyError: If the field name is not found in the mapping.
+
+        """
+        return f"{field_name}_exact"
 
     def update(self, index: str, iterable: Iterable[Any], commit: bool = True) -> None:
         """
@@ -933,7 +999,16 @@ class OpenSearchSearchBackend(BaseSearchBackend):
         if len(model_choices) > 0:
             filters.append({"terms": {DJANGO_CT: model_choices}})
 
-        filters.extend({"query_string": {"query": q}} for q in narrow_queries)
+        # Convert filter field queries into term filters
+        term_filters = []
+        for q in narrow_queries:
+            # expected q is something like 'speaker_name_exact:"VALUE"'
+            # parse out field and value
+            field, value = q.split(":", 1)
+            # strip quotes around the value if present
+            value = value.strip('"')
+            term_filters.append({"term": {field: value}})
+        filters.extend(term_filters)
 
         self._add_geo_filters_to_kwargs(filters, within, dwithin)
         self._apply_filters_to_query(kwargs, filters)
@@ -1388,7 +1463,6 @@ class OpenSearchSearchBackend(BaseSearchBackend):
 
             if field_class.document is True:
                 content_field_name = field_class.index_fieldname
-
             if field_mapping["type"] == "text":
                 if (
                     field_class.indexed is False
@@ -1450,7 +1524,7 @@ class OpenSearchSearchQuery(BaseSearchQuery):
         if field == "content":
             index_fieldname = ""
         else:
-            index_fieldname = f"{haystack.connections[self._using]}:".format(
+            index_fieldname = "{}:".format(
                 haystack.connections[self._using]
                 .get_unified_index()
                 .get_index_fieldname(field)

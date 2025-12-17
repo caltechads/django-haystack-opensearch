@@ -115,6 +115,10 @@ DJANGO_APPS: list[str] = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # 'django.contrib.humanize', # Handy template tags
+    "unfold",  # before django.contrib.admin
+    "unfold.contrib.filters",  # optional, if special filters are needed
+    "unfold.contrib.forms",  # optional, if special form elements are needed
+    "unfold.contrib.inlines",  # optio
     "django.contrib.admin",
 ]
 THIRD_PARTY_APPS: list[str] = [
@@ -394,9 +398,20 @@ HAYSTACK_CONNECTIONS: dict[str, Any] = {
 
 # crispy-forms
 # ------------------------------------------------------------------------------
-CRISPY_ALLOWED_TEMPLATE_PACKS: str = "bootstrap5"
+CRISPY_ALLOWED_TEMPLATE_PACKS: list[str] = ["bootstrap5", "unfold_crispy"]
 CRISPY_TEMPLATE_PACK: str = "bootstrap5"
 
+# Unfold admin theme
+# ------------------------------------------------------------------------------
+UNFOLD = {
+    "SITE_TITLE": "Haystack: OpenSearch Demo",
+    "SITE_HEADER": "Haystack: OpenSearch Demo",
+    "SITE_URL": "/",
+    "SITE_ICON": {
+        "light": lambda request: "/static/core/images/favicon.ico",  # noqa: ARG005
+        "dark": lambda request: "/static/core/images/favicon.ico",  # noqa: ARG005
+    },
+}
 
 # django-theme-academy
 # ------------------------------------------------------------------------------

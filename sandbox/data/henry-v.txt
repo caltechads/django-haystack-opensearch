@@ -3244,8 +3244,7 @@ Thou never shalt hear herald anymore.
 
 KING HENRY  I fear thou wilt once more come again
 for a ransom.	[Montjoy exits.]
-[Enter York.
-]
+[Enter York.]
 
 YORK, [kneeling]
 My lord, most humbly on my knee I beg
@@ -4294,7 +4293,7 @@ like an angel.
 KATHERINE, [to Alice]  Que dit-il? Que je suis semblable a
 les anges?
 
-ALICE  Oui, vraiment, sauf votre Grace, ainsi dit-il.
+
 
 KING HENRY  I said so, dear Katherine, and I must not
 blush to affirm it.

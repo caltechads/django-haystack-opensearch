@@ -32,6 +32,7 @@ django==5.2.7
     #   django-extensions
     #   django-haystack
     #   django-haystack-opensearch
+    #   django-unfold
     #   django-wildewidgets
     #   django-xff
 django-appconf==1.0.6
@@ -60,6 +61,8 @@ django-haystack==3.3.0
 django-sass-processor==1.4.1
     # via django-haystack-opensearch-demo (pyproject.toml)
 django-theme-academy==0.3.13
+    # via django-haystack-opensearch-demo (pyproject.toml)
+django-unfold==0.74.1
     # via django-haystack-opensearch-demo (pyproject.toml)
 django-wildewidgets==1.2.4
     # via
