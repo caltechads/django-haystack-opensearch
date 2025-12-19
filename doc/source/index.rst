@@ -36,22 +36,53 @@ django_haystack_opensearch
 
 Current version is |release|.
 
-``django_haystack_opensearch`` is a Python command-line tool for
-__FILL_ME_IN__
+``django_haystack_opensearch`` is an OpenSearch backend for django-haystack. It
+provides a drop-in replacement for Elasticsearch backends, allowing you to use
+OpenSearch (versions 1.x through 3.x) as your search engine with django-haystack.
+
+The backend is fully compatible with django-haystack's API and supports all
+standard Haystack features including faceting, highlighting, More Like This,
+spatial search, and more. It uses the `opensearch-py` client library only,
+instead of the out of date `elasticsearch` client library.
 
 Core Features
 -------------
 
 django_haystack_opensearch provides the following key features:
 
-**Core Feature 1**
-    - **Highlight 1**: Describe a part of feature 1
-    - **Highlight 2**: Describe a part of feature 1
+**Full-Text Search with OpenSearch**
+    - Powerful full-text search capabilities
+    - Support for complex queries and filters
+    - Relevance scoring and ranking
 
-**Core Feature 2**
-    - **Highlight 1**: Describe a part of feature 2
-    - **Highlight 2**: Describe a part of feature 2
+**Faceting and Filtering**
+    - Field facets for grouping and counting
+    - Date facets for time-based analysis
+    - Query facets for custom aggregations
+    - Efficient filtering on facet fields
 
+**Spatial/Geo Search**
+    - Geographic location search
+    - Distance-based queries
+    - Bounding box searches
+
+**More Like This**
+    - Find similar documents
+    - Content-based recommendations
+    - Similarity scoring
+
+**Highlighting and Spelling Suggestions**
+    - Highlight search terms in results
+    - Automatic spelling correction
+    - Query suggestions
+
+**All Standard Haystack Features**
+    - Complete API compatibility
+    - Model filtering
+    - Sorting and pagination
+    - Stored fields
+    - Field boosting
+    - And more!
 
 Getting Started
 ---------------
@@ -62,7 +93,8 @@ To get started with django_haystack_opensearch:
 2. **Quick Start**: See the :doc:`/overview/quickstart` guide for basic usage
 3. **Usage Guide**: Learn about commands and options in :doc:`/overview/usage`
 4. **Configuration**: Learn about configuration options in :doc:`/overview/configuration`
-5. **FAQ**: Check the :doc:`/overview/faq` section for common questions and troubleshooting
+5. **Demo**: Check out the :doc:`/overview/demo` guide to see a working example
+6. **FAQ**: Check the :doc:`/overview/faq` section for common questions and troubleshooting
 
 For developers, see the :doc:`/runbook/contributing` and :doc:`/runbook/coding_standards` guides.
 
@@ -70,14 +102,63 @@ Requirements
 ------------
 
 - Python 3.11 or later
+- Django 5.2 or later
+- OpenSearch 1.x through 3.x
+- django-haystack 3.3.0 or later
 
 Common Use Cases
 ----------------
 
-**Core Use Case 1**
-    - Aspect 1
-    - Aspect 2
+**Adding Search to Django Applications**
+    - Quickly add powerful search functionality to any Django project
+    - Index and search across multiple models
+    - Build faceted search interfaces
 
-**Core Use Case 2**
-    - Aspect 1
-    - Aspect 2
+**Migrating from Elasticsearch to OpenSearch**
+    - Drop-in replacement for Elasticsearch backends
+    - No code changes required
+    - Same API, different backend
+
+**Building Faceted Search Interfaces**
+    - Create filter interfaces with facet counts
+    - Support for multiple facet types
+    - Efficient filtering and aggregation
+
+**Implementing Advanced Search Features**
+    - More Like This recommendations
+    - Geographic search
+    - Highlighting and spelling correction
+    - Complex query combinations
+
+Getting Help
+------------
+
+If you need help with django_haystack_opensearch:
+
+**Documentation**
+    - Check the :doc:`/overview/faq` for common questions
+    - Review the :doc:`/overview/usage` guide for detailed examples
+    - See the :doc:`/overview/configuration` guide for setup options
+
+**GitHub Issues**
+    - Report bugs or request features on the
+      `GitHub repository <https://github.com/caltechads/django_haystack_opensearch/issues>`_
+    - Search existing issues before creating a new one
+    - Include relevant details when reporting bugs
+
+**Troubleshooting**
+    - Check the :doc:`/overview/faq` troubleshooting section
+    - Review error messages and tracebacks carefully
+    - Verify your configuration matches the examples
+
+**Demo Application**
+    - Explore the :doc:`/overview/demo` to see a working example
+    - Study the demo code for implementation patterns
+    - Use the demo as a reference for your own projects
+
+When reporting issues, please include:
+
+- Your Python, Django, and OpenSearch versions
+- Relevant configuration (redact sensitive information)
+- Error messages and tracebacks
+- Steps to reproduce the issue

@@ -174,9 +174,9 @@ class NavigationSidebar(TablerVerticalNavbar):
     branding = Block(
         LinkedImage(
             image_src=static("core/images/logo.png"),
-            image_width="230px",
+            image_width="220px",
             image_alt="django_haystack_opensearch",
-            css_class="d-flex justify-content-center ms-3",
+            css_class="d-flex justify-content-center ms-1",
             url="https://localhost/",
         ),
         GlobalSearchFormWidget(css_class="ms-auto ms-xl-0 align-self-center mt-3"),

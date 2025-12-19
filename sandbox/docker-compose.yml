@@ -44,21 +44,22 @@ services:
       retries: 5
 
   opensearch:
-    image: opensearchproject/opensearch:3
+    image: opensearchproject/opensearch:1
     container_name: opensearch
     hostname: opensearch
     environment:
       - discovery.type=single-node
-      - OPENSEARCH_INITIAL_ADMIN_PASSWORD=Admin_password123!
-      - DISABLE_SECURITY_PLUGIN=true
+      - "DISABLE_SECURITY_PLUGIN=true"
       - bootstrap.memory_lock=true
-      - PA_DEST_FOLDER=/usr/share/opensearch
+      - "OPENSEARCH_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
     ports:
       - "9200:9200"
     volumes:
       - djo_opensearch_data:/usr/share/opensearch/data
-      # Mount an empty directory to disable performance analyzer and avoid missing file error
-      - /dev/null:/usr/share/opensearch/config/opensearch-performance-analyzer
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:9200"]
       interval: 5s

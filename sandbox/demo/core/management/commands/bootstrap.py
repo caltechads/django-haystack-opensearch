@@ -29,6 +29,8 @@ class Command(BaseCommand):
         if self.db_is_fresh(DEFAULT_DB_ALIAS):
             call_command("migrate")
             call_command("loaddata", "users")
+            call_command("update_index", "--age=0")
         elif settings.BOOTSTRAP_ALWAYS_MIGRATE:
             call_command("migrate")
+            call_command("update_index", "--age=0")
         logger.info("migrate.end")
