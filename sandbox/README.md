@@ -1,28 +1,66 @@
-# django_haystack_opensearch Demo
+# django_haystack_opensearch Sandbox
 
-This django application exists to test the `django_haystack_opensearch` module.
+This is a demonstration Django application for the `django_haystack_opensearch` module. It indexes and searches through Shakespeare plays, demonstrating features like faceting, filtering, and highlighting.
 
-## Setting up to run the demo
+## Documentation
 
-## Set up your local virtualenv
+Full documentation for this project is available on [ReadTheDocs](https://django_haystack_opensearch.readthedocs.io).
 
-The demo runs in Docker, so you will need Docker Desktop or equivalent installed
-on your development machine.
+## Running the Demo
 
-### Build the Docker image
+The demo runs entirely in Docker, so you will need Docker Desktop or equivalent
+installed on your development machine.
+
+### 1. Build the Docker image
+
+From the `sandbox/` directory, run:
 
 ```bash
 make build
 ```
 
-### Run the service, and initialize the database
+This will package the library, install all dependencies, and prepare the demo application.
+
+### 2. Start the services
+
+Start the Django application, MySQL database, and OpenSearch server in the background:
 
 ```bash
 make dev-detached
-make exec
-> ./manage.py migrate
 ```
 
-### Getting to the demo app in your browser
+### 3. Automatic Initialization
 
-You should now be able to browse to the demo app on <https://localhost/> .
+When the container starts, it will automatically:
+
+- Run database migrations (which includes loading the Shakespeare play data)
+- Create the search index in OpenSearch
+- Index all documents
+
+You can follow the progress by checking the logs:
+
+```bash
+make logall
+```
+
+### 4. Access the application
+
+Once the services are healthy, you can browse to the demo app at:
+
+- **Web Interface**: <https://localhost/>
+- **OpenSearch**: <http://localhost:9200>
+
+## Management Commands
+
+The demo container includes several management commands for exploring the module:
+
+- `./manage.py import_play`: Import a play from a text file.
+- `./manage.py rebuild_index`: Clear and rebuild the search index.
+- `./manage.py update_index`: Update the index with new/modified data.
+
+To run commands inside the container:
+
+```bash
+make exec
+./manage.py <command>
+```
