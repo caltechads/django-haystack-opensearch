@@ -25,7 +25,7 @@ from haystack.utils import get_identifier, get_model_ct
 from haystack.utils import log as logging
 from haystack.utils.app_loading import haystack_get_model
 from haystack.utils.geo import generate_bounding_box
-from opensearchpy import Index, OpenSearch
+from opensearchpy import OpenSearch
 from opensearchpy.exceptions import NotFoundError, TransportError
 from opensearchpy.helpers import bulk, scan
 
@@ -204,31 +204,25 @@ class OpenSearchSearchBackend(BaseSearchBackend):
         return {"properties": field_mapping}
 
     def _add_keyword_and_exact_subfields(
-        self, props: dict[str, Any], unified_index: UnifiedIndex
+        self,
+        props: dict[str, Any],
+        unified_index: UnifiedIndex,  # noqa: ARG002
     ) -> dict[str, Any]:
         """
         Modify generated properties so that:
 
-          * Text fields get a `.keyword` subfield for exact matching
-          * Faceted fields get type keyword (exact match & aggregations)
+          * Text fields get a `.keyword` subfield for exact matching and faceting
 
         Args:
-           props: The field mapping to add the keyword and exact subfields to.
-           unified_index: The unified index to get the facet fieldnames from.
+           props: The field mapping to add the keyword subfields to.
+           unified_index: The unified index.
 
         Returns:
            A dictionary with the properties of the field mapping with the
-           keyword and exact subfields added.
+           keyword subfields added.
 
         """
         new_props: dict[str, Any] = {}
-        # Collect all declared facet field names from the unified index
-        facet_fields: set[str] = {
-            name
-            for model in unified_index.get_indexed_models()
-            for name, field in unified_index.get_index(model).fields.items()
-            if getattr(field, "faceted", False)
-        }
 
         for field, definition in props.items():
             # Always copy base definition
@@ -240,11 +234,6 @@ class OpenSearchSearchBackend(BaseSearchBackend):
                     "type": "text",
                     "fields": {"keyword": {"type": "keyword", "ignore_above": 256}},
                 }
-
-            # If this is a facetable field, create an *exact* keyword field
-            if field in facet_fields:
-                exact_name = f"{field}_exact"
-                new_props[exact_name] = {"type": "keyword", "ignore_above": 256}
 
         return new_props
 
@@ -420,19 +409,25 @@ class OpenSearchSearchBackend(BaseSearchBackend):
     def get_facet_fieldname(self, field_name: str) -> str:
         """
         Return the correct backend field name for faceting/filtering.
-        If we created `<field>_exact` in the mapping, return that.
+
+        For text fields, this returns the '.keyword' subfield.
+        For other fields, it returns the field name itself.
 
         Args:
             field_name: The field name to get the facet fieldname for.
 
         Returns:
-            The facet exact fieldname.
-
-        Raises:
-            KeyError: If the field name is not found in the mapping.
+            The backend field name for faceting.
 
         """
-        return f"{field_name}_exact"
+        unified_index = haystack.connections[self.connection_alias].get_unified_index()
+        for model in unified_index.get_indexed_models():
+            index = unified_index.get_index(model)
+            if field_name in index.fields:
+                if index.fields[field_name].field_type in ("text", "char"):
+                    return f"{field_name}.keyword"
+                break
+        return field_name
 
     def update(self, index: str, iterable: Iterable[Any], commit: bool = True) -> None:
         """
@@ -649,10 +644,23 @@ class OpenSearchSearchBackend(BaseSearchBackend):
                 fields = " ".join(fields)
             kwargs["stored_fields"] = fields
 
+    def _get_backend_sort_field(self, field: str) -> str:
+        """
+        Get the backend field name for sorting.
+
+        Args:
+            field: The field name to get the backend sort field for.
+
+        Returns:
+            The backend sort field name.
+
+        """
+        return self.get_facet_fieldname(field)
+
     def _add_sort_to_kwargs(
         self,
         kwargs: dict[str, Any],
-        sort_by: list[tuple[str, str]] | None,
+        sort_by: list[str | tuple[str, str]] | None,
         distance_point: dict[str, Any] | None,
     ) -> None:
         """
@@ -673,7 +681,18 @@ class OpenSearchSearchBackend(BaseSearchBackend):
 
         self.log.info("Adding sort to kwargs: %s", sort_by)
         order_list = []
-        for field, direction in sort_by:
+
+        for sort_field in sort_by:
+            if isinstance(sort_field, str):
+                if sort_field.startswith("-"):
+                    direction = "desc"
+                    field = sort_field[1:]
+                else:
+                    direction = "asc"
+                    field = sort_field
+            else:
+                field, direction = sort_field
+
             if field == "distance" and distance_point:
                 lng, lat = distance_point["point"].coords
                 sort_kwargs = {
@@ -690,7 +709,10 @@ class OpenSearchSearchBackend(BaseSearchBackend):
                         "'.distance(...)' method.",
                         stacklevel=2,
                     )
-                sort_kwargs = {field: {"order": direction}}
+
+                backend_field = self._get_backend_sort_field(field)
+                sort_kwargs = {backend_field: {"order": direction}}
+
             order_list.append(sort_kwargs)
 
         kwargs["sort"] = order_list
@@ -758,7 +780,7 @@ class OpenSearchSearchBackend(BaseSearchBackend):
         }
 
     def _add_facets_to_kwargs(
-        self, kwargs: dict[str, Any], facets: dict[str, Any] | None, index: Index
+        self, kwargs: dict[str, Any], facets: dict[str, Any] | None
     ) -> None:
         """
         Add facets/aggregations to search kwargs.
@@ -766,7 +788,6 @@ class OpenSearchSearchBackend(BaseSearchBackend):
         Args:
             kwargs: The search kwargs to add the facets to.
             facets: The facets to add to the search kwargs.
-            index: The index to add the facets to.
 
         """
         if facets is None:
@@ -776,7 +797,7 @@ class OpenSearchSearchBackend(BaseSearchBackend):
         for facet_fieldname, extra_options in facets.items():
             facet_options: dict[str, Any] = {
                 "meta": {"_type": "terms"},
-                "terms": {"field": index.get_facet_fieldname(facet_fieldname)},
+                "terms": {"field": self.get_facet_fieldname(facet_fieldname)},
             }
             if "order" in extra_options:
                 facet_options["meta"]["order"] = extra_options.pop("order")
@@ -1007,7 +1028,7 @@ class OpenSearchSearchBackend(BaseSearchBackend):
         if narrow_queries is None:
             narrow_queries = set()
 
-        self._add_facets_to_kwargs(kwargs, facets, index)
+        self._add_facets_to_kwargs(kwargs, facets)
         self._add_date_facets_to_kwargs(kwargs, date_facets)
         self._add_query_facets_to_kwargs(kwargs, query_facets)
 
@@ -1025,6 +1046,11 @@ class OpenSearchSearchBackend(BaseSearchBackend):
             field, value = q.split(":", 1)
             # strip quotes around the value if present
             value = value.strip('"')
+
+            # Resolve the field name, stripping Haystack's '_exact' suffix if present
+            if field.endswith("_exact"):
+                field = self.get_facet_fieldname(field[:-6])
+
             term_filters.append({"term": {field: value}})
         filters.extend(term_filters)
 
@@ -1480,11 +1506,7 @@ class OpenSearchSearchBackend(BaseSearchBackend):
             if field_class.document is True:
                 content_field_name = field_class.index_fieldname
             if field_mapping["type"] == "text":
-                if (
-                    field_class.indexed is False
-                    or hasattr(field_class, "facet_for")
-                    or getattr(field_class, "faceted", False)
-                ):
+                if field_class.indexed is False or hasattr(field_class, "facet_for"):
                     field_mapping["type"] = "keyword"
                     del field_mapping["analyzer"]
 
@@ -1540,11 +1562,17 @@ class OpenSearchSearchQuery(BaseSearchQuery):
         if field == "content":
             index_fieldname = ""
         else:
-            index_fieldname = "{}:".format(
+            index_fieldname = (
                 haystack.connections[self._using]
                 .get_unified_index()
                 .get_index_fieldname(field)
             )
+
+            # For exact matches, use the facet fieldname (which handles .keyword)
+            if filter_type in ("exact", "in"):
+                index_fieldname = self.backend.get_facet_fieldname(index_fieldname)
+
+            index_fieldname = f"{index_fieldname}:"
 
         filter_types = {
             "content": "%s",
