@@ -671,6 +671,7 @@ class OpenSearchSearchBackend(BaseSearchBackend):
         if sort_by is None:
             return
 
+        self.log.info("Adding sort to kwargs: %s", sort_by)
         order_list = []
         for field, direction in sort_by:
             if field == "distance" and distance_point:
@@ -718,7 +719,12 @@ class OpenSearchSearchBackend(BaseSearchBackend):
             kwargs["highlight"].update(highlight)
 
     def _add_suggest_to_kwargs(
-        self, kwargs: dict[str, Any], query_string: str, spelling_query: str | None
+        self,
+        kwargs: dict[str, Any],
+        query_string: str,
+        spelling_query: str | None,
+        content_field: str,
+        unified_index: UnifiedIndex,
     ) -> None:
         """
         Add suggest configuration to search kwargs.
@@ -727,16 +733,26 @@ class OpenSearchSearchBackend(BaseSearchBackend):
             kwargs: The search kwargs to add the suggest to.
             query_string: The query string to add the suggest to.
             spelling_query: The spelling query to add the suggest to.
+            content_field: The default content field to use for suggestions.
+            unified_index: The unified index to check for a dedicated spelling field.
 
         """
         if not self.include_spelling:
             return
 
+        # Check for a dedicated _spelling field in any of the indexed models
+        suggest_field = content_field
+        for model in unified_index.get_indexed_models():
+            index = unified_index.get_index(model)
+            if "_spelling" in index.fields:
+                suggest_field = "_spelling"
+                break
+
         kwargs["suggest"] = {
             "suggest": {
                 "text": spelling_query or query_string,
                 "term": {
-                    "field": "text",  # OpenSearch 3.3 does not support '_all' field
+                    "field": suggest_field,
                 },
             }
         }
@@ -984,7 +1000,9 @@ class OpenSearchSearchBackend(BaseSearchBackend):
         self._add_fields_to_kwargs(kwargs, fields)
         self._add_sort_to_kwargs(kwargs, sort_by, distance_point)
         self._add_highlight_to_kwargs(kwargs, highlight, content_field)
-        self._add_suggest_to_kwargs(kwargs, query_string, spelling_query)
+        self._add_suggest_to_kwargs(
+            kwargs, query_string, spelling_query, content_field, index
+        )
 
         if narrow_queries is None:
             narrow_queries = set()
@@ -1349,16 +1367,14 @@ class OpenSearchSearchBackend(BaseSearchBackend):
         if self.include_spelling and "suggest" in raw_results:
             raw_suggest = raw_results["suggest"].get("suggest")
             if raw_suggest:
-                spelling_suggestion = " ".join(
-                    [
-                        (
-                            word["text"]
-                            if len(word["options"]) == 0
-                            else word["options"][0]["text"]
-                        )
-                        for word in raw_suggest
-                    ]
-                )
+                suggestion_parts = []
+                for word in raw_suggest:
+                    if len(word["options"]) > 0:
+                        suggestion_parts.append(word["options"][0]["text"])
+                    else:
+                        suggestion_parts.append(word["text"])
+
+                spelling_suggestion = " ".join(suggestion_parts)
 
         # Use our _process_facets method for OpenSearch 3.3 aggregations format
         facets = self._process_facets(raw_results)

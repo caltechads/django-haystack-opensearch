@@ -109,6 +109,24 @@ Example with API key authentication:
         },
     }
 
+Spelling Suggestions
+^^^^^^^^^^^^^^^^^^^^
+
+To enable spelling suggestions, add the ``INCLUDE_SPELLING`` option to your connection:
+
+.. code-block:: python
+
+    HAYSTACK_CONNECTIONS = {
+        "default": {
+            "ENGINE": "django_haystack_opensearch.haystack.OpenSearchSearchEngine",
+            "URL": "http://localhost:9200",
+            "INDEX_NAME": "haystack",
+            "INCLUDE_SPELLING": True,
+        },
+    }
+
+See :ref:`spelling-suggestions` in the usage guide for more details.
+
 Multiple Connections
 ^^^^^^^^^^^^^^^^^^^^
 

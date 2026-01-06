@@ -393,6 +393,7 @@ HAYSTACK_CONNECTIONS: dict[str, Any] = {
         "ENGINE": "django_haystack_opensearch.haystack.OpenSearchSearchEngine",
         "URL": "http://host.docker.internal:9200/",
         "INDEX_NAME": "django_haystack_opensearch_demo",
+        "INCLUDE_SPELLING": True,
     },
 }
 

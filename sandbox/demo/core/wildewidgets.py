@@ -68,11 +68,6 @@ class MainMenu(Menu):
             url=reverse_lazy("admin:index"),
         ),
         MenuItem(
-            text="Search",
-            icon="search",
-            url=reverse_lazy("core:search"),
-        ),
-        MenuItem(
             text="Advanced Search",
             icon="sliders",
             url=reverse_lazy("core:advanced-search"),

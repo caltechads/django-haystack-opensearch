@@ -206,6 +206,8 @@ Highlight search terms in results:
         if hasattr(result, "highlighted"):
             print(result.highlighted)  # HTML with <em> tags around matches
 
+.. _spelling-suggestions:
+
 Spelling Suggestions
 --------------------
 
@@ -222,6 +224,27 @@ Get spelling suggestions for queries:
     suggestion = sqs.spelling_suggestion()
     if suggestion:
         print(f"Did you mean: {suggestion}")
+
+How it Works
+^^^^^^^^^^^^
+
+By default, the OpenSearch backend uses the main document field (the one with
+``document=True``) to generate spelling suggestions.
+
+For better results, you can provide a dedicated spelling field in your
+``SearchIndex``. This is useful if you want to use a different analyzer for
+spelling than for your main content (e.g., a non-stemmed analyzer).
+
+To use a dedicated spelling field, simply name it ``_spelling``:
+
+.. code-block:: python
+
+    class MyIndex(indexes.SearchIndex, indexes.Indexable):
+        text = indexes.CharField(document=True, use_template=True)
+        # Dedicated spelling field
+        _spelling = indexes.CharField(model_attr='my_content_field')
+
+The backend will automatically detect this field and use it for suggestions.
 
 More Like This
 --------------
