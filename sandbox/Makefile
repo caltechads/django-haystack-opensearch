@@ -68,6 +68,9 @@ docker-destroy-db: docker-clean
 	docker volume rm sandbox_django_haystack_opensearch_demo_data
 
 test:
+	@if [ -z "$(ARGS)" ]; then \
+		ARGS="/ve/lib/python3.13/site-packages/django_haystack_opensearch/tests"; \
+	fi; \
 	@echo "Starting django_haystack_opensearch_demo..."
 	docker compose up -d
 	@echo "Waiting for django_haystack_opensearch_demo to be up on port 443..."
