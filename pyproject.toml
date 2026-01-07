@@ -251,9 +251,24 @@ docstring-code-format = false
 docstring-code-line-length = "dynamic"
 
 [tool.ruff.lint.per-file-ignores]
-"sandbox/test/**/*.py" = ["S101"]
-"sandbox/test/*.py" = ["S101"]
-"sandbox/demo/core/tests.py" = ["S101", "PLR2004", "E501", "SLF001", "PTH123", "ERA001"]
+"django_haystack_opensearch/tests/*.py" = [
+  "S101",
+  "PLR2004",
+  "PLR0913",
+  "E501",
+  "SLF001",
+  "PTH123",
+  "ERA001",
+]
+"sandbox/demo/core/tests.py" = [
+  "S101",
+  "PLR2004",
+  "PLR0913",
+  "E501",
+  "SLF001",
+  "PTH123",
+  "ERA001",
+]
 
 [tool.vulture]
 # Configuration for vulture: https://github.com/jendrikseipp/vulture
