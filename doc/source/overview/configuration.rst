@@ -13,14 +13,14 @@ OpenSearch Version Support
 --------------------------
 
 ``django_haystack_opensearch`` is compatible with **OpenSearch 1.x through 3.x**. It uses
-the `opensearch-py>=3.1.0` client library and maintains API compatibility with
-the elasticsearch7_backend, making it a drop-in replacement for Elasticsearch
-backends in django-haystack.
+the ``opensearch-py>=3.1.0`` client library exclusively, instead of the deprecated
+``elasticsearch-py`` v7 library.
 
 Django Haystack Settings
 ------------------------
 
-To configure the Haystack backend, you can set the ``HAYSTACK_CONNECTIONS`` setting in your project's ``settings.py`` file.
+To configure the Haystack backend, you must set the ``HAYSTACK_CONNECTIONS``
+setting in your project's ``settings.py`` file appropriately.
 
 Required Settings
 ^^^^^^^^^^^^^^^^^
@@ -47,6 +47,7 @@ Optional Settings
 ^^^^^^^^^^^^^^^^^
 
 - **TIMEOUT**: Request timeout in seconds (default: 10)
+- **INCLUDE_SPELLING**: Boolean to enable spelling suggestions
 - **KWARGS**: Additional keyword arguments passed to the OpenSearch client constructor
 
 Common configuration options in ``KWARGS``:
@@ -169,7 +170,7 @@ Configuration Management
 
    - Don't commit sensitive configuration (passwords, API keys)
    - Document required settings in your project's README
-   - Use example configuration files (e.g., ``settings.example.py``)
+   - Use example configuration files (e.g., ``settings_example.py``)
 
 4. **Security**
 

@@ -49,10 +49,10 @@ Facet Field Filtering
 **Important**: When filtering on facet fields, you must use the ``__exact`` suffix,
 otherwise you will get no results.
 
-This is because facet fields are automatically mapped to keyword fields in OpenSearch
-for exact matching and aggregations. The backend creates a ``{field}_exact`` keyword
-field for each facet field, and the ``__exact`` suffix tells Haystack to use this
-exact field for filtering.
+This is because facet fields are automatically mapped to ``.keyword`` sub-fields
+in OpenSearch for exact matching and aggregations. The backend handles this mapping
+transparently, and the ``__exact`` suffix tells the backend to use the non-analyzed
+version of the field for filtering.
 
 .. code-block:: python
 
@@ -276,6 +276,33 @@ You can also add additional query constraints:
         additional_query_string="category:technology"
     )
 
+.. _file-content-extraction:
+
+File Content Extraction
+-----------------------
+
+The OpenSearch backend provides a utility method to extract text and metadata from
+binary files (like PDF, DOCX, etc.) using OpenSearch's ``ingest-attachment`` plugin.
+
+.. code-block:: python
+
+    from haystack import connections
+
+    backend = connections["default"].get_backend()
+
+    with open("document.pdf", "rb") as f:
+        result = backend.extract_file_contents(f)
+
+    if result:
+        print(result["contents"])  # Extracted text
+        print(result["metadata"])  # File metadata (author, title, etc.)
+
+This method is particularly useful when you want to index the contents of uploaded
+files into your search index.
+
+**Note**: This feature requires the ``ingest-attachment`` plugin to be installed and
+enabled on your OpenSearch node. See :ref:`opensearch-plugins` for more details.
+
 Spatial Search
 --------------
 
@@ -410,7 +437,7 @@ Advanced Usage
 --------------
 
 Combining Features
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 You can combine multiple features in a single query:
 
@@ -500,16 +527,17 @@ You can also index programmatically:
 .. _facet-field-filtering:
 
 Understanding Facet Field Filtering
-------------------------------------
+-----------------------------------
 
 Why ``__exact`` is Required for Facet Fields
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When you define a field as ``faceted=True`` in your search index, the backend
-automatically creates two field mappings in OpenSearch:
+automatically ensures that the field is indexed in a way that supports both
+full-text search and exact matching/aggregations.
 
-1. The original field (for full-text search if it's a text field)
-2. A ``{field}_exact`` keyword field (for exact matching and aggregations)
+In OpenSearch, this is typically handled by creating a ``.keyword`` sub-field
+for text fields.
 
 For example, if you have:
 
@@ -518,22 +546,19 @@ For example, if you have:
     class SpeechIndex(indexes.SearchIndex, indexes.Indexable):
         speaker_name = indexes.CharField(model_attr="speaker__name", faceted=True)
 
-The backend creates:
-- ``speaker_name`` - the original field
-- ``speaker_name_exact`` - a keyword field for exact matching
+The backend ensures OpenSearch has:
 
-When you use ``filter(speaker_name__exact="KING HENRY")``, Haystack translates
-this to query the ``speaker_name_exact`` keyword field, which provides exact
-matching suitable for filtering.
+- ``speaker_name`` - the original field (analyzed for full-text search)
+- ``speaker_name.keyword`` - a non-analyzed sub-field for exact matching
+
+When you use ``filter(speaker_name__exact="KING HENRY")``, the backend
+automatically detects the ``__exact`` filter and routes the query to the
+``speaker_name.keyword`` sub-field.
 
 If you use ``filter(speaker_name="KING HENRY")`` without ``__exact``, Haystack
-tries to query the ``speaker_name`` field, which may be a text field that
-undergoes analysis (tokenization, lowercasing, etc.), making exact matches
-unreliable or impossible.
+queries the base ``speaker_name`` field. Since this field is analyzed
+(tokenized, lowercased, etc.), an exact match against the full string will
+likely fail or return inconsistent results.
 
-This is why facet fields require the ``__exact`` suffix for filtering. The
-backend's ``get_facet_fieldname()`` method automatically returns the ``_exact``
-suffix for facet fields to ensure correct filtering behavior.
-
-For a working example, see the test in ``sandbox/demo/core/tests.py`` in the
-``TestQueryFilters.test_filter_exact`` method.
+This is why facet fields require the ``__exact`` (or ``__in``) suffix for
+reliable filtering.

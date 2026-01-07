@@ -5,10 +5,10 @@ This section answers common questions about django_haystack_opensearch and provi
 solutions to frequently encountered issues.
 
 General Questions
-------------------
+-----------------
 
 What is django_haystack_opensearch?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ``django_haystack_opensearch`` is an OpenSearch backend for django-haystack. It
 provides a drop-in replacement for Elasticsearch backends, allowing you to use
@@ -49,25 +49,52 @@ Usage Questions
 ---------------
 
 Why do facet fields require ``__exact`` when filtering?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When you define a field as ``faceted=True`` in your search index, the backend
-automatically creates a ``{field}_exact`` keyword field in OpenSearch for exact
-matching and aggregations. This is necessary because:
+automatically ensures that the field is indexed in a way that supports both
+full-text search and exact matching/aggregations.
+
+In OpenSearch, this is typically handled by creating a ``.keyword`` sub-field
+for text fields.  This is necessary because:
 
 1. Facet fields need to be stored as keywords (not analyzed text) for accurate
    counting and exact matching
 2. The original field may be analyzed (tokenized, lowercased, etc.), making exact
    matches unreliable
 
-When you use ``filter(speaker_name__exact="KING HENRY")``, Haystack queries the
-``speaker_name_exact`` keyword field, which provides exact matching.
+When you use ``filter(speaker_name__exact="KING HENRY")``, the backend routes the
+query to the ``speaker_name.keyword`` sub-field, which provides exact matching.
 
 If you use ``filter(speaker_name="KING HENRY")`` without ``__exact``, Haystack
 tries to query the analyzed ``speaker_name`` field, which may not match exactly.
 
 For more details, see the :doc:`/overview/usage` guide section on
 :ref:`facet-field-filtering`.
+
+How do I index the contents of files (PDF, DOCX, etc.)?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The OpenSearch backend provides a ``extract_file_contents()`` method that uses
+OpenSearch's ``ingest-attachment`` plugin to extract text and metadata from
+binary files.
+
+.. code-block:: python
+
+    from haystack import connections
+    backend = connections["default"].get_backend()
+
+    with open("document.pdf", "rb") as f:
+        result = backend.extract_file_contents(f)
+
+    if result:
+        # result["contents"] contains the extracted text
+        # result["metadata"] contains file metadata
+        pass
+
+Note that this requires the ``ingest-attachment`` plugin to be installed on your
+OpenSearch node. See the :doc:`/overview/installation` guide for instructions on
+how to install the plugin.
 
 How do I search across multiple models?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -118,7 +145,7 @@ Make sure you're using the ``__exact`` suffix when filtering on facet fields:
 See :ref:`facet-field-filtering` in the usage guide for an explanation.
 
 Connection errors to OpenSearch
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you're getting connection errors:
 
@@ -169,7 +196,7 @@ If you get index not found errors:
    and write to indices
 
 Performance and Limitations
-----------------------------
+---------------------------
 
 What are the performance characteristics?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -189,7 +216,7 @@ For best performance:
 - Consider caching frequently-used queries
 
 Are there any limitations?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - The backend is designed for OpenSearch 1.x through 3.x. Other versions may
   work but are not officially supported
@@ -198,7 +225,7 @@ Are there any limitations?
 - Very large result sets may require special handling (use pagination)
 
 Migration from Elasticsearch
------------------------------
+----------------------------
 
 Can I migrate from an Elasticsearch backend?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -219,9 +246,10 @@ Getting Help
 ------------
 
 Where can I get more help?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. **Documentation**: Check the other sections of this documentation:
+
    - :doc:`/overview/installation` - Installation guide
    - :doc:`/overview/quickstart` - Quick start guide
    - :doc:`/overview/usage` - Detailed usage guide

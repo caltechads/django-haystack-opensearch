@@ -44,17 +44,50 @@ Managing dependencies
 - Use ``uv add --group=docs <package>`` to add a documentation dependency package to the project.
 - Use ``uv add --group=demo <package>`` to add a demo site dependency to the project.  Also add the resultant dependency to ``sandbox/pyproject.toml``.
 
-
-Testing
--------
-
-We use ``pytest-django`` to run the tests.  Add tests for any new functionality you add to the ``sandbox/tests/`` folder.  To run the tests, use the following command:
+To manage dependencies for the sandbox container, use the following command (for example):
 
 .. code-block:: shell
 
     $ cd sandbox
-    $ TESTING=True ./manage.py test --parallel -v 2
+    $ source .venv/bin/activate
+    $ uv sync --dev
+    $ cd ..
 
+Sourcing the sandbox environment will make the ``uv`` work with the .venv in the sandbox directory.
+
+Testing
+-------
+
+We use ``pytest-django`` to run the tests.  Add tests for any new functionality
+you add to the ``django_haystack_opensearch/tests/`` folder.  To run the tests,
+we run them in the sandbox container using the following command:
+
+.. code-block:: shell
+
+    $ cd sandbox
+    $ make test
+
+To run the tests with specific arguments, use the following command:
+
+.. code-block:: shell
+
+    $ cd sandbox
+    $ make test ARGS="-k <test_name> /ve/lib/python3.13/site-packages/django_haystack_opensearch/tests"
+
+To run a specific test file, use the following command:
+
+.. code-block:: shell
+
+    $ cd sandbox
+    $ make test ARGS="/ve/lib/python3.13/site-packages/django_haystack_opensearch/tests/<test_file>.py"
+
+By default, the tests are run without the integration tests.  To run the
+integration tests, use the following command:
+
+.. code-block:: shell
+
+    $ cd sandbox
+    $ make test ARGS="-m integration /ve/lib/python3.13/site-packages/django_haystack_opensearch/tests"
 
 Updating the documentation
 --------------------------

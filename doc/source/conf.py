@@ -24,7 +24,7 @@ import sphinx_rtd_theme  # noqa: F401
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 
-sys.path.insert(0, os.path.abspath("../.."))  # noqa: PTH100
+sys.path.insert(0, os.path.abspath("../../sandbox"))  # noqa: PTH100
 
 # -- Project information -----------------------------------------------------
 
@@ -32,8 +32,8 @@ sys.path.insert(0, os.path.abspath("../.."))  # noqa: PTH100
 master_doc = "index"
 
 project = "django_haystack_opensearch"
-copyright = "Chris Malek"  # noqa: A001
-author = "Chris Malek"
+copyright = "California Institute of Technology"  # noqa: A001
+author = "Caltech IMSS ADS"
 
 # The full version, including alpha/beta/rc tags
 release = "0.1.0"
@@ -50,7 +50,7 @@ extensions = [
     "sphinxcontrib.images",
     "sphinx.ext.intersphinx",
     "sphinx_rtd_theme",
-    "sphinxcontrib.django",
+    "sphinxcontrib_django",
 ]
 
 source_suffix: dict[str, str] = {".rst": "restructuredtext"}
@@ -72,7 +72,7 @@ add_function_parentheses: bool = False
 add_module_names: bool = True
 
 # Configure the path to the Django settings module
-django_settings: str = "sandbox.settings_docker"
+django_settings: str = "demo.settings_docker"
 # Include the database table names of Django models
 django_show_db_tables: bool = True
 

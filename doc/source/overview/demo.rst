@@ -33,6 +33,7 @@ Setting Up the Demo
        make build
 
    This will:
+
    - Package the django_haystack_opensearch library
    - Build the Docker image with all dependencies
    - Set up the demo application

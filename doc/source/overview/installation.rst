@@ -50,6 +50,65 @@ If you want to install from the latest development version:
     cd django_haystack_opensearch
     uv add file://../django_haystack_opensearch
 
+.. _opensearch-plugins:
+
+OpenSearch Plugins
+------------------
+
+Some advanced features of ``django_haystack_opensearch`` require specific plugins to
+be installed on your OpenSearch node.
+
+Ingest Attachment Plugin
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+The :ref:`file-content-extraction` feature (``backend.extract_file_contents()``)
+requires the ``ingest-attachment`` OpenSearch plugin.
+
+**Installing via docker-compose**
+
+If you are using Docker, you can automate the installation of this plugin in your
+``docker-compose.yml`` by overriding the container command:
+
+.. code-block:: yaml
+
+    services:
+      opensearch:
+        image: opensearchproject/opensearch:1
+        command: >
+          /bin/bash -c "
+            if ! bin/opensearch-plugin list | grep -q ingest-attachment; then
+              bin/opensearch-plugin install --batch ingest-attachment
+            fi
+            /usr/share/opensearch/opensearch-docker-entrypoint.sh
+          "
+        # ... rest of your configuration ...
+
+**Manual Installation**
+
+You can also install it manually using the ``opensearch-plugin`` utility:
+
+.. code-block:: bash
+
+    bin/opensearch-plugin install ingest-attachment
+
+**AWS OpenSearch Service**
+
+If you are using AWS OpenSearch Service, you must associate the plugin with your
+domain using the **Packages** feature:
+
+1. Associate the plugin to your domain via the AWS Management Console, AWS CLI, or
+   SDKs using the Packages feature.
+2. Go to the **Packages** section in the OpenSearch Service console.
+3. Locate the ``ingest-attachment`` package that matches your OpenSearch engine version.
+4. Associate it with your domain. AWS will deploy the plugin and restart the domain
+   nodes if needed.
+5. Verify the installation by calling the plugin list API on your cluster:
+
+   .. code-block:: http
+
+       GET _cat/plugins?v
+
+   You should see ``ingest-attachment`` in the list once successfully installed.
 
 Configuration
 -------------

@@ -1,6 +1,6 @@
-========
+==========================
 django_haystack_opensearch
-========
+==========================
 
 .. toctree::
    :maxdepth: 2
@@ -18,6 +18,7 @@ django_haystack_opensearch
    overview/usage
    overview/configuration
    overview/faq
+   overview/demo
 
 .. toctree::
    :maxdepth: 2
@@ -33,17 +34,19 @@ django_haystack_opensearch
    :hidden:
 
    changelog
+   api/backend
 
 Current version is |release|.
 
-``django_haystack_opensearch`` is an OpenSearch backend for django-haystack. It
-provides a drop-in replacement for Elasticsearch backends, allowing you to use
-OpenSearch (versions 1.x through 3.x) as your search engine with django-haystack.
+``django_haystack_opensearch`` is an OpenSearch backend for `django-haystack
+<https://django-haystack.readthedocs.io/>`_. It provides a pure `opensearch-py
+<https://opensearch-py.readthedocs.io/>`_ based backend, allowing you to use
+OpenSearch (versions 1.x through 3.x) as your search engine with django-haystack
+without elasticsearch-py.
 
 The backend is fully compatible with django-haystack's API and supports all
 standard Haystack features including faceting, highlighting, More Like This,
-spatial search, and more. It uses the `opensearch-py` client library only,
-instead of the out of date `elasticsearch` client library.
+spatial search, and more.
 
 Core Features
 -------------
@@ -76,12 +79,18 @@ django_haystack_opensearch provides the following key features:
     - Automatic spelling correction
     - Query suggestions
 
+**Importing files (PDF, DOCX, etc.)**
+    - Extract text and metadata from binary files
+    - Use OpenSearch's ``ingest-attachment`` plugin to extract the contents of files
+    - Supports all file types supported by the ``ingest-attachment`` plugin
+
 **All Standard Haystack Features**
     - Complete API compatibility
     - Model filtering
     - Sorting and pagination
     - Stored fields
     - Field boosting
+    - Index management
     - And more!
 
 Getting Started
