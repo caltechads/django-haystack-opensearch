@@ -1,0 +1,2 @@
+[run]
+omit = /ve/lib/python3.13/site-packages/django_haystack_opensearch/tests/*
