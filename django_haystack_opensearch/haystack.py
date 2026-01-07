@@ -309,6 +309,8 @@ class OpenSearchSearchBackend(BaseSearchBackend):
         iso = self._iso_datetime(value)
         if iso:
             return iso
+        if isinstance(value, bool):
+            return "true" if value else "false"
         if isinstance(value, bytes):
             # TODO: Be stricter.
             return str(value, errors="replace")

@@ -6,12 +6,13 @@ from haystack.exceptions import SkipDocument
 from opensearchpy.exceptions import TransportError
 from django_haystack_opensearch.haystack import OpenSearchSearchBackend
 
+
 class TestOpenSearchBackendCore:
     def setup_method(self):
         self.opts = {
             "URL": "http://localhost:9200",
             "INDEX_NAME": "test-index",
-            "KWARGS": {"some_opt": "value"}
+            "KWARGS": {"some_opt": "value"},
         }
         self.backend = OpenSearchSearchBackend("default", **self.opts)
 
@@ -81,7 +82,7 @@ class TestOpenSearchBackendCore:
 
         # Test string representation of dict
         dict_str = "{'a': 1}"
-        assert self.backend._to_python(dict_str) == {'a': 1}
+        assert self.backend._to_python(dict_str) == {"a": 1}
 
     def test_to_python_fallback(self):
         # Test non-serializable string
@@ -96,13 +97,17 @@ class TestOpenSearchBackendCore:
         mock_index.full_prepare.return_value = {
             "id": "myapp.mymodel.1",
             "text": "sample text",
-            "pub_date": datetime.datetime(2023, 1, 1)
+            "pub_date": datetime.datetime(2023, 1, 1),
         }
 
         iterable = [MagicMock()]
 
         # We need to mock self.backend._prepare_object because it's called in _prepare_documents_for_bulk
-        with patch.object(self.backend, "_prepare_object", return_value=mock_index.full_prepare.return_value):
+        with patch.object(
+            self.backend,
+            "_prepare_object",
+            return_value=mock_index.full_prepare.return_value,
+        ):
             docs = self.backend._prepare_documents_for_bulk("some_index", iterable)
 
             assert len(docs) == 1
@@ -122,7 +127,9 @@ class TestOpenSearchBackendCore:
         iterable = [MagicMock()]
         self.backend.silently_fail = False
 
-        with patch.object(self.backend, "_prepare_object", side_effect=TransportError(500, "error")):
+        with patch.object(
+            self.backend, "_prepare_object", side_effect=TransportError(500, "error")
+        ):
             with pytest.raises(TransportError):
                 self.backend._prepare_documents_for_bulk("some_index", iterable)
 
@@ -132,7 +139,8 @@ class TestOpenSearchBackendCore:
         iterable = [MagicMock()]
         self.backend.silently_fail = True
 
-        with patch.object(self.backend, "_prepare_object", side_effect=TransportError(500, "error")):
+        with patch.object(
+            self.backend, "_prepare_object", side_effect=TransportError(500, "error")
+        ):
             docs = self.backend._prepare_documents_for_bulk("some_index", iterable)
             assert len(docs) == 0
-

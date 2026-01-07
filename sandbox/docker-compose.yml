@@ -47,6 +47,13 @@ services:
     image: opensearchproject/opensearch:1
     container_name: opensearch
     hostname: opensearch
+    command: >
+      /bin/bash -c "
+        if ! bin/opensearch-plugin list | grep -q ingest-attachment; then
+          bin/opensearch-plugin install --batch ingest-attachment
+        fi
+        /usr/share/opensearch/opensearch-docker-entrypoint.sh
+      "
     environment:
       - discovery.type=single-node
       - "DISABLE_SECURITY_PLUGIN=true"
