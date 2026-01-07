@@ -38,7 +38,7 @@ if TYPE_CHECKING:
 # Regex pattern for parsing datetime strings from OpenSearch
 DATETIME_REGEX: Final[re.Pattern[str]] = re.compile(
     r"^(?P<year>\d{4})-(?P<month>\d{2})-(?P<day>\d{2})T"
-    r"(?P<hour>\d{2}):(?P<minute>\d{2}):(?P<second>\d{2})(\.\d+)?$"
+    r"(?P<hour>\d{2}):(?P<minute>\d{2}):(?P<second>\d{2})(?:\.(?P<microsecond>\d+))?$"
 )
 
 
@@ -326,16 +326,22 @@ class OpenSearchSearchBackend(BaseSearchBackend):
                 date_values = possible_datetime.groupdict()
 
                 for dk, dv in date_values.items():
-                    date_values[dk] = int(dv)
+                    if dk == "microsecond" and dv:
+                        # Convert to microseconds (e.g., .123 -> 123000)
+                        date_values[dk] = int(dv.ljust(6, "0")[:6])
+                    elif dv:
+                        date_values[dk] = int(dv)
+                    else:
+                        date_values[dk] = 0
 
                 return datetime.datetime(
-                    year=int(date_values["year"]),
-                    month=int(date_values["month"]),
-                    day=int(date_values["day"]),
-                    hour=int(date_values["hour"]),
-                    minute=int(date_values["minute"]),
-                    second=int(date_values["second"]),
-                    microsecond=int(date_values["microsecond"]),
+                    year=date_values["year"],
+                    month=date_values["month"],
+                    day=date_values["day"],
+                    hour=date_values["hour"],
+                    minute=date_values["minute"],
+                    second=date_values["second"],
+                    microsecond=date_values["microsecond"],
                     tzinfo=datetime.timezone.utc,
                 )
 
