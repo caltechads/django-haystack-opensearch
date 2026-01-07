@@ -22,6 +22,7 @@ decorator==5.1.1
     # via ipython
 django==5.2.7
     # via
+    #   django-haystack-opensearch-demo (pyproject.toml)
     #   crispy-bootstrap5
     #   django-appconf
     #   django-braces

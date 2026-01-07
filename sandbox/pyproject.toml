@@ -23,6 +23,7 @@ classifiers = [
     "Typing :: Typed",
 ]
 dependencies = [
+    "django>=5.2.0<6",
     "django_haystack_opensearch",
     "django-braces>=1.15.0",
     "django-crispy-forms>=2.3",
