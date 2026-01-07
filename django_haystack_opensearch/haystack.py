@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import ast
+import base64
 import datetime
 import re
 import warnings
@@ -16,6 +17,7 @@ from haystack.backends import (
     BaseSearchBackend,
     BaseSearchQuery,
     UnifiedIndex,
+    log_query,
 )
 from haystack.constants import DEFAULT_OPERATOR, DJANGO_CT, DJANGO_ID, FUZZINESS, ID
 from haystack.exceptions import SkipDocument
@@ -1234,6 +1236,55 @@ class OpenSearchSearchBackend(BaseSearchBackend):
 
         return self._process_results(raw_results, result_class=result_class)
 
+    def extract_file_contents(self, file_obj: Any) -> dict[str, Any] | None:
+        """
+        Extract text and metadata from a binary file using OpenSearch ingest-attachment.
+
+        Args:
+            file_obj: A file-like object containing the binary data.
+
+        Returns:
+            A dictionary with 'contents' and 'metadata', or None if extraction fails.
+
+        """
+        try:
+            # Read and base64 encode the file content
+            content = base64.b64encode(file_obj.read()).decode("utf-8")
+        except Exception:
+            if not self.silently_fail:
+                raise
+            self.log.exception("Failed to read and encode file for extraction")
+            return None
+
+        # Create a simulate pipeline body to extract the attachment
+        body = {
+            "pipeline": {
+                "description": "Extract attachment information",
+                "processors": [{"attachment": {"field": "data"}}],
+            },
+            "docs": [{"_source": {"data": content}}],
+        }
+
+        try:
+            # Call OpenSearch ingest simulate API
+            response = self.conn.ingest.simulate(body=body)
+
+            if response and "docs" in response and len(response["docs"]) > 0:
+                doc = response["docs"][0].get("doc", {})
+                source = doc.get("_source", {})
+                attachment = source.get("attachment", {})
+
+                return {
+                    "contents": attachment.get("content", ""),
+                    "metadata": attachment.get("metadata", {}),
+                }
+        except Exception:
+            if not self.silently_fail:
+                raise
+            self.log.exception("Failed to extract file contents from OpenSearch")
+
+        return None
+
     def _build_search_params(self, kwargs, start_offset, end_offset):
         """Build search parameters including from/size."""
         if start_offset is not None:
@@ -1264,6 +1315,7 @@ class OpenSearchSearchBackend(BaseSearchBackend):
 
         return raw_results
 
+    @log_query
     def search(self, query_string: str, **kwargs: Any) -> dict[str, Any]:
         """
         Search for documents matching the query string.
