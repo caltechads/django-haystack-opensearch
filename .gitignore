@@ -122,3 +122,5 @@ tags
 *.code-workspace
 .idea
 .vscode
+
+sandbox/django_haystack_opensearch.tar.gz
