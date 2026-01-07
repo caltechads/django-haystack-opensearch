@@ -21,7 +21,7 @@ class DjangohaystackopensearchAppConfig(AppConfig):
             # in the "Where should this code live?" section, for why this import
             # is inside CoreConfig.ready().  To disable model change logging,
             # comment out this import.
-            from . import signals  # noqa: F401
+            from . import signals  # noqa: F401, PLC0415
 
             self.ready_is_done = True
         else:

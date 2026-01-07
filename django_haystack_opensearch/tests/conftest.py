@@ -1,6 +1,9 @@
-import pytest
 from unittest.mock import MagicMock, patch
+
+import pytest
 from django.conf import settings
+from opensearchpy import OpenSearch
+from opensearchpy.exceptions import ConnectionError as OpenSearchConnectionError
 
 
 class MockField:
@@ -91,9 +94,10 @@ def opensearch_url():
             return default_url
         connections = getattr(settings, "HAYSTACK_CONNECTIONS", {})
         url = connections.get("default", {}).get("URL", default_url)
-        return url
-    except Exception:
+    except Exception:  # noqa: BLE001
         return default_url
+    else:
+        return url
 
 
 @pytest.fixture(scope="session")
@@ -101,14 +105,11 @@ def real_opensearch(opensearch_url):
     """
     Return an OpenSearch client if the backend is reachable, otherwise skip.
     """
-    from opensearchpy import OpenSearch
-    from opensearchpy.exceptions import ConnectionError
-
     client = OpenSearch(hosts=[opensearch_url], timeout=2)
     try:
         if client.ping():
             return client
-    except ConnectionError:
+    except OpenSearchConnectionError:
         pass
 
     pytest.skip(f"OpenSearch at {opensearch_url} is not reachable")

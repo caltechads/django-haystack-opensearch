@@ -1,6 +1,6 @@
 from typing import List  # noqa: UP035
 
-from django.urls import URLPattern, path, re_path
+from django.urls import URLPattern
 
 # from .views import
 
