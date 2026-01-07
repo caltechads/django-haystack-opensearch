@@ -1,10 +1,12 @@
-# django_haystack_opensearch Sandbox
+# django-haystack-opensearch Sandbox
 
-This is a demonstration Django application for the `django_haystack_opensearch` module. It indexes and searches through Shakespeare plays, demonstrating features like faceting, filtering, and highlighting.
+This is a demonstration Django application for the `django_haystack_opensearch`
+module. It indexes and searches through Shakespeare plays, demonstrating
+features like faceting, filtering, and highlighting.
 
 ## Documentation
 
-Full documentation for this project is available on [ReadTheDocs](https://django_haystack_opensearch.readthedocs.io).
+Full documentation for this project is available on [ReadTheDocs](https://django-haystack-opensearch.readthedocs.io).
 
 ## Running the Demo
 

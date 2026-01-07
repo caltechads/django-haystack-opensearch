@@ -1,7 +1,7 @@
 Demo Application
 ================
 
-The ``django_haystack_opensearch`` project includes a demo application in the
+The ``django-haystack-opensearch`` project includes a demo application in the
 ``sandbox/`` directory that demonstrates the full capabilities of the backend.
 The demo is a Django application that indexes and searches through Shakespeare
 plays, showing features like faceting, filtering, and highlighting.

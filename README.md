@@ -1,10 +1,15 @@
-# django_haystack_opensearch
+# django-haystack-opensearch
 
 An OpenSearch backend for [django-haystack](https://haystacksearch.org/).
 
-**Documentation**: <https://django_haystack_opensearch.readthedocs.io>
+**Documentation**: <https://django-haystack-opensearch.readthedocs.io>
 
-`django_haystack_opensearch` provides a drop-in replacement for Elasticsearch backends, allowing you to use OpenSearch (versions 1.x through 3.x) as your search engine with django-haystack. It uses the `opensearch-py` client library only, instead of the out-of-date `elasticsearch` client library.
+`django-haystack-opensearch` provides a drop-in replacement for Elasticsearch
+backends, allowing you to use OpenSearch (versions 1.x through 3.x) as your
+search engine with
+[django-haystack](https://https://github.com/django-haystack/django-haystack/).
+It uses the `opensearch-py` client library only, instead of the out-of-date
+`elasticsearch` client library.
 
 ## Core Features
 
@@ -80,6 +85,6 @@ results = SearchQuerySet().filter(author__exact="John Doe")
 
 ## Getting Help
 
-- Check the [Documentation](https://django_haystack_opensearch.readthedocs.io) for detailed guides and examples.
-- Report bugs or request features on the [GitHub Issues](https://github.com/caltechads/django_haystack_opensearch/issues) page.
+- Check the [Documentation](https://django-haystack-opensearch.readthedocs.io) for detailed guides and examples.
+- Report bugs or request features on the [GitHub Issues](https://github.com/caltechads/django-haystack-opensearch/issues) page.
 - Explore the `sandbox/` directory for a complete demonstration application.

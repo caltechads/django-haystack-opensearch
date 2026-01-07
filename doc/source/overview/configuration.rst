@@ -2,17 +2,17 @@ Configuration
 =============
 
 This guide covers all configuration options for the
-``django_haystack_opensearch`` Django library, including Django Haystack settings and
+``django-haystack-opensearch`` Django library, including Django Haystack settings and
 environment variables.
 
-``django_haystack_opensearch`` is a Django Haystack backend for OpenSearch.  The default
+``django-haystack-opensearch`` is a Django Haystack backend for OpenSearch.  The default
 configuration should work for most use cases, but you can customise behavior
 through various configuration methods.
 
 OpenSearch Version Support
 --------------------------
 
-``django_haystack_opensearch`` is compatible with **OpenSearch 1.x through 3.x**. It uses
+``django-haystack-opensearch`` is compatible with **OpenSearch 1.x through 3.x**. It uses
 the ``opensearch-py>=3.1.0`` client library exclusively, instead of the deprecated
 ``elasticsearch-py`` v7 library.
 

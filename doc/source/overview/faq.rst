@@ -10,9 +10,10 @@ General Questions
 What is django_haystack_opensearch?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-``django_haystack_opensearch`` is an OpenSearch backend for django-haystack. It
-provides a drop-in replacement for Elasticsearch backends, allowing you to use
-OpenSearch (versions 1.x through 3.x) as your search engine with django-haystack.
+``django-haystack-opensearch`` is an OpenSearch backend for django-haystack. It
+provides a pure `opensearch-py <https://opensearch-py.readthedocs.io/>`_ based backend, allowing you to use OpenSearch
+(versions 1.x through 3.x) as your search engine with django-haystack without
+the deprecated `elasticsearch-py <https://elasticsearch-py.readthedocs.io/>`_ v7 library.
 
 Key features:
 
@@ -25,8 +26,8 @@ Key features:
 What versions of OpenSearch are supported?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-``django_haystack_opensearch`` supports **OpenSearch 1.x through 3.x**. The backend
-uses the `opensearch-py>=3.1.0` client library, which provides compatibility
+``django-haystack-opensearch`` supports **OpenSearch 1.x through 3.x**. The backend
+uses the ``opensearch-py>=3.1.0`` client library, which provides compatibility
 across these versions.
 
 Installation Issues
@@ -230,12 +231,13 @@ Migration from Elasticsearch
 Can I migrate from an Elasticsearch backend?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Yes! ``django_haystack_opensearch`` is designed as a drop-in replacement for
-Elasticsearch backends. The API is compatible with ``elasticsearch7_backend``.
+Yes! ``django-haystack-opensearch`` is designed to work with OpenSearch, so
+if you have been using the deprecated `elasticsearch-py` v7 library, you can
+migrate to OpenSearch with minimal or no code changes.
 
 To migrate:
 
-1. Install ``django_haystack_opensearch``
+1. Install ``django-haystack-opensearch``
 2. Update your ``HAYSTACK_CONNECTIONS`` setting to use the OpenSearch engine
 3. Update the ``URL`` to point to your OpenSearch server
 4. Rebuild your index: ``python manage.py rebuild_index``
@@ -256,7 +258,7 @@ Where can I get more help?
    - :doc:`/overview/configuration` - Configuration options
 
 2. **GitHub issues**: Report bugs or request features on the
-   `project repository <https://github.com/caltechads/django_haystack_opensearch/issues>`_
+   `project repository <https://github.com/caltechads/django-haystack-opensearch/issues>`_
 
 3. **Demo application**: Check out the :doc:`/overview/demo` guide to see a
    working example
@@ -271,7 +273,7 @@ When reporting a bug, please include:
    - OS and version
    - Python version
    - Django version
-   - django_haystack_opensearch version
+   - django-haystack-opensearch version
    - OpenSearch version
 3. **Steps to reproduce**: The exact steps to reproduce the bug
 4. **Configuration**: Relevant parts of your ``HAYSTACK_CONNECTIONS`` setting
@@ -290,7 +292,7 @@ Example bug report:
     - OS: Ubuntu 22.04
     - Python: 3.11
     - Django: 5.2
-    - django_haystack_opensearch: 0.1.0
+    - django-haystack-opensearch: 0.1.0
     - OpenSearch: 2.11.0
 
     Steps to reproduce:

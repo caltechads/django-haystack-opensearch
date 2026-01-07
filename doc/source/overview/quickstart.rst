@@ -1,7 +1,7 @@
 Quickstart Guide
 ================
 
-This guide will get you up and running with ``django_haystack_opensearch`` quickly.
+This guide will get you up and running with ``django-haystack-opensearch`` quickly.
 
 Prerequisites
 -------------
@@ -9,7 +9,7 @@ Prerequisites
 - Python 3.11 or higher
 - Django 5.2 or higher
 - An OpenSearch server (1.x through 3.x)
-- Follow the :doc:`/overview/installation` instructions to install ``django_haystack_opensearch``
+- Follow the :doc:`/overview/installation` instructions to install ``django-haystack-opensearch``
 
 Installation
 ------------
@@ -157,4 +157,4 @@ Getting Help
 
 - Check the full documentation for detailed examples
 - Review the :doc:`/overview/faq` section for common issues
-- Report issues on the `GitHub repository <https://github.com/caltechads/django_haystack_opensearch/issues>`_
+- Report issues on the `GitHub repository <https://github.com/caltechads/django-haystack-opensearch/issues>`_

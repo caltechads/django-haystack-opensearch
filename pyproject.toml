@@ -53,7 +53,6 @@ test = [
   "pytest-django>=4.11.1",
 ]
 demo = [
-    "django_haystack_opensearch",
     "django-braces>=1.15.0",
     "django-crispy-forms>=2.3",
     "crispy-bootstrap5>=2024.10",
@@ -78,12 +77,9 @@ demo = [
 ]
 
 [project.urls]
-Respository = "https://github.com/caltechads/django_haystack_opensearch"
-Documentation = "https://django_haystack_opensearch.readthedocs.io"
-Issues = "https://github.com/caltechads/django_haystack_opensearch/issues"
-
-[project.scripts]
-django_haystack_opensearch = "django_haystack_opensearch.main:main"
+Respository = "https://github.com/caltechads/django-haystack-opensearch"
+Documentation = "https://django-haystack-opensearch.readthedocs.io"
+Issues = "https://github.com/caltechads/django-haystack-opensearch/issues"
 
 [tool.uv]
 python-preference = "only-system"

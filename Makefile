@@ -1,6 +1,6 @@
 VERSION = 0.1.0
 
-PACKAGE = django_haystack_opensearch
+PACKAGE = django-haystack-opensearch
 
 #======================================================================
 
@@ -19,7 +19,7 @@ dist: clean
 	@python -m build --sdist --wheel
 
 compile: uv.lock
-	@uv pip compile --group=docs pyproject.toml -o requirements.txt
+	@uv pip compile --group=docs --group=demo pyproject.toml -o requirements.txt
 
 release: clean
 	@uv build --sdist --wheel

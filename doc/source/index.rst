@@ -1,5 +1,5 @@
 ==========================
-django_haystack_opensearch
+django-haystack-opensearch
 ==========================
 
 .. toctree::
@@ -51,7 +51,7 @@ spatial search, and more.
 Core Features
 -------------
 
-django_haystack_opensearch provides the following key features:
+``django-haystack-opensearch`` provides the following key features:
 
 **Full-Text Search with OpenSearch**
     - Powerful full-text search capabilities
@@ -151,7 +151,7 @@ If you need help with django_haystack_opensearch:
 
 **GitHub Issues**
     - Report bugs or request features on the
-      `GitHub repository <https://github.com/caltechads/django_haystack_opensearch/issues>`_
+      `GitHub repository <https://github.com/caltechads/django-haystack-opensearch/issues>`_
     - Search existing issues before creating a new one
     - Include relevant details when reporting bugs
 

@@ -1,12 +1,12 @@
 Installation
 ============
 
-This guide covers how to install the ``django_haystack_opensearch`` package and its dependencies.
+This guide covers how to install the ``django-haystack-opensearch`` package and its dependencies.
 
 Prerequisites
 -------------
 
-Before installing ``django_haystack_opensearch``, ensure you have:
+Before installing ``django-haystack-opensearch``, ensure you have:
 
 - Python 3.11 or higher
 - `uv <https://docs.astral.sh/uv/>`_, `pip <https://pip.pypa.io/en/stable/>`_, or `pipx <https://pipx.pypa.io/stable/>`_
@@ -45,9 +45,9 @@ If you want to install from the latest development version:
 
 .. code-block:: bash
 
-    git clone https://github.com/caltechads/django_haystack_opensearch.git
+    git clone https://github.com/caltechads/django-haystack-opensearch.git
     sh -c "$(curl -fsSL https://astral.sh/uv/install)"
-    cd django_haystack_opensearch
+    cd <your-project-name>
     uv add file://../django_haystack_opensearch
 
 .. _opensearch-plugins:
@@ -55,7 +55,7 @@ If you want to install from the latest development version:
 OpenSearch Plugins
 ------------------
 
-Some advanced features of ``django_haystack_opensearch`` require specific plugins to
+Some advanced features of ``django-haystack-opensearch`` require specific plugins to
 be installed on your OpenSearch node.
 
 Ingest Attachment Plugin
@@ -121,7 +121,7 @@ Getting Help
 
 If you encounter issues during installation:
 
-1. Check the `GitHub issues <https://github.com/caltechads/django_haystack_opensearch/issues>`_
+1. Check the `GitHub issues <https://github.com/caltechads/django-haystack-opensearch/issues>`_
 2. Review the troubleshooting section above
 3. Ensure your Python environment meets the prerequisites
 4. Try installing in a virtual environment to isolate dependencies

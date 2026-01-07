@@ -1,7 +1,7 @@
 Using django_haystack_opensearch
 ================================
 
-This guide covers how to use ``django_haystack_opensearch`` to add powerful search
+This guide covers how to use ``django-haystack-opensearch`` to add powerful search
 functionality to your Django applications using OpenSearch.
 
 Basic Search
