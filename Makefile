@@ -19,7 +19,7 @@ dist: clean
 	@python -m build --sdist --wheel
 
 compile: uv.lock
-	@uv pip compile --extra docs pyproject.toml -o requirements.txt
+	@uv pip compile --group=docs pyproject.toml -o requirements.txt
 
 release: clean
 	@uv build --sdist --wheel
