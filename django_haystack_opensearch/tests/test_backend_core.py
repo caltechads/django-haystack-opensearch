@@ -144,3 +144,5 @@ class TestOpenSearchBackendCore:
         ):
             docs = self.backend._prepare_documents_for_bulk("some_index", iterable)
             assert len(docs) == 0
+
+
