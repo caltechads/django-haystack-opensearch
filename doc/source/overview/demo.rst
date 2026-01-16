@@ -72,6 +72,8 @@ Once the services are running, you can access the demo application at:
 - **OpenSearch**: http://localhost:9200
 - **MySQL**: localhost:3306
 
+Use the username ``root`` and password ``password`` to login.
+
 The web interface provides a search interface where you can:
 
 - Search for speeches by content
