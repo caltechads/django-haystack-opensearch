@@ -6,7 +6,7 @@ PACKAGE = django-haystack-opensearch
 
 
 clean:
-	rm -rf *.tar.gz dist *.egg-info *.rpm
+	rm -rf *.tar.gz dist *.egg-info
 	find . -name "*.pyc" -exec rm '{}' ';'
 	find . -name "*.pyo" -exec rm '{}' ';'
 	find . -name "*.pyd" -exec rm '{}' ';'
