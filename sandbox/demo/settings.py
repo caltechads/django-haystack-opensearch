@@ -7,12 +7,15 @@ from typing import Any
 import environ
 import structlog
 
+from django_haystack_opensearch import __version__
+
 from .logging import censor_password_processor, request_context_logging_processor
 
 # The name of our project
 # ------------------------------------------------------------------------------
 PROJECT_NAME: str = "demo"
-HUMAN_PROJECT_NAME: str = "Sphinx Hosting Demo"
+HUMAN_PROJECT_NAME: str = "Django Haystack OpenSearch Demo"
+VERSION: str = "0.1.0"
 
 # Load our environment with django-environ
 BASE_DIR: environ.Path = environ.Path(__file__) - 2
@@ -28,6 +31,7 @@ env: environ.Env = environ.Env()
 DEBUG: bool = env.bool("DEBUG", default=False)
 DEVELOPMENT: bool = env.bool("DEVELOPMENT", default=False)
 TESTING: bool = env.bool("TESTING", default=False)
+VERSION: str = __version__
 # Set BOOTSTRAP_ALWAYS_MIGRATE to True if you want to always run pending
 # migrations on container boot up
 BOOTSTRAP_ALWAYS_MIGRATE: bool = env.bool("BOOTSTRAP_ALWAYS_MIGRATE", default=True)
@@ -229,6 +233,7 @@ TEMPLATES: list[dict[str, Any]] = [
                 "django.template.context_processors.tz",
                 "django.contrib.messages.context_processors.messages",
                 "academy_theme.context_processors.theme",
+                "users.context_processors.add_version",
             ],
         },
     },
@@ -423,6 +428,8 @@ ACADEMY_THEME_SETTINGS: dict[str, Any] = {
     "FAVICON_16": "core/images/favicon-16x16.png",
     "FAVICON": "core/images/favicon.ico",
     "SITE_WEBMANIFEST": "core/images/site.webmanifest",
+    "LOGOUT_TITLE": "Log out of the demo site",
+    "LOGOUT_LINK": "/accounts/logout/",
     # Footer
     "ORGANIZATION_LINK": "https://github.com/caltechads/django_haystack_opensearch",
     "ORGANIZATION_NAME": "django-haystack-opensearch",
