@@ -15,7 +15,7 @@ from .logging import censor_password_processor, request_context_logging_processo
 # ------------------------------------------------------------------------------
 PROJECT_NAME: str = "demo"
 HUMAN_PROJECT_NAME: str = "Django Haystack OpenSearch Demo"
-VERSION: str = "0.1.0"
+VERSION: str = "1.0.0"
 
 # Load our environment with django-environ
 BASE_DIR: environ.Path = environ.Path(__file__) - 2
