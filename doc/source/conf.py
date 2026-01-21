@@ -13,8 +13,15 @@
 from __future__ import annotations
 
 import os
+import pathlib
 import sys
 from typing import Any
+
+# Set TESTING to True to avoid requiring mysqlclient during doc build
+# We set this forcefully to override any environment variables
+os.environ["TESTING"] = "True"
+# We also set DJANGO_SETTINGS_MODULE to ensure consistency
+os.environ["DJANGO_SETTINGS_MODULE"] = "demo.settings_docker"
 
 import sphinx_rtd_theme  # noqa: F401
 
@@ -24,7 +31,9 @@ import sphinx_rtd_theme  # noqa: F401
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 
-sys.path.insert(0, os.path.abspath("../../sandbox"))  # noqa: PTH100
+here = pathlib.Path(__file__).parent
+sandbox = here.parent.parent / "sandbox"
+sys.path.insert(0, str(sandbox.resolve()))
 
 # -- Project information -----------------------------------------------------
 

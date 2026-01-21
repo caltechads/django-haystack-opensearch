@@ -15,13 +15,10 @@ clean:
 	rm -rf build
 	rm -rf dist
 
-dist: clean
-	@python -m build --sdist --wheel
-
 compile: uv.lock
 	@uv pip compile --group=docs --group=demo pyproject.toml -o requirements.txt
 
-release: clean
+release:
 	@uv build --sdist --wheel
 	@twine upload dist/*
 	git push origin master

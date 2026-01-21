@@ -451,7 +451,7 @@ sdist = { url = "https://files.pythonhosted.org/packages/b4/09/623634ca5f8b9fe99
 
 [[package]]
 name = "django-haystack-opensearch"
-version = "0.1.0"
+version = "1.0.0"
 source = { editable = "." }
 dependencies = [
     { name = "build" },
