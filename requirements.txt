@@ -193,7 +193,6 @@ sphinx==8.2.3
     #   sphinxcontrib-django
     #   sphinxcontrib-images
     #   sphinxcontrib-jquery
-    #   sphinxcontrib-jsonglobaltoc
 sphinx-rtd-theme==3.0.2
     # via django-haystack-opensearch (pyproject.toml:docs)
 sphinxcontrib-applehelp==2.0.0
@@ -210,14 +209,10 @@ sphinxcontrib-jquery==4.1
     # via sphinx-rtd-theme
 sphinxcontrib-jsmath==1.0.1
     # via sphinx
-sphinxcontrib-jsonglobaltoc==0.1.5
-    # via django-haystack-opensearch (pyproject.toml:docs)
 sphinxcontrib-qthelp==2.0.0
     # via sphinx
 sphinxcontrib-serializinghtml==2.0.0
-    # via
-    #   sphinx
-    #   sphinxcontrib-jsonglobaltoc
+    # via sphinx
 sqlparse==0.5.5
     # via
     #   django

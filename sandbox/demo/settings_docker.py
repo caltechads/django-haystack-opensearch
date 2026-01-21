@@ -8,5 +8,6 @@ os.environ["DB_PORT"] = "fake"
 os.environ["CACHE"] = "fake"
 os.environ["DEVELOPMENT"] = "True"
 os.environ["ENABLE_DEBUG_TOOLBAR"] = "True"
+os.environ["TESTING"] = "True"
 
 from .settings import *  # noqa: F403
